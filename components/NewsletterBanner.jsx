@@ -1,5 +1,5 @@
 function NewsletterBanner() {
-  return <div>Enter</div>;
+  return <div className="">Enter</div>;
 }
 
 export default NewsletterBanner;

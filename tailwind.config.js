@@ -6,6 +6,8 @@ module.exports = {
     './components/**/*.{js,jsx}',
     './app/**/*.{js,jsx}',
     './src/**/*.{js,jsx}',
+    './layouts/**/*.{js,jsx}',
+    './lib/**/*.{js,jsx}',
   ],
   prefix: "",
   theme: {
@@ -18,11 +20,17 @@ module.exports = {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        border: {
+          DEFAULT: "hsl(var(--border))",
+          bg: "oklch(var(--og-border-bg))",
+          button: "hsl(var(--border-button))",
+          input: "hsl(var(--border-input))",
+          card: "hsl(var(--border-card))",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -51,26 +59,76 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        ogPrimary: {
+          DEFAULT: "oklch(var(--og-primary))",
+          light: "oklch(var(--og-primary-light))",
+          lighter: "oklch(var(--og-primary-lighter))",
+          lightest: "oklch(var(--og-primary-lightest))",
+          dark: "oklch(var(--og-primary-dark))",
+          darker: "oklch(var(--og-primary-darker))",
+          darkest: "oklch(var(--og-primary-darkest))",
+        },
+        ogSuccess: {
+          DEFAULT: "oklch(var(--og-success))",
+          light: "oklch(var(--og-success-light))",
+          lighter: "oklch(var(--og-success-lighter))",
+          lightest: "oklch(var(--og-success-lightest))",
+          dark: "oklch(var(--og-success-dark))",
+          darker: "oklch(var(--og-success-darker))",
+          darkest: "oklch(var(--og-success-darkest))",
+        },
+        ogWarning: {
+          DEFAULT: "oklch(var(--og-warning))",
+          light: "oklch(var(--og-warning-light))",
+          lighter: "oklch(var(--og-warning-lighter))",
+          lightest: "oklch(var(--og-warning-lightest))",
+          dark: "oklch(var(--og-warning-dark))",
+          darker: "oklch(var(--og-warning-darker))",
+          darkest: "oklch(var(--og-warning-darkest))",
+        },
+        ogDestructive: {
+          DEFAULT: "oklch(var(--og-destructive))",
+          light: "oklch(var(--og-destructive-light))",
+          lighter: "oklch(var(--og-destructive-lighter))",
+          lightest: "oklch(var(--og-destructive-lightest))",
+          dark: "oklch(var(--og-destructive-dark))",
+          darker: "oklch(var(--og-destructive-darker))",
+          darkest: "oklch(var(--og-destructive-darkest))",
+        },
+        ogBG: {
+          base: "oklch(var(--og-bg-base))",
+          sub: "oklch(var(--og-bg-sub))",
+          hover: "oklch(var(--og-bg-hover))",
+        },
+        ogLabel: {
+          base: "oklch(var(--og-label-base))",
+          title: "oklch(var(--og-label-title))",
+          muted: "oklch(var(--og-label-muted))",
+          faint: "oklch(var(--og-label-faint))",
+          link: "oklch(var(--og-label-link))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        desktop: "var(--og-radius-desktop)",
+        mobile: "var(--og-radius-mobile)",
       },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
+    },
+    keyframes: {
+      "accordion-down": {
+        from: { height: "0" },
+        to: { height: "var(--radix-accordion-content-height)" },
       },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+      "accordion-up": {
+        from: { height: "var(--radix-accordion-content-height)" },
+        to: { height: "0" },
       },
+    },
+    animation: {
+      "accordion-down": "accordion-down 0.2s ease-out",
+      "accordion-up": "accordion-up 0.2s ease-out",
     },
   },
   plugins: [require("tailwindcss-animate")],
