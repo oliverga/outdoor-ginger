@@ -96,6 +96,20 @@
   }
 }
 
+/* Fonts */
+html {
+  font-family: var(--font-inter);
+}
+
+h1 {
+  font-family: var(--font-syne);
+}
+
+body {
+  background-color: oklch(var(--og-bg-base));
+  color: oklch(var(--og-label-base));
+}
+
 @layer base {
   * {
     @apply font-sans;
