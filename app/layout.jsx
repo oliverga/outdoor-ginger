@@ -23,7 +23,18 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${inter.variable} ${syne.variable}`}>
       <body className="bg-ogBG-base text-ogLabel-base">
         <>{children}</>
-        <Toaster />
+        <Toaster
+          richColors={true}
+          toastOptions={{
+            style: {
+              background: "oklch(var(--og-bg-base))",
+              color: "oklch(var(--og-label-base))",
+              border: "1px solid oklch(var(--og-border-input))",
+              borderRadius: "var(--og-radius-mobile)",
+            },
+          }}
+          theme="light"
+        />
       </body>
     </html>
   );

@@ -105,6 +105,11 @@ h1 {
   font-family: var(--font-syne);
 }
 
+.toast {
+  background-color: var(--og-bg-sub);
+  color: var(--og-label-base);
+}
+
 @layer base {
   * {
     @apply font-sans;
