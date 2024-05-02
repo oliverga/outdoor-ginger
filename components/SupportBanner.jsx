@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { Input } from "./ui/input";
+import Link from "next/link";
 
 function SupportBanner() {
   return (
@@ -16,30 +16,34 @@ function SupportBanner() {
         </p>
       </div>
       <div className="flex md:flex-col gap-4">
-        <Button
-          size="lg"
-          className="bg-ogPrimary text-ogPrimary-lightest hover:bg-ogPrimary-dark p-10 rounded-desktop"
-        >
-          <Image
-            src="/buymeacoffee.svg"
-            width={64}
-            height={64}
-            alt="Buy Me a Coffee"
-            className=" w-52 pointer-events-none"
-          />
-        </Button>
-        <Button
-          size="lg"
-          className="bg-ogPrimary text-ogPrimary-lightest hover:bg-ogPrimary-dark p-10 rounded-desktop"
-        >
-          <Image
-            src="/gofundme.svg"
-            width={64}
-            height={64}
-            alt="GoFundMe"
-            className=" w-44 pointer-events-none"
-          />
-        </Button>
+        <Link href="https://buymeacoffee.com/outdoorginger">
+          <Button
+            size="lg"
+            className="bg-ogPrimary text-ogPrimary-lightest hover:bg-ogPrimary-dark p-10 rounded-desktop"
+          >
+            <Image
+              src="/buymeacoffee.svg"
+              width={64}
+              height={64}
+              alt="Buy Me a Coffee"
+              className=" w-52 pointer-events-none"
+            />
+          </Button>
+        </Link>
+        <Link href="https://www.gofundme.com/f/outdoorginger">
+          <Button
+            size="lg"
+            className="bg-ogPrimary text-ogPrimary-lightest hover:bg-ogPrimary-dark p-10 rounded-desktop"
+          >
+            <Image
+              src="/gofundme.svg"
+              width={64}
+              height={64}
+              alt="GoFundMe"
+              className=" w-44 pointer-events-none"
+            />
+          </Button>
+        </Link>
       </div>
     </section>
   );
