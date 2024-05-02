@@ -8,8 +8,8 @@ function SupportBanner() {
       <div className=" space-y-8 md:text-left">
         <h1 className="text-6xl md:text-8xl font-bold">Support August</h1>
         <p className="text-lg max-w-md text-ogPrimary-light">
-          I'm dedicated to inspiring others to get out and explore nature and
-          your support makes it happen.
+          I&apos;m dedicated to inspiring others to get out and explore nature
+          and your support makes it happen.
         </p>
         <p className="text-lg text-ogPrimary-light">
           All donations are appreciated 🫶
