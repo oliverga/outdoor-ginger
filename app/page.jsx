@@ -1,3 +1,9 @@
+import NewsletterBanner from "@/components/NewsletterBanner";
+
 export default function Home() {
-  return <main></main>;
+  return (
+    <main>
+      <NewsletterBanner />
+    </main>
+  );
 }

@@ -103,6 +103,7 @@ html {
 
 h1 {
   font-family: var(--font-syne);
+  font-variant-ligatures: no-common-ligatures;
 }
 
 .toast {
