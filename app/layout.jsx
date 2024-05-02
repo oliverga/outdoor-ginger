@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter, Syne } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
+import Footer from "@/layouts/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
           }}
           theme="light"
         />
+        <Footer />
       </body>
     </html>
   );

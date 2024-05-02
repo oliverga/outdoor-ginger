@@ -115,6 +115,9 @@ module.exports = {
         desktop: "var(--og-radius-desktop)",
         mobile: "var(--og-radius-mobile)",
       },
+      backgroundImage: {
+        'footer-image': "url('/footer_img.webp')",
+      }
     },
     keyframes: {
       "accordion-down": {
