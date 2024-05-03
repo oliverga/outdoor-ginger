@@ -19,7 +19,7 @@ function SupportBanner() {
         <Link href="https://buymeacoffee.com/outdoorginger">
           <Button
             size="lg"
-            className="bg-ogPrimary text-ogPrimary-lightest hover:bg-ogPrimary-dark p-10 rounded-desktop"
+            className="bg-ogPrimary text-ogPrimary-lightest hover:bg-ogPrimary-dark p-10 w-full rounded-2xl"
           >
             <Image
               src="/buymeacoffee.svg"
@@ -33,7 +33,7 @@ function SupportBanner() {
         <Link href="https://www.gofundme.com/f/outdoorginger">
           <Button
             size="lg"
-            className="bg-ogPrimary text-ogPrimary-lightest hover:bg-ogPrimary-dark p-10 rounded-desktop"
+            className="bg-ogPrimary text-ogPrimary-lightest hover:bg-ogPrimary-dark p-10 w-full rounded-2xl"
           >
             <Image
               src="/gofundme.svg"

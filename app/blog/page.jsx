@@ -29,11 +29,15 @@ export default function Page() {
         return (
           <article
             key={post.slug.current}
-            className="prose md:prose-xl prose-neutral mx-auto mt-20 mb-48 px-6 border-b pb-32"
+            className="prose md:prose-lg prose-neutral mx-auto mt-20 mb-48 px-6 border-b pb-32"
           >
             <h2>{post.title}</h2>
+
             <p>By {postAuthor.name}</p>
-            <p>{format(new Date(post.publishedAt), "PPP")}</p>
+            <p className="text-base">
+              {format(new Date(post.publishedAt), "PPP")}
+            </p>
+
             <PortableText value={post.content} />
           </article>
         );

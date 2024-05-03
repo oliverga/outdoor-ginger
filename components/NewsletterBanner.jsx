@@ -20,7 +20,7 @@ function NewsletterBanner() {
         <Input
           type="email"
           placeholder="Your email address"
-          className="bg-ogPrimary-light placeholder:text-ogPrimary-lightest text-ogPrimary-lightest border-ogPrimary-lighter"
+          className="bg-ogPrimary placeholder:text-ogPrimary-lightest text-ogPrimary-lightest border-ogPrimary-lighter w-max outline"
           required
         />
         <Button
