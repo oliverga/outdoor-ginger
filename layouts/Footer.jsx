@@ -17,7 +17,7 @@ function Footer() {
             <Link href="/equipment">My equipment</Link>
           </li>
           <li>
-            <Link href="/blog">Blog</Link>
+            <Link href="/blog">Campfire Chronicles</Link>
           </li>
           <li>
             <Link href="/about">About</Link>

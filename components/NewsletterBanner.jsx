@@ -8,19 +8,22 @@ function NewsletterBanner() {
         <h1 className="text-6xl md:text-8xl font-bold text-ogPrimary-lightest">
           Campfire Chronicles
         </h1>
-        <h2 className=" font-display text-ogPrimary-lighter text-xl font-medium">
+        {/* <h2 className=" font-display text-ogPrimary-lighter text-xl font-medium">
           The Outdoor Ginger Newsletter
-        </h2>
+        </h2> */}
       </div>
       <p className="text-ogPrimary-lighter max-w-lg text-lg">
         Subscribe to my newsletter to get interesting stories, field reports,
         and other goodies straight to your inbox.
       </p>
-      <form action="" className="flex flex-col md:flex-row gap-4 items-center">
+      <form
+        action=""
+        className="flex flex-col md:flex-row gap-4 items-center w-full max-w-xs md:max-w-md"
+      >
         <Input
           type="email"
           placeholder="Your email address"
-          className="bg-ogPrimary placeholder:text-ogPrimary-lightest text-ogPrimary-lightest border-ogPrimary-lighter w-max outline"
+          className="bg-ogPrimary placeholder:text-ogPrimary-lightest text-ogPrimary-lightest border-ogPrimary-lighter"
           required
         />
         <Button
