@@ -29,7 +29,7 @@ export default function Page() {
         return (
           <article
             key={post.slug.current}
-            className="prose md:prose-xl mx-auto mt-20 mb-48 px-6 border-b pb-32"
+            className="prose md:prose-xl prose-neutral mx-auto mt-20 mb-48 px-6 border-b pb-32"
           >
             <h2>{post.title}</h2>
             <p>By {postAuthor.name}</p>
