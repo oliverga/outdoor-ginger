@@ -2,6 +2,7 @@ import "./globals.css";
 import { Inter, Syne } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import Footer from "@/layouts/Footer";
+import Header from "@/layouts/Header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${syne.variable}`}>
       <body className="bg-ogBG-base text-ogLabel-base">
+        <Header />
         <>{children}</>
         <Toaster
           richColors={true}

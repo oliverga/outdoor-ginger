@@ -27,9 +27,9 @@ module.exports = {
         border: {
           DEFAULT: "hsl(var(--border))",
           bg: "oklch(var(--og-border-bg))",
-          button: "hsl(var(--border-button))",
-          input: "hsl(var(--border-input))",
-          card: "hsl(var(--border-card))",
+          button: "oklch(var(--border-button))",
+          input: "oklch(var(--border-input))",
+          card: "oklch(var(--border-card))",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
