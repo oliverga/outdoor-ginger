@@ -11,11 +11,9 @@ function Header() {
   const progress = "63%";
   const { scrollY } = useScroll();
 
-  // Use useState hook to manage state
   const [hidden, setHidden] = useState(false);
   const [prevScroll, setPrevScroll] = useState(0);
 
-  // This onUpdate function is called in the `scrollY.onChange` callback
   function update(latest, prev) {
     if (latest < prev) {
       setHidden(false);
@@ -24,7 +22,6 @@ function Header() {
     }
   }
 
-  // Add `update()` function and `setPrevScroll` state handler
   useMotionValueEvent(scrollY, "change", (latest) => {
     update(latest, prevScroll);
     setPrevScroll(latest);
