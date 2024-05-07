@@ -98,7 +98,7 @@ function Header() {
           <p className="text-sm font-medium text-ogLabel-muted">
             Of 10.000 kr.
           </p>
-          <Link href="https://www.gofundme.com">
+          <Link href="https://www.gofundme.com/f/outdoorginger" target="_blank">
             <Button
               size="sm"
               className="bg-ogPrimary hover:bg-ogPrimary-dark gap-1"
