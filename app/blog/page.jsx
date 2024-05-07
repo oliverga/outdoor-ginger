@@ -17,7 +17,7 @@ const authors = await client.fetch(authorQuery);
 
 export default function Page() {
   return (
-    <main>
+    <main className="pt-32">
       {posts.map((post) => {
         if (!post.author) {
           console.error("Post author is null:", post);
