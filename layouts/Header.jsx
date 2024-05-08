@@ -109,7 +109,7 @@ function Header() {
         </div>
       </div>
       <div className="flex max-w-7xl mx-auto">
-        <div className=" w-full">
+        <div className=" w-full ">
           <div className="rounded-bl-xl overflow-hidden h-3 w-full mx-auto flex bg-ogBG-sub relative z-30">
             <motion.div
               className="w-0 h-3 bg-ogPrimary absolute top-0 left-0"
@@ -117,18 +117,24 @@ function Header() {
               transition={{ duration: 1.8, type: "spring" }}
             ></motion.div>
           </div>
-          {/* <motion.p
-            initial={0}
-            animate={{ textContent: progress }}
-            transition={{ duration: 1.8, type: "spring" }}
-          >
-            {progress}
-          </motion.p> */}
+          <div className=" w-full mx-auto flex h-full">
+            <motion.div
+              className="w-0 h-0 opacity-0"
+              animate={{ width: progress }}
+              transition={{ duration: 1.8, type: "spring" }}
+            ></motion.div>
+            <motion.div
+              className=" origin-top-right -translate-x-[100%] -translate-y-[2px] bg-ogPrimary text-ogBG-base h-fit p-2 rounded-b-xl text-sm font-medium opacity-0"
+              animate={{ opacity: 1 }}
+            >
+              <p>{progress}</p>
+            </motion.div>
+          </div>
         </div>
         <div className="w-fit h-fit  mx-auto flex justify-end">
           <div className="w-fit h-full max-w-xs bg-ogBG-sub justify-self-end rounded-b-xl flex justify-between gap-4 items-center px-2 py-2  z-30 ">
             <p className=" whitespace-nowrap text-sm font-normal cursor-default text-ogLabel-muted pl-2">
-              Of 10.000 kr.
+              Goal: 10.000 kr.
             </p>
             <Link
               href="https://www.gofundme.com/f/outdoorginger"
