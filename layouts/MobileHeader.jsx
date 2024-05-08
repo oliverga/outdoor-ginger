@@ -110,7 +110,7 @@ function MobileHeader() {
 						initial={{ y: "-100%" }}
 						animate={{ y: "0%" }}
 						exit={{ y: "-100%" }}
-						transition={{ duration: 0.5, type: "tween" }}
+						transition={{ duration: 0.5, type: "spring" }}
 					>
 						<nav className="flex flex-col row-start-1">
 							<div className="place-self-end">
