@@ -21,7 +21,7 @@ const authors = await client.fetch(authorQuery);
 export default function Page() {
   return (
     <main className="pt-64 pb-32 max-w-7xl mx-auto">
-      <div className="grid grid-flow-col grid-cols-3 gap-2">
+      <div className="grid grid-flow-row gap-2">
         {posts.map((post) => {
           if (!post.author) {
             console.error("Post author is null:", post);
