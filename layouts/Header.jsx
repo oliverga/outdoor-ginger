@@ -8,14 +8,12 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useState, useEffect } from "react";
 
 function Header() {
-  const progress = "88%";
+  const progress = "84%";
   const { scrollY } = useScroll();
 
-  // Use useState hook to manage state
   const [hidden, setHidden] = useState(false);
   const [prevScroll, setPrevScroll] = useState(0);
 
-  // This onUpdate function is called in the `scrollY.onChange` callback
   function update(latest, prev) {
     if (latest < prev) {
       setHidden(false);
@@ -24,11 +22,25 @@ function Header() {
     }
   }
 
-  // Add `update()` function and `setPrevScroll` state handler
   useMotionValueEvent(scrollY, "change", (latest) => {
     update(latest, prevScroll);
     setPrevScroll(latest);
   });
+
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      const topThird = window.innerHeight / 3;
+      if (event.clientY <= topThird) {
+        setHidden(false);
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   useEffect(() => {
     const script = document.createElement("script");
@@ -45,7 +57,7 @@ function Header() {
   return (
     <motion.header
       className="hidden md:block fixed top-0 left-0 z-50 w-screen px-8 py-4"
-      animate={{ y: hidden ? "-100%" : "0" }}
+      animate={{ y: hidden ? "-60%" : "0" }}
       transition={{
         duration: 0.8,
         type: "spring",
@@ -124,10 +136,12 @@ function Header() {
               transition={{ duration: 1.8, type: "spring" }}
             ></motion.div>
             <motion.div
-              className=" origin-top-right -translate-x-[100%] -translate-y-[2px] bg-ogPrimary text-ogBG-base h-fit p-2 rounded-b-xl text-sm font-medium opacity-0"
+              className=" origin-right -translate-x-full -translate-y-[1px] z-50 bg-ogPrimary text-ogBG-base h-fit p-2 rounded-b-xl text-sm font-medium opacity-0"
               animate={{ opacity: 1 }}
+              transition={{ duration: 1.8, type: "spring" }}
+              hover={{ rotate: 20 }}
             >
-              <p>{progress}</p>
+              <p className=" cursor-default">{progress}</p>
             </motion.div>
           </div>
         </div>
