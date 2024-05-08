@@ -48,18 +48,6 @@ function Header() {
 		};
 	}, []);
 
-	// useEffect(() => {
-	// 	const script = document.createElement("script");
-	// 	script.src =
-	// 		"/node_modules/@lottiefiles/lottie-player/dist/lottie-player.js";
-	// 	script.type = "module";
-	// 	document.body.appendChild(script);
-
-	// 	return () => {
-	// 		document.body.removeChild(script);
-	// 	};
-	// }, []);
-
 	return (
 		<motion.header
 			className="hidden md:block fixed top-0 left-0 z-50 w-screen px-8 py-4"
