@@ -6,8 +6,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 function Header() {
+  const pathname = usePathname();
+
+  const linkStyle = (path) =>
+    pathname === path ? "p-2 text-ogPrimary" : "p-2";
+
   const progress = "84%";
   const { scrollY } = useScroll();
 
@@ -90,27 +96,30 @@ function Header() {
             <nav className="w-full max-w-xl">
               <ul className="flex w-full justify-between items-center text-sm font-normal whitespace-nowrap">
                 <li>
-                  <Link className="p-2" href="/membership">
+                  <Link className={linkStyle("/membership")} href="/membership">
                     Membership
                   </Link>
                 </li>
                 <li>
-                  <Link className="p-2" href="/equipment">
+                  <Link className={linkStyle("/equipment")} href="/equipment">
                     My equipment
                   </Link>
                 </li>
                 <li>
-                  <Link className="p-2" href="/blog">
+                  <Link className={linkStyle("/blog")} href="/blog">
                     Campfire Chronicles
                   </Link>
                 </li>
                 <li>
-                  <Link className="p-2" href="/about">
+                  <Link className={linkStyle("/about")} href="/about">
                     About me
                   </Link>
                 </li>
                 <li>
-                  <Link className="p-2" href="/about#contact">
+                  <Link
+                    className={linkStyle("/about#contact")}
+                    href="/about#contact"
+                  >
                     Contact
                   </Link>
                 </li>
