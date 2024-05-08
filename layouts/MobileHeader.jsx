@@ -53,7 +53,7 @@ function MobileHeader() {
 					</ul>
 				</div>
 			</div>
-			<div className="bg-ogPrimary fixed w-screen h-screen z-50 overflow-visible grid grid-rows-2">
+			<div className="bg-ogPrimary fixed w-screen h-screen z-50 overflow-hidden grid grid-rows-2">
 				<nav className="flex flex-col row-start-1">
 					<div className="place-self-end">
 						<dotlottie-player
@@ -66,7 +66,7 @@ function MobileHeader() {
 							onClick={handleClick}
 						/>
 					</div>
-					<ul className="flex flex-col justify-between gap-4 items-center text-3xl font-medium text-background capitalize">
+					<ul className="flex flex-col justify-between gap-4 items-center text-3xl font-bold text-background capitalize">
 						<li>
 							<Link href="/">Home</Link>
 						</li>
