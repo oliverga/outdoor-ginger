@@ -133,6 +133,12 @@ module.exports = {
       "accordion-down": "accordion-down 0.2s ease-out",
       "accordion-up": "accordion-up 0.2s ease-out",
     },
+    fontFamily: {
+      sans: ["var(--font-inter)"],
+      serif: ["var(--font-serif)"],
+      mono: ["var(--font-mono)"],
+      display: ["var(--font-syne)"],
+    },
   },
   plugins: [require("tailwindcss-animate"), require('@tailwindcss/typography')],
 }
