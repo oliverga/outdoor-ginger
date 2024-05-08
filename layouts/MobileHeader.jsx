@@ -125,7 +125,7 @@ function MobileHeader() {
 									onClick={handleClick2}
 								/>
 							</div>
-							<ul className="flex flex-col justify-between gap-4 items-center text-3xl font-display font-semibold text-background capitalize">
+							<ul className="flex flex-col justify-between gap-4 items-center text-3xl font-display font-bold text-background capitalize">
 								<li>
 									<Link href="/" onClick={() => setIsDivVisible(false)}>
 										Home
