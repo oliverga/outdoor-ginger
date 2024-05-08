@@ -4,7 +4,6 @@ import { Toaster } from "@/components/ui/sonner";
 import Footer from "@/layouts/Footer";
 import Header from "@/layouts/Header";
 import MobileHeader from "@/layouts/MobileHeader";
-import Head from "next/head";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -25,9 +24,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en" className={`${inter.variable} ${syne.variable}`}>
-			<Head>
-				<meta name="theme-color" content="#fe4f0b" />
-			</Head>
 			<body className="bg-ogBG-base text-ogLabel-base">
 				<MobileHeader />
 				<Header />
