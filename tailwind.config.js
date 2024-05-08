@@ -135,8 +135,6 @@ module.exports = {
     },
     fontFamily: {
       sans: ["var(--font-inter)"],
-      serif: ["var(--font-serif)"],
-      mono: ["var(--font-mono)"],
       display: ["var(--font-syne)"],
     },
   },
