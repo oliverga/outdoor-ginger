@@ -70,7 +70,7 @@ function Header() {
         bounce: 0.3,
       }}
     >
-      <div className="max-w-7xl overflow-hidden mx-auto rounded-bl-xl rounded-t-xl z-40 ">
+      <div className="max-w-7xl overflow-hidden mx-auto  rounded-t-xl z-40 ">
         <div className=" w-full h-20 bg-ogBG-base rounded-t-xl flex items-center justify-between px-8 border border-x-neutral-200 border-t-neutral-200 border-b-0 border-opacity-50 mx-auto max-w-7xl">
           <Link href="/" className="flex">
             {/* <dotlottie-player
@@ -130,10 +130,10 @@ function Header() {
         </div>
       </div>
       <div className="flex max-w-7xl mx-auto">
-        <div className=" w-full ">
-          <div className="rounded-bl-xl overflow-hidden h-3 w-full mx-auto flex bg-ogBG-sub relative z-30">
+        <div className="w-full">
+          <div className=" h-3 w-full mx-auto flex bg-ogBG-sub relative z-30 rounded-bl-xl overflow-hidden ">
             <motion.div
-              className="w-0 h-3 bg-ogPrimary absolute top-0 left-0"
+              className="w-0 h-3 bg-ogPrimary absolute top-0 left-0 "
               animate={{ width: progress }}
               transition={{ duration: 1.8, type: "spring" }}
             ></motion.div>
