@@ -120,6 +120,8 @@ module.exports = {
       backgroundImage: {
         "footer-image": "url('/footer_img.webp')",
       },
+        "footer-image": "url('/footer_img.webp')",
+      },
     },
     keyframes: {
       "accordion-down": {
