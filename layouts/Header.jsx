@@ -6,7 +6,6 @@ import Link from "next/link";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import "@dotlottie/player-component/dist/dotlottie-player.js";
 
 function Header() {
 	const pathname = usePathname();
@@ -46,6 +45,10 @@ function Header() {
 		return () => {
 			window.removeEventListener("mousemove", handleMouseMove);
 		};
+	}, []);
+
+	useEffect(() => {
+		import("@dotlottie/player-component");
 	}, []);
 
 	return (
@@ -130,7 +133,6 @@ function Header() {
 							className=" origin-right -translate-x-full -translate-y-[1px] z-50 bg-ogPrimary text-ogBG-base h-fit p-2 rounded-b-xl text-sm font-medium opacity-0"
 							animate={{ opacity: 1 }}
 							transition={{ duration: 1.8, type: "spring" }}
-							hover={{ rotate: 20 }}
 						>
 							<p className=" cursor-default">{progress}</p>
 						</motion.div>

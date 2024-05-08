@@ -2,28 +2,29 @@
 
 import { IconShoppingCart } from "@tabler/icons-react";
 import Link from "next/link";
-import "@dotlottie/player-component/dist/dotlottie-player.js";
 import Image from "next/image";
 import { useRef, useEffect } from "react";
 
 function MobileHeader() {
-	const playerRef = useRef();
+    const playerRef = useRef();
 
-	const handleClick = () => {
-		const player = playerRef.current;
-		player.play();
-	};
-
-	useEffect(() => {
-		const player = playerRef.current;
-		player.addEventListener("complete", () => {
-			player.stop();
-		});
-
-		return () => {
-			player.removeEventListener("complete", () => {});
-		};
-	}, []);
+    const handleClick = () => {
+      const player = playerRef.current;
+      player.play();
+    };
+  
+    useEffect(() => {
+      import("@dotlottie/player-component/dist/dotlottie-player.js").then(() => {
+        const player = playerRef.current;
+        player.addEventListener("complete", () => {
+          player.stop();
+        });
+  
+        return () => {
+          player.removeEventListener("complete", () => {});
+        };
+      });
+    }, []);
 	return (
 		<div className="md:hidden fixed top-0 left-0 w-screen px-2 py-4 mx-auto z-40 ">
 			<div className=" w-full h-16 bg-ogBG-base rounded-xl flex items-center justify-between px-2 border border-x-neutral-200 border-t-neutral-200 border-b-0 border-opacity-50">
