@@ -23,7 +23,7 @@ function NewsletterBanner() {
         <Input
           type="email"
           placeholder="Your email address"
-          className="bg-ogPrimary placeholder:text-ogPrimary-lightest text-ogPrimary-lightest border-ogPrimary-lighter focus:border-ogPrimary-lightest"
+          className="bg-ogPrimary placeholder:text-ogPrimary-lightest text-ogPrimary-lightest border-ogPrimary-lighter focus-visible:ring-0 focus-visible:ring-offset-0"
           required
         />
         <Button
