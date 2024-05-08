@@ -82,7 +82,7 @@ function MobileHeader() {
 			<div className="fixed top-0 left-0 w-screen px-2 py-4 mx-auto z-40 ">
 				<div className=" w-full h-16 bg-ogBG-base rounded-xl flex items-center justify-between px-2 border border-x-neutral-200 border-t-neutral-200 border-b-0 border-opacity-50">
 					<Link href="/" className="flex ml-1">
-						<Image src="./icons/logo.svg" width={120} height={120} alt="logo" />
+						<Image src="/icons/logo.svg" width={120} height={120} alt="logo" />
 					</Link>
 					<ul className="flex w-full justify-end items-center text-sm font-normal whitespace-nowrap">
 						<li>
@@ -92,7 +92,7 @@ function MobileHeader() {
 							<dotlottie-player
 								key={isDivVisible}
 								ref={playerRef1}
-								src="./lottie/burgerMenu.lottie"
+								src="/lottie/burgerMenu.lottie"
 								background="transparent"
 								speed="3"
 								style={{ width: "48px" }}
@@ -117,7 +117,7 @@ function MobileHeader() {
 								<dotlottie-player
 									key={isDivVisible}
 									ref={playerRef2}
-									src="./lottie/closeMatches.lottie"
+									src="/lottie/closeMatches.lottie"
 									background="transparent"
 									speed="2"
 									style={{ width: "80px", height: "80px" }}
@@ -169,7 +169,7 @@ function MobileHeader() {
 						</nav>
 						<div className="absolute top-[55vh] flex items-center justify-center">
 							<img
-								src="./icons/flameWhite.svg"
+								src="/icons/flameWhite.svg"
 								alt="flame icon"
 								className="h-[120vw] w-full object-cover"
 							/>
