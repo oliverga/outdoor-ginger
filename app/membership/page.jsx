@@ -1,3 +1,12 @@
+import SupportBanner from "@/components/SupportBanner";
+import Hero from "@/components/generel/Hero";
+
 export default function Page() {
-  return <main></main>;
+  return (
+    <main>
+      <Hero title="Membership" height="650px" imageSrc="/membershiphero.webp" />
+
+      <SupportBanner />
+    </main>
+  );
 }

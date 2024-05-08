@@ -1,14 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: [
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
-    './app/**/*.{js,jsx}',
-    './src/**/*.{js,jsx}',
-    './layouts/**/*.{js,jsx}',
-    './lib/**/*.{js,jsx}',
-  ],
+  content: ["./pages/**/*.{js,jsx}", "./components/**/*.{js,jsx}", "./app/**/*.{js,jsx}", "./src/**/*.{js,jsx}", "./layouts/**/*.{js,jsx}", "./lib/**/*.{js,jsx}"],
   prefix: "",
   theme: {
     container: {
@@ -116,8 +109,8 @@ module.exports = {
         mobile: "var(--og-radius-mobile)",
       },
       backgroundImage: {
-        'footer-image': "url('/footer_img.webp')",
-      }
+        "footer-image": "url('/footer_img.webp')",
+      },
     },
     keyframes: {
       "accordion-down": {
@@ -138,5 +131,5 @@ module.exports = {
       display: ["var(--font-syne)"],
     },
   },
-  plugins: [require("tailwindcss-animate"), require('@tailwindcss/typography')],
-}
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+};
