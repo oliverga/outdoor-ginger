@@ -4,6 +4,7 @@ import { IconShoppingCart } from "@tabler/icons-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 function MobileHeader() {
 	const playerRef1 = useRef();
@@ -102,51 +103,80 @@ function MobileHeader() {
 					</ul>
 				</div>
 			</div>
-			{isDivVisible && (
-				<div className="bg-ogPrimary fixed w-screen h-screen z-50 overflow-y-hidden grid grid-rows-2">
-					<nav className="flex flex-col row-start-1">
-						<div className="place-self-end">
-							<dotlottie-player
-								key={isDivVisible}
-								ref={playerRef2}
-								src="./lottie/closeMatches.lottie"
-								background="transparent"
-								speed="2"
-								style={{ width: "80px", height: "80px" }}
-								playMode="normal"
-								onClick={handleClick2}
+			<AnimatePresence>
+				{isDivVisible && (
+					<motion.div
+						className="bg-ogPrimary fixed w-screen h-screen z-50 overflow-y-hidden grid grid-rows-2"
+						initial={{ y: "-100%" }}
+						animate={{ y: "0%" }}
+						exit={{ y: "-100%" }}
+						transition={{ duration: 0.5, type: "tween" }}
+					>
+						<nav className="flex flex-col row-start-1">
+							<div className="place-self-end">
+								<dotlottie-player
+									key={isDivVisible}
+									ref={playerRef2}
+									src="./lottie/closeMatches.lottie"
+									background="transparent"
+									speed="2"
+									style={{ width: "80px", height: "80px" }}
+									playMode="normal"
+									onClick={handleClick2}
+								/>
+							</div>
+							<ul className="flex flex-col justify-between gap-4 items-center text-3xl font-display font-semibold text-background capitalize">
+								<li>
+									<Link href="/" onClick={() => setIsDivVisible(false)}>
+										Home
+									</Link>
+								</li>
+								<li>
+									<Link
+										href="/membership"
+										onClick={() => setIsDivVisible(false)}
+									>
+										Membership
+									</Link>
+								</li>
+								<li>
+									<Link
+										href="/equipment"
+										onClick={() => setIsDivVisible(false)}
+									>
+										My equipment
+									</Link>
+								</li>
+								<li>
+									<Link href="/blog" onClick={() => setIsDivVisible(false)}>
+										Campfire Chronicles
+									</Link>
+								</li>
+								<li>
+									<Link href="/about" onClick={() => setIsDivVisible(false)}>
+										About me
+									</Link>
+								</li>
+								<li>
+									<Link
+										href="/about#contact"
+										onClick={() => setIsDivVisible(false)}
+									>
+										Contact
+									</Link>
+								</li>
+							</ul>
+						</nav>
+						<div className="absolute top-[55vh] flex items-center justify-center">
+							<img
+								src="./icons/flameWhite.svg"
+								alt="flame icon"
+								className="h-[120vw] w-full object-cover"
 							/>
 						</div>
-						<ul className="flex flex-col justify-between gap-4 items-center text-3xl font-display font-semibold text-background capitalize">
-							<li>
-								<Link href="/">Home</Link>
-							</li>
-							<li>
-								<Link href="/membership">Membership</Link>
-							</li>
-							<li>
-								<Link href="/equipment">My equipment</Link>
-							</li>
-							<li>
-								<Link href="/blog">Campfire Chronicles</Link>
-							</li>
-							<li>
-								<Link href="/about">About me</Link>
-							</li>
-							<li>
-								<Link href="/about#contact">Contact</Link>
-							</li>
-						</ul>
-					</nav>
-					<div className="absolute top-[55vh] flex items-center justify-center">
-						<img
-							src="./icons/flameWhite.svg"
-							alt="flame icon"
-							className="h-[120vw] w-full object-cover"
-						/>
-					</div>
-				</div>
-			)}
+					</motion.div>
+				)}
+			</AnimatePresence>
 		</header>
 	);
 }
