@@ -29,8 +29,8 @@ function MobileHeader() {
 		});
 	}, []);
 	return (
-		<header>
-			<div className="md:hidden fixed top-0 left-0 w-screen px-2 py-4 mx-auto z-40 ">
+		<header className="md:hidden">
+			<div className="fixed top-0 left-0 w-screen px-2 py-4 mx-auto z-40 ">
 				<div className=" w-full h-16 bg-ogBG-base rounded-xl flex items-center justify-between px-2 border border-x-neutral-200 border-t-neutral-200 border-b-0 border-opacity-50">
 					<Link href="/" className="flex ml-1">
 						<Image src="./icons/logo.svg" width={120} height={120} alt="logo" />
@@ -53,7 +53,7 @@ function MobileHeader() {
 					</ul>
 				</div>
 			</div>
-			<div className="bg-ogPrimary fixed w-screen h-screen z-50 overflow-hidden grid grid-rows-2">
+			<div className="bg-ogPrimary fixed w-screen h-screen z-50 overflow-y-hidden grid grid-rows-2">
 				<nav className="flex flex-col row-start-1">
 					<div className="place-self-end">
 						<dotlottie-player
@@ -91,7 +91,7 @@ function MobileHeader() {
 					<img
 						src="./icons/flameWhite.svg"
 						alt="flame icon"
-						className="h-[500px] w-full object-cover"
+						className="h-[120vw] w-full object-cover"
 					/>
 				</div>
 			</div>
