@@ -6,7 +6,7 @@ import Link from "next/link";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import "@dotlottie/player-component";
+import "@dotlottie/player-component/dist/dotlottie-player.js";
 
 function Header() {
 	const pathname = usePathname();

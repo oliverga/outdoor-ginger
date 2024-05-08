@@ -2,7 +2,7 @@
 
 import { IconShoppingCart } from "@tabler/icons-react";
 import Link from "next/link";
-import "@dotlottie/player-component";
+import "@dotlottie/player-component/dist/dotlottie-player.js";
 import Image from "next/image";
 import { useRef, useEffect } from "react";
 
