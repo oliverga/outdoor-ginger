@@ -6,9 +6,9 @@ export default function Page() {
   return (
     <main>
       <Hero title="Membership" height="650px" imageSrc="/membershiphero.webp"></Hero>
-      <div className="pt-64 pb-32 max-w-5xl mx-auto">
-        <div className="flex justify-between">
-          <Accordion type="single" collapsible className="w-full">
+      <div className="pb-32 max-w-5xl mx-auto">
+        <div className="flex flex-row gap-12 justify-between">
+          <Accordion type="single" collapsible className="w-1/2">
             <AccordionItem value="item-1">
               <AccordionTrigger>What is a membership?</AccordionTrigger>
               <AccordionContent className="text-ogLabel-muted text-sm">Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
@@ -22,7 +22,7 @@ export default function Page() {
               <AccordionContent className="text-ogLabel-muted text-sm">Yes. It&apos;s animated by default, but you can disable it if you prefer.</AccordionContent>
             </AccordionItem>
           </Accordion>
-          <img src="/your-image.jpg" alt="Your Description" className="w-1/2" />
+          <img src="/your-image.jpg" alt="Your Description" className=" justify-self-end" />
         </div>
       </div>
       <SupportBanner />
