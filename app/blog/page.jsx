@@ -22,7 +22,11 @@ const authors = await client.fetch(authorQuery);
 export default function Page() {
   return (
     <main className="">
-      <Hero title="Blog" imageSrc="/membershiphero.webp" height="60vh"></Hero>
+      <Hero
+        title="Campfire Chronicles"
+        imageSrc="/bloghero.webp"
+        height="50vh"
+      ></Hero>
       <section className="pb-32 max-w-5xl mx-auto ">
         <div className="flex flex-col md:grid grid-cols-3 gap-6">
           <div className=" col-span-1 flex flex-col gap-6">
