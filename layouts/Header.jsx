@@ -63,19 +63,25 @@ function Header() {
     >
       <div className="max-w-7xl overflow-hidden mx-auto  rounded-t-xl z-40 ">
         <div className=" w-full h-20 bg-ogBG-base rounded-t-xl flex items-center justify-between px-8 border border-x-neutral-200 border-t-neutral-200 border-b-0 border-opacity-50 mx-auto max-w-7xl">
-          <Link href="/" className="flex">
-            <dotlottie-player
-              src="/lottie/iconText.lottie"
-              background="transparent"
-              speed="1"
-              style={{ width: "150px" }}
-              direction="1"
-              playMode="bounce"
-              loop
-              autoplay
-              hover
-            ></dotlottie-player>
-          </Link>
+          <motion.div
+            className="opacity-0"
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2, type: "spring" }}
+          >
+            <Link href="/" className="flex">
+              <dotlottie-player
+                src="/lottie/iconText.lottie"
+                background="transparent"
+                speed="1"
+                style={{ width: "150px" }}
+                direction="1"
+                playMode="bounce"
+                loop
+                autoplay
+                hover
+              ></dotlottie-player>
+            </Link>
+          </motion.div>
 
           <div className="flex gap-8 items-center w-full justify-end">
             <nav className="w-full max-w-xl">
