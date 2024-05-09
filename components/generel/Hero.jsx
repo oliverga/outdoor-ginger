@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-function Hero({ title, imageSrc, height, children }) {
+function Hero({ title, imageSrc, height, children, bgPos }) {
   return (
     <section className="relative mb-12 ">
       <div
@@ -27,6 +27,7 @@ function Hero({ title, imageSrc, height, children }) {
         width={1920}
         height={1000}
         className="object-cover object-center w-full h-full absolute top-0 left-0 z-10"
+        style={{ objectPosition: bgPos }}
       />
     </section>
   );
