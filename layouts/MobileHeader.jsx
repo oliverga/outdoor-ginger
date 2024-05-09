@@ -79,7 +79,7 @@ function MobileHeader() {
 
 	return (
 		<header className="md:hidden">
-			<div className="fixed top-0 left-0 w-screen px-2 py-4 mx-auto z-40 ">
+			<div className="fixed top-0 left-0 w-screen px-2 py-4 mx-auto z-30 ">
 				<div className=" w-full h-16 bg-ogBG-base rounded-xl flex items-center justify-between px-2 border border-x-neutral-200 border-t-neutral-200 border-b-0 border-opacity-50">
 					<Link href="/" className="flex ml-1">
 						<Image src="/icons/logo.svg" width={120} height={120} alt="logo" />
@@ -106,7 +106,7 @@ function MobileHeader() {
 			<AnimatePresence>
 				{isDivVisible && (
 					<motion.div
-						className="bg-ogPrimary fixed w-screen h-screen z-50 overflow-y-hidden grid grid-rows-2"
+						className="bg-ogPrimary fixed w-screen h-screen overflow-y-hidden z-40 grid grid-rows-2"
 						initial={{ y: "-100%" }}
 						animate={{ y: "0%" }}
 						exit={{ y: "-100%" }}
@@ -120,12 +120,12 @@ function MobileHeader() {
 									src="/lottie/closeMatches.lottie"
 									background="transparent"
 									speed="2"
-									style={{ width: "80px", height: "80px" }}
+									style={{ width: "65px", height: "65px" }}
 									playMode="normal"
 									onClick={handleClick2}
 								/>
 							</div>
-							<ul className="flex flex-col justify-between gap-4 items-center text-3xl font-display font-bold text-background capitalize">
+							<ul className="flex flex-col justify-between gap-4 items-center flex-wrap text-3xl font-display font-bold text-background capitalize z-50">
 								<li>
 									<Link href="/" onClick={() => setIsDivVisible(false)}>
 										Home
@@ -167,7 +167,7 @@ function MobileHeader() {
 								</li>
 							</ul>
 						</nav>
-						<div className="absolute top-[55vh] flex items-center justify-center">
+						<div className="absolute top-[60vh] flex items-center justify-center">
 							<img
 								src="/icons/flameWhite.svg"
 								alt="flame icon"
