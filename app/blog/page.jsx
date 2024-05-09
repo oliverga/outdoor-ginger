@@ -50,7 +50,7 @@ function Article({ post }) {
     <div className="@container">
       <article
         key={post.slug.current}
-        className="mx-auto border rounded-xl overflow-hidden w-full"
+        className="mx-auto border rounded-xl overflow-hidden w-full shadow-md"
       >
         <Link href={`/blog/${post.slug.current}`}>
           {post.mainImage && (
