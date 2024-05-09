@@ -15,7 +15,11 @@ module.exports = {
       screens: {
         'md': '912px',
         'vh-sm': {'raw': '(max-height: 595px)'},
-
+      },
+      zIndex: {
+        '60': 60,
+        '70': 70,
+        '80': 80,
       },
       colors: {
         input: "hsl(var(--input))",
@@ -136,5 +140,5 @@ module.exports = {
       display: ["var(--font-syne)"],
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography"), require('@tailwindcss/container-queries'),],
 };

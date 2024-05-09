@@ -61,6 +61,7 @@ export default async function Page({ params }) {
               day: "numeric",
             })}
           </p>
+
           <PortableText value={post[0].content} />
         </article>
       </div>
