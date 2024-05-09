@@ -110,12 +110,3 @@ h1 {
   background-color: var(--og-bg-sub);
   color: var(--og-label-base);
 }
-
-@layer base {
-  * {
-    @apply font-sans;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}

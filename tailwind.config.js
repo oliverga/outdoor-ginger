@@ -12,6 +12,11 @@ module.exports = {
       },
     },
     extend: {
+      screens: {
+        'md': '912px',
+        'vh-sm': {'raw': '(max-height: 595px)'},
+
+      },
       colors: {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -125,6 +130,10 @@ module.exports = {
     animation: {
       "accordion-down": "accordion-down 0.2s ease-out",
       "accordion-up": "accordion-up 0.2s ease-out",
+    },
+    fontFamily: {
+      sans: ["var(--font-inter)"],
+      display: ["var(--font-syne)"],
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],

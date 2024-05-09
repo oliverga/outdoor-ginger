@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { IconHeartHandshake, IconShoppingCart } from "@tabler/icons-react";
-import Image from "next/image";
 import Link from "next/link";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useState, useEffect } from "react";
@@ -49,15 +48,7 @@ function Header() {
 	}, []);
 
 	useEffect(() => {
-		const script = document.createElement("script");
-		script.src =
-			"https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs";
-		script.type = "module";
-		document.body.appendChild(script);
-
-		return () => {
-			document.body.removeChild(script);
-		};
+		import("@dotlottie/player-component");
 	}, []);
 
 	return (
@@ -74,7 +65,7 @@ function Header() {
 				<div className=" w-full h-20 bg-ogBG-base rounded-t-xl flex items-center justify-between px-8 border border-x-neutral-200 border-t-neutral-200 border-b-0 border-opacity-50 mx-auto max-w-7xl">
 					<Link href="/" className="flex">
 						<dotlottie-player
-							src="https://lottie.host/e3d9a5c4-f769-4132-9872-f80331f91a27/Zbx6jzHolm.json"
+							src="/lottie/iconText.lottie"
 							background="transparent"
 							speed="1"
 							style={{ width: "150px" }}
@@ -142,7 +133,6 @@ function Header() {
 							className=" origin-right -translate-x-full -translate-y-[1px] z-50 bg-ogPrimary text-ogBG-base h-fit p-2 rounded-b-xl text-sm font-medium opacity-0"
 							animate={{ opacity: 1 }}
 							transition={{ duration: 1.8, type: "spring" }}
-							hover={{ rotate: 20 }}
 						>
 							<p className=" cursor-default">{progress}</p>
 						</motion.div>
