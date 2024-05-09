@@ -1,3 +1,4 @@
+import Hero from "@/components/generel/Hero";
 import { client, urlFor } from "@/lib/sanity/client";
 import { format } from "date-fns";
 import Image from "next/image";
@@ -20,19 +21,22 @@ const authors = await client.fetch(authorQuery);
 
 export default function Page() {
   return (
-    <main className="pt-64 pb-32 max-w-4xl mx-auto ">
-      <div className="flex flex-col md:grid grid-cols-3 gap-6">
-        <div className=" col-span-1 flex flex-col gap-6">
-          {posts.slice(0, Math.ceil(posts.length / 2)).map((post) => {
-            return <Article post={post} key={post.slug.current} />;
-          })}
+    <main className="">
+      <Hero title="Blog" imageSrc="/membershiphero.webp" height="60vh"></Hero>
+      <section className="pb-32 max-w-5xl mx-auto ">
+        <div className="flex flex-col md:grid grid-cols-3 gap-6">
+          <div className=" col-span-1 flex flex-col gap-6">
+            {posts.slice(0, Math.ceil(posts.length / 2)).map((post) => {
+              return <Article post={post} key={post.slug.current} />;
+            })}
+          </div>
+          <div className="col-span-2 flex flex-col gap-6">
+            {posts.slice(Math.ceil(posts.length / 2)).map((post) => {
+              return <Article post={post} key={post.slug.current} />;
+            })}
+          </div>
         </div>
-        <div className="col-span-2 flex flex-col gap-6">
-          {posts.slice(Math.ceil(posts.length / 2)).map((post) => {
-            return <Article post={post} key={post.slug.current} />;
-          })}
-        </div>
-      </div>
+      </section>
     </main>
   );
 }
