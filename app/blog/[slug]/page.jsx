@@ -30,8 +30,6 @@ export default async function Page({ params }) {
     (author) => author._id === post[0].author._ref,
   );
 
-  console.log("Post:", post);
-
   return (
     <main>
       <div className="h-[50vh] overflow-hidden ">
@@ -44,8 +42,8 @@ export default async function Page({ params }) {
         />
       </div>
       <div className=" pt-[5rem] rounded-t-[3rem] -translate-y-[3rem] bg-ogBG-base">
-        <article className="prose md:prose-xl prose-neutral mx-auto p-8">
-          <h1 className="text-3xl md:text-5xl">{post[0].title}</h1>
+        <article className="prose md:prose-lg prose-neutral mx-auto p-8">
+          <h1 className="text-3xl md:text-5xl font-bold">{post[0].title}</h1>
           <p>
             By{" "}
             <a
