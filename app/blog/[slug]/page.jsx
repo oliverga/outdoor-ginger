@@ -37,7 +37,7 @@ export default async function Page({ params }) {
     <main>
       <Hero imageSrc={imgUrl} height="40vh"></Hero>
 
-      <article className="prose md:prose-lg prose-neutral mx-auto px-8">
+      <article className="prose md:prose-lg prose-neutral mx-auto px-8 pb-24">
         <h1 className="text-3xl md:text-5xl font-bold">{post[0].title}</h1>
         <p>
           By{" "}
