@@ -136,5 +136,5 @@ module.exports = {
       display: ["var(--font-syne)"],
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography"), require('@tailwindcss/container-queries'),],
 };

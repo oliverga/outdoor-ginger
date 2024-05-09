@@ -26,6 +26,7 @@
     "@sanity/client": "^6.15.20",
     "@sanity/image-url": "^1.0.2",
     "@tabler/icons-react": "^3.3.0",
+    "@tailwindcss/container-queries": "^0.1.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
