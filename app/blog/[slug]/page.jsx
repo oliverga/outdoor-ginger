@@ -1,3 +1,4 @@
+import Hero from "@/components/generel/Hero";
 import { client, urlFor } from "@/lib/sanity/client";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
@@ -30,41 +31,34 @@ export default async function Page({ params }) {
     (author) => author._id === post[0].author._ref,
   );
 
+  const imgUrl = urlFor(post[0].mainImage).url();
+
   return (
     <main>
-      <div className="h-[50vh] overflow-hidden ">
-        <Image
-          src={urlFor(post[0].mainImage).url()}
-          alt=""
-          width={1920}
-          height={1000}
-          className="object-cover object-center w-full h-full"
-        />
-      </div>
-      <div className=" pt-[5rem] rounded-t-[3rem] -translate-y-[3rem] bg-ogBG-base">
-        <article className="prose md:prose-lg prose-neutral mx-auto p-8">
-          <h1 className="text-3xl md:text-5xl font-bold">{post[0].title}</h1>
-          <p>
-            By{" "}
-            <a
-              href={`https://instagram.com/${postAuthor.instagram}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline"
-            >
-              {postAuthor.name}
-            </a>{" "}
-            on{" "}
-            {new Date(post[0].publishedAt).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </p>
+      <Hero imageSrc={imgUrl} height="40vh"></Hero>
 
-          <PortableText value={post[0].content} />
-        </article>
-      </div>
+      <article className="prose md:prose-lg prose-neutral mx-auto px-8">
+        <h1 className="text-3xl md:text-5xl font-bold">{post[0].title}</h1>
+        <p>
+          By{" "}
+          <a
+            href={`https://instagram.com/${postAuthor.instagram}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            {postAuthor.name}
+          </a>{" "}
+          on{" "}
+          {new Date(post[0].publishedAt).toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
+        </p>
+
+        <PortableText value={post[0].content} />
+      </article>
     </main>
   );
 }

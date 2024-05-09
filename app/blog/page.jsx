@@ -27,7 +27,7 @@ export default function Page() {
         imageSrc="/bloghero.webp"
         height="50vh"
       ></Hero>
-      <section className="pb-32 max-w-5xl mx-auto ">
+      <section className="pb-32 max-w-5xl mx-auto px-8">
         <div className="flex flex-col md:grid grid-cols-3 gap-6">
           <div className=" col-span-1 flex flex-col gap-6">
             {posts.slice(0, Math.ceil(posts.length / 2)).map((post) => {
