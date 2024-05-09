@@ -4,7 +4,8 @@ function Hero({ title, imageSrc, height, children }) {
   return (
     <section className="relative mb-12">
       <div
-        className={`h-[${height}] overflow-hidden grid grid-cols-2 max-w-5xl mx-auto pb-24`}
+        style={{ height: height }}
+        className="overflow-hidden grid grid-cols-2 max-w-5xl mx-auto pb-24"
       >
         <div className="place-self-end z-20 w-full">
           <h1 className="text-4xl md:text-7xl font-bold text-ogBG-base uppercase">
