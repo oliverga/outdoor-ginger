@@ -32,15 +32,15 @@ export default function Page() {
         <div className="flex justify-between">
           <Accordion type="single" collapsible className="w-1/2">
             <AccordionItem value="item-1" defaultOpen={true}>
-              <AccordionTrigger>What is a membership?</AccordionTrigger>
+              <AccordionTrigger className="text-lg">What is a membership?</AccordionTrigger>
               <AccordionContent className="text-ogLabel-muted text-sm">Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-              <AccordionTrigger>What's in it for me?</AccordionTrigger>
+              <AccordionTrigger className="text-lg">What's in it for me?</AccordionTrigger>
               <AccordionContent className="text-ogLabel-muted text-sm">Yes. It comes with default styles that matches the other components&apos; aesthetic.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
-              <AccordionTrigger>What does it cost?</AccordionTrigger>
+              <AccordionTrigger className="text-lg">What does it cost?</AccordionTrigger>
               <AccordionContent className="text-ogLabel-muted text-sm">Yes. It&apos;s animated by default, but you can disable it if you prefer.</AccordionContent>
             </AccordionItem>
           </Accordion>
