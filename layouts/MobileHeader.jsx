@@ -125,7 +125,7 @@ function MobileHeader() {
 									onClick={handleClick2}
 								/>
 							</div>
-							<ul className="flex flex-col justify-between gap-4 items-center flex-wrap text-3xl font-display font-bold text-background capitalize z-50">
+							<ul className="flex flex-col vh-sm:mx-8 vh-sm:flex-row justify-between gap-4 items-center flex-wrap text-3xl font-display font-bold text-background capitalize z-50">
 								<li>
 									<Link href="/" onClick={() => setIsDivVisible(false)}>
 										Home
@@ -167,7 +167,7 @@ function MobileHeader() {
 								</li>
 							</ul>
 						</nav>
-						<div className="absolute top-[60vh] flex items-center justify-center">
+						<div className="absolute top-[60vh] flex items-center justify-center vh-sm:hidden">
 							<img
 								src="/icons/flameWhite.svg"
 								alt="flame icon"

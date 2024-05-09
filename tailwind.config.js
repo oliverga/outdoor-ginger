@@ -12,6 +12,11 @@ module.exports = {
       },
     },
     extend: {
+      screens: {
+        'md': '912px',
+        'vh-sm': {'raw': '(max-height: 595px)'},
+
+      },
       colors: {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
