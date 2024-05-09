@@ -16,6 +16,11 @@ module.exports = {
         'md': '912px',
         'vh-sm': {'raw': '(max-height: 595px)'},
       },
+      zIndex: {
+        '60': 60,
+        '70': 70,
+        '80': 80,
+      },
       colors: {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
