@@ -17,7 +17,7 @@ function Hero({ title, imageSrc, height, children, bgPos }) {
       </div>
       <div className=" rounded-t-[3rem] bg-ogBG-base col-span-2 h-12 z-50 absolute bottom-0 left-0 w-full"></div>
       <div
-        className="object-cover object-center w-full h-full absolute top-0 left-0 z-20 bg-gradient-to-tr from-ogLabel-base to-transparent opacity-50
+        className="object-cover object-center w-full h-full absolute top-0 left-0 z-20 bg-gradient-to-tr from-ogLabel-base to-transparent opacity-20
       "
       ></div>
 
