@@ -9,10 +9,10 @@ export default function Page() {
   return (
     <main className="relative">
       <Hero title="Membership" imageSrc="/membershiphero.webp" height="60vh">
-        <div id="right" className="mt-10 w-80">
-          <Card>
+        <div id="right" className="mt-72 w-80 absolute left-1/2 transform -translate-x-1/2">
+          <Card className="rounded-2xl">
             <CardHeader>
-              <CardTitle className="font-normal">Become a Member</CardTitle>
+              <CardTitle className="font-normal mb-2">Become a Member</CardTitle>
               <CardDescription className="font-light">
                 Join our community of explorers <br></br> and get exclusive benefits.
               </CardDescription>
@@ -21,16 +21,16 @@ export default function Page() {
               <p className="text-3xl font-semibold">
                 50 kr <span className="text-sm font-light text-ogLabel-muted ">/ Month </span>
               </p>
-              <Button size="sm" className=" bg-ogPrimary hover:bg-ogPrimary-dark gap-1">
+              <Button size="default" className="bg-ogPrimary hover:bg-ogPrimary-dark text-base">
                 Subscribe
               </Button>
             </CardFooter>
           </Card>
         </div>
       </Hero>
-      <div className="py-32 max-w-5xl mx-auto">
-        <div className="flex justify-between">
-          <Accordion type="single" collapsible className="w-1/2">
+      <div className="px-6 md:px-0 py-32 max-w-5xl mx-auto">
+        <div className="flex flex-col justify-center justify-between">
+          <Accordion type="single" collapsible className="md:w-1/2 mb-10">
             <AccordionItem value="item-1" defaultOpen={true}>
               <AccordionTrigger className="text-lg">What is a membership?</AccordionTrigger>
               <AccordionContent className="text-ogLabel-muted text-sm">Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
@@ -44,7 +44,7 @@ export default function Page() {
               <AccordionContent className="text-ogLabel-muted text-sm">Yes. It&apos;s animated by default, but you can disable it if you prefer.</AccordionContent>
             </AccordionItem>
           </Accordion>
-          <div className="w-1/2 flex justify-end">
+          <div className="md:w-1/2 md:flex md:justify-end">
             <Image src="/membershipvideo.png" width={400} height={200} alt="Your Description" className="" />
           </div>
         </div>
