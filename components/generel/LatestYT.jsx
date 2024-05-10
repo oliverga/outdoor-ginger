@@ -19,7 +19,12 @@ export default function LatestYT() {
 			fetch(
 				`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`
 			)
-				.then((response) => response.json())
+				.then((response) => {
+					if (!response.ok) {
+						throw new Error(`HTTP error! status: ${response.status}`);
+					}
+					return response.json();
+				})
 				.then((data) => {
 					const videoData = data.items
 						.filter((item) => item.snippet.description !== "")
@@ -40,7 +45,7 @@ export default function LatestYT() {
 					localStorage.setItem("fetchTime", Date.now());
 				})
 				.catch((error) => {
-					console.error("Error fetching videos", error);
+					console.error("Error fetching videos");
 				});
 		};
 
