@@ -13,13 +13,13 @@ module.exports = {
     },
     extend: {
       screens: {
-        'md': '912px',
-        'vh-sm': {'raw': '(max-height: 595px)'},
+        md: "912px",
+        "vh-sm": { raw: "(max-height: 595px)" },
       },
       zIndex: {
-        '60': 60,
-        '70': 70,
-        '80': 80,
+        60: 60,
+        70: 70,
+        80: 80,
       },
       colors: {
         input: "hsl(var(--input))",
@@ -120,8 +120,6 @@ module.exports = {
       backgroundImage: {
         "footer-image": "url('/footer_img.webp')",
       },
-        "footer-image": "url('/footer_img.webp')",
-      },
     },
     keyframes: {
       "accordion-down": {
@@ -142,5 +140,5 @@ module.exports = {
       display: ["var(--font-syne)"],
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography"), require('@tailwindcss/container-queries'),],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography"), require("@tailwindcss/container-queries")],
 };
