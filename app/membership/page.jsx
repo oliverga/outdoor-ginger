@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <main className="relative">
       <Hero title="Membership" imageSrc="/membershiphero.webp" height="60vh">
-        <div id="right" className="mt-72 w-80 absolute left-1/2 transform -translate-x-1/2">
+        <div id="right" className="md:mt-0 md:top-auto mt-72 w-80 absolute left-1/2 md:left-auto transform -translate-x-1/2">
           <Card className="rounded-2xl">
             <CardHeader>
               <CardTitle className="font-normal mb-2">Become a Member</CardTitle>
