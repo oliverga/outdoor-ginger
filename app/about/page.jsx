@@ -10,7 +10,7 @@ export default function Page() {
       </Hero>
       <section className="px-6 md:px-0 py-32 max-w-5xl mx-auto">
         <div>
-          <h2 className="font-display text-3xl uppercase font-bold">august</h2>
+          <h2 className="font-display text-3xl uppercase font-semibold">august</h2>
         </div>
       </section>
     </main>
