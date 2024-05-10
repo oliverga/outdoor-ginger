@@ -78,8 +78,8 @@ function MobileHeader() {
 	}, [isDivVisible]);
 
 	return (
-		<header className="fixed md:hidden z-50">
-			<div className="top-0 left-0 w-screen px-2 py-4 mx-auto">
+		<header className="fixed top-0 left-0  md:hidden z-50">
+			<div className="w-screen px-2 py-4 mx-auto">
 				<div className="w-full h-16 bg-ogBG-base rounded-xl flex items-center justify-between px-2 border border-x-neutral-200 border-t-neutral-200 border-b-0 border-opacity-50">
 					<Link href="/" className="flex ml-1">
 						<Image src="/icons/logo.svg" width={120} height={120} alt="logo" />
@@ -108,8 +108,8 @@ function MobileHeader() {
 					<motion.div
 						className="bg-ogPrimary fixed w-screen h-screen overflow-y-hidden z-60 grid grid-rows-2"
 						initial={{ y: "-100%" }}
-						animate={{ y: "0%" }}
-						exit={{ y: "-100%" }}
+						animate={{ y: "-11.4%" }}
+						exit={{ y: "-120%" }}
 						transition={{ duration: 0.5, type: "spring" }}
 					>
 						<nav className="flex flex-col row-start-1">
