@@ -12,7 +12,6 @@ export default function Home() {
 				height="80vh"
 				bgPos="bottom"
 			></Hero>
-			<section className="h-screen"></section>
 			<LatestYT />
 			<SupportBanner />
 			<NewsletterBanner />

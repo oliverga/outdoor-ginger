@@ -21,6 +21,9 @@ module.exports = {
         70: 70,
         80: 80,
       },
+      gridTemplateRows: {
+       'latestYT': '1fr 3fr',
+      },
       colors: {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
