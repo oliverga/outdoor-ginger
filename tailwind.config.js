@@ -24,6 +24,10 @@ module.exports = {
       gridTemplateRows: {
        'latestYT': '1fr 3fr',
       },
+      spacing: {  
+        '108': '26rem',
+        '144': '36rem',
+      },
       colors: {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
