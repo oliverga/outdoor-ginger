@@ -23,14 +23,14 @@ module.exports = {
         80: 80,
       },
       gridTemplateRows: {
-       'latestYT': '1fr 3fr',
+        latestYT: "1fr 3fr",
       },
       gridTemplateColumns: {
-        'cartLayout': '1fr 3fr 1fr',
+        cartLayout: "1fr 3fr 1fr",
       },
-      spacing: {  
-        '108': '26rem',
-        '144': '36rem',
+      spacing: {
+        108: "26rem",
+        144: "36rem",
       },
       colors: {
         input: "hsl(var(--input))",
@@ -151,5 +151,5 @@ module.exports = {
       display: ["var(--font-syne)"],
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography"), require("@tailwindcss/container-queries"), require('tailwind-scrollbar'),],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography"), require("@tailwindcss/container-queries"), require("tailwind-scrollbar")],
 };
