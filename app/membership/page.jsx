@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <main className="relative">
       <Hero title="Membership" imageSrc="/membershiphero.webp" height="60vh">
-        <div id="right" className="md:mt-0 md:top-auto mt-72 w-80 absolute left-1/2 md:left-auto transform -translate-x-1/2">
+        <div id="right" className="mt-72 md:mt-0 w-dvw md:left-auto px-6 md:top-1/3 md:px-0 md:w-80 absolute left-1/2 transform -translate-x-1/2">
           <Card className="rounded-2xl">
             <CardHeader>
               <CardTitle className="font-normal mb-2">Become a Member</CardTitle>
@@ -28,8 +28,8 @@ export default function Page() {
           </Card>
         </div>
       </Hero>
-      <div className="px-6 md:px-0 py-32 max-w-5xl mx-auto">
-        <div className="flex flex-col justify-center justify-between">
+      <div className="px-6 md:px-0 mt-52 max-w-5xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-center justify-between">
           <Accordion type="single" collapsible className="md:w-1/2 mb-10">
             <AccordionItem value="item-1" defaultOpen={true}>
               <AccordionTrigger className="text-lg">What is a membership?</AccordionTrigger>
