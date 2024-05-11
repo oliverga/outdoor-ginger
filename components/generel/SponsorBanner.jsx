@@ -2,9 +2,10 @@
 
 import { client, urlFor } from "@/lib/sanity/client";
 import Image from "next/image";
-import { delay, motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, useMotionValue } from "framer-motion";
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import { set } from "date-fns";
 
 const sponsorQuery =
 	'*[_type == "sponsor"]{Sponsor_Name, Sponsor_Website, Sponsor_Logo}';
@@ -22,18 +23,27 @@ export default function SponsorBanner() {
 	}, []);
 
 	const controls = useAnimation();
+	const x = useMotionValue(0);
+	const [isDragging, setIsDragging] = useState(false);
 
 	const startAnimation = useCallback(() => {
-		controls.start({
-			x: [0, 110 * sponsors.length],
-			transition: {
-				repeat: Infinity,
-				repeatType: "reverse",
-				duration: 45,
-				ease: "linear",
-			},
-		});
-	}, [controls, sponsors]);
+		if (!isDragging) {
+			const totalDistance = 100 * sponsors.length; // Increase this value to make the banner move longer
+			const remainingDistance = Math.abs(x.get() - totalDistance);
+			const speed = 30; // Adjust this value to change the speed
+			const duration = remainingDistance / speed;
+
+			controls.start({
+				x: [x.get(), totalDistance],
+				transition: {
+					repeat: Infinity,
+					repeatType: "reverse",
+					duration: duration,
+					ease: "linear",
+				},
+			});
+		}
+	}, [controls, sponsors, isDragging, x]);
 
 	useEffect(() => {
 		startAnimation();
@@ -44,10 +54,16 @@ export default function SponsorBanner() {
 			<motion.div
 				className="flex gap-8 justify-center items-center"
 				animate={controls}
+				style={{ x }} // Apply the motion value to the x property
 				drag="x"
-				dragConstraints={{ left: 1000, right: 1000 }}
-				onDragEnd={startAnimation}
+				onDragStart={() => setIsDragging(true)}
+				onDragEnd={() => {
+					setTimeout(() => {
+						setIsDragging(false);
+					}, 1000);
+				}}
 				dragElastic={1}
+				dragTransition={{ bounceStiffness: 10000, bounceDamping: 200 }}
 			>
 				{Array(4)
 					.fill(sponsors)
