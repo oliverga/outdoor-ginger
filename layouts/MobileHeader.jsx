@@ -87,24 +87,24 @@ function MobileHeader() {
 
 	const cartRef = useRef(null);
 
-	useEffect(() => {
-		if (!cartOpen) return; // Only run if the cart is open
+	// useEffect(() => {
+	// 	if (!cartOpen) return; // Only run if the cart is open
 
-		const handleScroll = () => {
-			if (cartRef.current) {
-				const { top, bottom } = cartRef.current.getBoundingClientRect();
-				if (window.scrollY < top || window.scrollY > bottom) {
-					setCartOpen(false);
-				}
-			}
-		};
+	// 	const handleScroll = () => {
+	// 		if (cartRef.current) {
+	// 			const { top, bottom } = cartRef.current.getBoundingClientRect();
+	// 			if (window.scrollY < top || window.scrollY > bottom) {
+	// 				setCartOpen(false);
+	// 			}
+	// 		}
+	// 	};
 
-		window.addEventListener("scroll", handleScroll);
+	// 	window.addEventListener("scroll", handleScroll);
 
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, [cartOpen]);
+	// 	return () => {
+	// 		window.removeEventListener("scroll", handleScroll);
+	// 	};
+	// }, [cartOpen]);
 
 	return (
 		<header className="md:hidden z-50">
