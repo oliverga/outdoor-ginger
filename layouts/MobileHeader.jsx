@@ -88,6 +88,8 @@ function MobileHeader() {
 	const cartRef = useRef(null);
 
 	useEffect(() => {
+		if (!cartOpen) return; // Only run if the cart is open
+
 		const handleScroll = () => {
 			if (cartRef.current) {
 				const { top, bottom } = cartRef.current.getBoundingClientRect();
@@ -102,7 +104,7 @@ function MobileHeader() {
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
 		};
-	}, []);
+	}, [cartOpen]);
 
 	return (
 		<header className="md:hidden z-50">
