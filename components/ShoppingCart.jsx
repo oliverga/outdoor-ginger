@@ -55,6 +55,7 @@ export default function ShoppingCart({ cartOpen, cartRef }) {
 								<p>
 									Accept{" "}
 									<Link
+										target="_blank"
 										href="https://www.google.com/search?client=firefox-b-d&q=terms+and+conditions"
 										className="underline decoration-neutral-400"
 									>
@@ -62,6 +63,7 @@ export default function ShoppingCart({ cartOpen, cartRef }) {
 									</Link>
 									{" & "}
 									<Link
+										target="_blank"
 										href="https://www.google.com/search?client=firefox-b-d&q=terms+and+conditions"
 										className="underline decoration-neutral-400"
 									>
