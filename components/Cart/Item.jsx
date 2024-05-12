@@ -3,13 +3,13 @@
 import { IconPlus, IconMinus, IconTrash } from "@tabler/icons-react";
 import Image from "next/image";
 
-export default function Item() {
+export default function Item({ imgSrc, name, price }) {
 	return (
 		<div className="mb-8">
 			<div className="grid grid-cols-cartLayout grid-rows-2 gap-x-4">
 				<div className="aspect-square ">
 					<Image
-						src="/knife.png"
+						src={imgSrc}
 						width={300}
 						height={300}
 						alt="Knife"
@@ -17,8 +17,8 @@ export default function Item() {
 					/>
 				</div>
 				<div className="flex flex-col justify-between">
-					<p className="capitalize">Knife - limited edition</p>
-					<p>99.95 kr</p>
+					{name.length > 21 ? name.substring(0, 21) + "..." : name}
+					<p className="text-ogLabel-muted font-light">{price}</p>
 				</div>
 				<div className="row-start-2 col-start-2 flex gap-4 items-center">
 					<button className="border-2 p-1 h-min rounded-md">

@@ -15,10 +15,33 @@ export default function ShoppingCart({ cartOpen, cartRef }) {
 				animate={{ y: cartOpen ? "0vh" : "-100vh" }}
 				transition={{ duration: 0.5 }}
 			>
-				<div className="bg-ogBG-base rounded-b-2xl overflow-hidden max-h-144 pt-16 flex flex-col justify-between">
+				<div className="bg-ogBG-base rounded-b-2xl overflow-hidden max-h-[550px] pt-16 flex flex-col justify-between">
 					<div className="px-8 overflow-x-scroll">
-						<Item />
-						<Item />
+						<Item
+							imgSrc="/knife.png"
+							name="Knife - limited edition"
+							price="99.95 kr"
+						/>
+						<Item
+							imgSrc="/knife.png"
+							name="hold up - limited edition"
+							price="9900000.95 kr"
+						/>
+						<Item
+							imgSrc="/knife.png"
+							name="hold up - limited edition"
+							price="9900000.95 kr"
+						/>
+						<Item
+							imgSrc="/knife.png"
+							name="hold up - limited edition"
+							price="9900000.95 kr"
+						/>
+						<Item
+							imgSrc="/knife.png"
+							name="hold up - limited edition"
+							price="9900000.95 kr"
+						/>
 					</div>
 					<div className="bg-neutral-200">
 						<div className="px-12 pt-4 pb-2 flex flex-col gap-2">
