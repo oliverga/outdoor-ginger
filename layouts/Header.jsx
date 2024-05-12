@@ -154,6 +154,7 @@ function Header() {
 							target="_blank"
 						>
 							<Button
+								variant="primary"
 								size="sm"
 								className="bg-ogPrimary hover:bg-ogPrimary-dark gap-1"
 							>
