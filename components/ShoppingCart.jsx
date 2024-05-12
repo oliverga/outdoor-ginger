@@ -4,6 +4,7 @@ import Item from "./Cart/Item";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { Checkbox } from "./ui/checkbox";
+import { Button } from "./ui/button";
 
 export default function ShoppingCart({ cartOpen }) {
 	return (
@@ -19,25 +20,34 @@ export default function ShoppingCart({ cartOpen }) {
 						<Item />
 					</div>
 					<div className="bg-neutral-200">
-						<div className="px-8 pt-4 pb-6 flex flex-col gap-1">
-							<div className=" flex justify-between">
+						<div className="px-12 pt-4 pb-6 flex flex-col gap-2">
+							<div className=" flex justify-between font-light">
 								<p>Subtotal</p>
 								<p>99.95 kr</p>
 							</div>
 							<hr className="bg-neutral-300 h-[3px]" />
-							<div className="flex items-center gap-2">
+							<div className="flex items-center gap-2 font-thin text-xs">
 								<Checkbox />
 								<p>
 									Accept{" "}
-									<Link href="https://www.google.com/search?client=firefox-b-d&q=terms+and+conditions">
+									<Link
+										href="https://www.google.com/search?client=firefox-b-d&q=terms+and+conditions"
+										className="underline decoration-neutral-400"
+									>
 										Terms
 									</Link>
 									{" & "}
-									<Link href="https://www.google.com/search?client=firefox-b-d&q=terms+and+conditions">
+									<Link
+										href="https://www.google.com/search?client=firefox-b-d&q=terms+and+conditions"
+										className="underline decoration-neutral-400"
+									>
 										Conditions
 									</Link>
 								</p>
 							</div>
+							<Button variant="primary" size="sm">
+								Checkout
+							</Button>
 						</div>
 					</div>
 				</div>
