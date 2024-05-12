@@ -12,7 +12,8 @@ export default function ShoppingCart({ cartOpen, cartRef }) {
 			<motion.div
 				ref={cartRef}
 				initial={{ y: "-100vh" }}
-				animate={{ y: cartOpen ? "0vh" : "-100vh" }}
+				animate={{ y: "0vh" }}
+				exit={{ y: "-100vh" }} // Define the exit animation
 				transition={{ duration: 0.5 }}
 			>
 				<div className="bg-ogBG-base rounded-b-2xl overflow-hidden max-h-[550px] pt-16 flex flex-col justify-between">
