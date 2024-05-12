@@ -70,7 +70,6 @@ export default function SponsorBanner({ type = "rolling" }) {
 						.fill(sponsors)
 						.flat()
 						.map((sponsor, index) => {
-							console.log(sponsor);
 							return (
 								<Link
 									href={sponsor.Sponsor_Website}
