@@ -51,7 +51,7 @@ export default function ShoppingCart({ cartOpen, cartRef }) {
 								<p>99.95 kr</p>
 							</div>
 							<hr className="bg-neutral-300 h-[3px]" />
-							<div className="flex items-center gap-2 font-thin text-xs">
+							<div className="flex items-center gap-2 font-thin text-xs mb-2">
 								<Checkbox />
 								<p>
 									Accept{" "}
