@@ -6,14 +6,14 @@ import Link from "next/link";
 import { Checkbox } from "./ui/checkbox";
 import { Button } from "./ui/button";
 
-export default function ShoppingCart({ cartOpen }) {
+export default function ShoppingCart({ cartOpen, cartRef }) {
 	return (
 		<div className="overflow-hidden fixed top-0 left-0 z-40 w-full px-2 mt-12 drop-shadow-md">
 			<motion.div
+				ref={cartRef}
 				initial={{ y: "-100vh" }}
 				animate={{ y: cartOpen ? "0vh" : "-100vh" }}
 				transition={{ duration: 0.5 }}
-				className=""
 			>
 				<div className="bg-ogBG-base rounded-b-2xl overflow-hidden h-96 pt-16 flex flex-col justify-between">
 					<div className="px-8">

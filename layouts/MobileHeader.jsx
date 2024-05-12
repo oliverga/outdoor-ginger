@@ -85,6 +85,25 @@ function MobileHeader() {
 		setCartOpen(!cartOpen);
 	};
 
+	const cartRef = useRef(null);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			if (cartRef.current) {
+				const { top, bottom } = cartRef.current.getBoundingClientRect();
+				if (window.scrollY < top || window.scrollY > bottom) {
+					setCartOpen(false);
+				}
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
+
 	return (
 		<header className="md:hidden z-50">
 			<div className="fixed top-0 left-0 w-screen px-2 py-4 mx-auto z-50">
@@ -193,7 +212,7 @@ function MobileHeader() {
 					</motion.div>
 				)}
 			</AnimatePresence>
-			<ShoppingCart cartOpen={cartOpen} />
+			<ShoppingCart cartOpen={cartOpen} cartRef={cartRef} />
 		</header>
 	);
 }
