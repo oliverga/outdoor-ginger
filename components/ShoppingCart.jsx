@@ -8,15 +8,16 @@ import { Button } from "./ui/button";
 
 export default function ShoppingCart({ cartOpen, cartRef }) {
 	return (
-		<div className="overflow-hidden fixed top-0 left-0 z-40 w-full px-2 mt-12 drop-shadow-md">
+		<div className="overflow-hidden fixed top-0 left-0 z-40 w-full px-2 md:px-0 mt-12 drop-shadow-md max-w-[1280px] mx-auto md:left-1/2 md:transform md:-translate-x-1/2">
 			<motion.div
 				ref={cartRef}
 				initial={{ y: "-100vh" }}
 				animate={{ y: "0vh" }}
 				exit={{ y: "-120vh" }}
 				transition={{ duration: 0.5 }}
+				className="md:mr-8 cart:mr-0"
 			>
-				<div className="bg-ogBG-base rounded-b-2xl overflow-hidden max-h-[550px] pt-16 flex flex-col justify-between">
+				<div className="bg-ogBG-base rounded-b-2xl overflow-hidden max-h-[550px] md:max-h-[650px] max-w-96 pt-16 md:pt-32 ml-auto flex flex-col justify-between">
 					<div className="px-8 overflow-x-scroll">
 						<Item
 							imgSrc="/knife.png"

@@ -14,6 +14,7 @@ module.exports = {
     extend: {
       screens: {
         md: "912px",
+        cart: "1280px",
         "vh-sm": { raw: "(max-height: 595px)" },
       },
       zIndex: {
