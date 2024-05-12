@@ -15,6 +15,7 @@ export default function Home() {
 			></Hero>
 			<LatestYT />
 			<SponsorBanner />
+			<SponsorBanner type="static" />
 			<SupportBanner />
 			<NewsletterBanner />
 		</main>
