@@ -151,5 +151,5 @@ module.exports = {
       display: ["var(--font-syne)"],
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography"), require("@tailwindcss/container-queries")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography"), require("@tailwindcss/container-queries"), require('tailwind-scrollbar'),],
 };

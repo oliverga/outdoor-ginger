@@ -18,7 +18,7 @@ export default function ShoppingCart({ cartOpen, cartRef }) {
 				className="md:mr-8 cart:mr-0"
 			>
 				<div className="bg-ogBG-base rounded-b-2xl overflow-hidden max-h-[550px] md:max-h-[650px] max-w-96 pt-16 md:pt-32 ml-auto flex flex-col justify-between">
-					<div className="px-8 overflow-x-scroll">
+					<div className="px-8 overflow-x-scroll scrollbar scrollbar-thumb-ogPrimary scrollbar-track-ogBG-base">
 						<Item
 							imgSrc="/knife.png"
 							name="Knife - limited edition"

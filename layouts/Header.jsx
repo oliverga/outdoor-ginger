@@ -161,7 +161,7 @@ function Header() {
 						</div>
 					</div>
 				</div>
-				<div className="flex max-w-7xl mx-auto">
+				<div className="flex max-w-7xl mx-auto drop-shadow-2xl">
 					<div className="w-full">
 						<div className=" h-3 w-full mx-auto flex bg-ogBG-sub relative z-30 rounded-bl-xl overflow-hidden ">
 							<motion.div
