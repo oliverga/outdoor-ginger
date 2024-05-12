@@ -24,6 +24,9 @@ module.exports = {
       gridTemplateRows: {
        'latestYT': '1fr 3fr',
       },
+      gridTemplateColumns: {
+        'cartLayout': '1fr 3fr 1fr',
+      },
       spacing: {  
         '108': '26rem',
         '144': '36rem',

@@ -15,8 +15,9 @@ export default function ShoppingCart({ cartOpen, cartRef }) {
 				animate={{ y: cartOpen ? "0vh" : "-100vh" }}
 				transition={{ duration: 0.5 }}
 			>
-				<div className="bg-ogBG-base rounded-b-2xl overflow-hidden h-96 pt-16 flex flex-col justify-between">
-					<div className="px-8">
+				<div className="bg-ogBG-base rounded-b-2xl overflow-hidden max-h-144 pt-16 flex flex-col justify-between">
+					<div className="px-8 overflow-x-scroll">
+						<Item />
 						<Item />
 					</div>
 					<div className="bg-neutral-200">
