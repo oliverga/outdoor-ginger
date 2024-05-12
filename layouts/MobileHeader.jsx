@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import ShoppingCart from "@/components/ShoppingCart";
 
 function MobileHeader() {
 	const playerRef1 = useRef();
@@ -13,6 +14,7 @@ function MobileHeader() {
 
 	const handleClick1 = () => {
 		const player = playerRef1.current;
+		setCartOpen(false);
 		if (player) {
 			player.play();
 			const onComplete = () => {
@@ -77,16 +79,30 @@ function MobileHeader() {
 		}
 	}, [isDivVisible]);
 
+	const [cartOpen, setCartOpen] = useState(false);
+
+	const toggleCart = () => {
+		setCartOpen(!cartOpen);
+	};
+
 	return (
 		<header className="md:hidden z-50">
 			<div className="fixed top-0 left-0 w-screen px-2 py-4 mx-auto z-50">
 				<div className="w-full h-16 bg-ogBG-base rounded-xl flex items-center justify-between px-2 border border-x-neutral-200 border-t-neutral-200 border-b-0 border-opacity-50 shadow-lg">
-					<Link href="/" className="flex ml-1">
+					<Link
+						href="/"
+						className="flex ml-1"
+						onClick={() => setCartOpen(false)}
+					>
 						<Image src="/icons/logo.svg" width={120} height={120} alt="logo" />
 					</Link>
 					<ul className="flex w-full justify-end items-center text-sm font-normal whitespace-nowrap">
 						<li>
-							<IconShoppingCart size={35} className=" stroke-[1.5px]" />
+							<IconShoppingCart
+								size={35}
+								className=" stroke-[1.5px]"
+								onClick={toggleCart}
+							/>
 						</li>
 						<li>
 							<dotlottie-player
@@ -177,6 +193,7 @@ function MobileHeader() {
 					</motion.div>
 				)}
 			</AnimatePresence>
+			<ShoppingCart cartOpen={cartOpen} />
 		</header>
 	);
 }
