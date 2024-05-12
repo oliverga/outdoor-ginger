@@ -113,6 +113,7 @@ function Header() {
 									loop
 									autoplay
 									hover
+									onClick={() => setCartOpen(false)}
 								></dotlottie-player>
 							</Link>
 						</motion.div>
@@ -124,22 +125,35 @@ function Header() {
 										<Link
 											className={linkStyle("/membership")}
 											href="/membership"
+											onClick={() => setCartOpen(false)}
 										>
 											Membership
 										</Link>
 									</li>
 									<li>
-										<Link className={linkStyle("/equipment")} href="/equipment">
+										<Link
+											className={linkStyle("/equipment")}
+											href="/equipment"
+											onClick={() => setCartOpen(false)}
+										>
 											My equipment
 										</Link>
 									</li>
 									<li>
-										<Link className={linkStyle("/blog")} href="/blog">
+										<Link
+											className={linkStyle("/blog")}
+											href="/blog"
+											onClick={() => setCartOpen(false)}
+										>
 											Campfire Chronicles
 										</Link>
 									</li>
 									<li>
-										<Link className={linkStyle("/about")} href="/about">
+										<Link
+											className={linkStyle("/about")}
+											href="/about"
+											onClick={() => setCartOpen(false)}
+										>
 											About me
 										</Link>
 									</li>
@@ -147,6 +161,7 @@ function Header() {
 										<Link
 											className={linkStyle("/about#contact")}
 											href="/about#contact"
+											onClick={() => setCartOpen(false)}
 										>
 											Contact
 										</Link>
