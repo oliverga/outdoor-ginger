@@ -9,58 +9,56 @@ export default function LatestYT() {
 
 	useEffect(() => {
 		const apiKey = "AIzaSyBDx6YWmbbZ-on7sEt3sRtiER6XtZEhATk";
-		const channelId = "UCo7ll072evLTI3hawAW3pMQ"; // Replace with the Channel ID of the desired YouTube channel
-		const maxResults = 20; // Number of latest videos to retrieve
-		console.log(
-			`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`
-		);
+		const channelId = "UCo7ll072evLTI3hawAW3pMQ";
+		const maxResults = 20;
 
 		const fetchVideos = () => {
-			fetch(
-				`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`
-			)
-				.then((response) => {
-					if (!response.ok) {
-						throw new Error(`HTTP error! status: ${response.status}`);
-					}
-					return response.json();
-				})
-				.then((data) => {
-					const videoData = data.items
-						.filter((item) => item.snippet.description !== "")
-						.slice(0, 3) // Limit the results to 3 videos
-						.map((item) => {
-							const videoId = item.id.videoId;
-							const videoTitle = item.snippet.title;
+			const storedVideos = localStorage.getItem("videos");
+			const fetchTime = localStorage.getItem("fetchTime");
+			const currentTime = Date.now();
+			const twentyFourHours = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+			if (
+				!storedVideos ||
+				!fetchTime ||
+				currentTime - fetchTime > twentyFourHours
+			) {
+				fetch(
+					`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`
+				)
+					.then((response) => {
+						if (!response.ok) {
+							throw new Error(`HTTP error! status: ${response.status}`);
+						}
+						return response.json();
+					})
+					.then((data) => {
+						const videoData = data.items
+							.filter((item) => item.snippet.description !== "")
+							.slice(0, 3) // Limit the results to 3 videos
+							.map((item) => {
+								const videoId = item.id.videoId;
+								const videoTitle = item.snippet.title;
 
-							return {
-								id: videoId,
-								title: videoTitle,
-								url: `https://www.youtube.com/embed/${videoId}`,
-							};
-						});
+								return {
+									id: videoId,
+									title: videoTitle,
+									url: `https://www.youtube.com/embed/${videoId}`,
+								};
+							});
 
-					setVideos(videoData);
-					localStorage.setItem("videos", JSON.stringify(videoData));
-					localStorage.setItem("fetchTime", Date.now());
-				})
-				.catch((error) => {
-					console.error("Error fetching videos");
-				});
+						setVideos(videoData);
+						localStorage.setItem("videos", JSON.stringify(videoData));
+						localStorage.setItem("fetchTime", currentTime.toString());
+					})
+					.catch((error) => {
+						console.error("Error fetching videos");
+					});
+			} else {
+				setVideos(JSON.parse(storedVideos));
+			}
 		};
 
-		const storedVideos = JSON.parse(localStorage.getItem("videos"));
-		const fetchTime = localStorage.getItem("fetchTime");
-
-		if (
-			!storedVideos ||
-			!fetchTime ||
-			Date.now() - fetchTime > 24 * 60 * 60 * 1000
-		) {
-			fetchVideos();
-		} else {
-			setVideos(storedVideos);
-		}
+		fetchVideos();
 	}, []);
 
 	return (
@@ -68,7 +66,7 @@ export default function LatestYT() {
 			<h2 className="row-start-1 col-start-1 col-span-2 font-display font-semibold text-ogPrimary-lightest uppercase text-4xl md:text-5xl place-self-center text-center ml-6">
 				Latest Adventures
 			</h2>
-			<div className="flex gap-4 self-end row-start-2 col-start-1 col-span-2 mt-4 mb-12 ml-6 md:m-auto md:mb-16 z-20 overflow-x-scroll md:overflow-x-visible">
+			<div className="flex md:flex-wrap md:justify-around gap-4 self-end row-start-2 col-start-1 col-span-2 mt-4 mb-12 ml-6 md:m-auto md:mb-16 z-20 overflow-x-scroll md:overflow-x-visible md:max-w-5xl">
 				{videos.length > 0 &&
 					videos.map((video) => (
 						<iframe
