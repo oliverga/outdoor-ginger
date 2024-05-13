@@ -22,7 +22,7 @@ export default function ShoppingCart({ cartRef }) {
         }}
         className="md:mr-8 cart:mr-0"
       >
-        <div className="bg-ogBG-base rounded-b-2xl max-h-[80dvh] md:max-h-[650px] md:max-w-96  ml-auto flex flex-col justify-between pointer-events-auto drop-shadow-xl relative overflow-hidden">
+        <div className="bg-ogBG-base rounded-b-2xl max-h-[80lvh] md:max-h-[650px] md:max-w-96  ml-auto flex flex-col justify-between pointer-events-auto drop-shadow-xl relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-8 bg-gradient-to-b from-ogBG-base to-transparent pointer-events-none"></div>
           <div className="px-8 space-y-6 overflow-y-scroll scrollbar scrollbar-thumb-ogPrimary scrollbar-track-ogBG-base pt-24 md:pt-8 pb-8">
             <Item
