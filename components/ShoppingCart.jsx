@@ -1,15 +1,16 @@
 "use client";
 
-import Item from "./Cart/Item";
+import Item from "./cart/Item";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { Checkbox } from "./ui/checkbox";
 import { Button } from "./ui/button";
 
-export default function ShoppingCart() {
+export default function ShoppingCart({ cartRef }) {
   return (
     <div className="overflow-hidden fixed -top-6 left-0 z-40 w-full px-2 md:px-0 mt-12 max-w-7xl mx-auto md:left-1/2 md:transform md:-translate-x-1/2 h-[100%] pointer-events-none">
       <motion.div
+        ref={cartRef}
         initial={{ y: "-100%" }}
         animate={{ y: "0px" }}
         exit={{ y: "-130%" }}
@@ -46,7 +47,7 @@ export default function ShoppingCart() {
           </div>
           <div className="bg-neutral-200">
             <div className="px-12 pt-4 pb-2 flex flex-col gap-2">
-              <div className=" flex justify-between font-light">
+              <div className=" flex justify-between font-normal">
                 <p>Subtotal</p>
                 <p>99.95 kr</p>
               </div>
