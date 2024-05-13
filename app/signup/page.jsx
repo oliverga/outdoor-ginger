@@ -1,5 +1,5 @@
 import { Label } from "@/components/ui/label";
-import { login } from "@/lib/supabase/actions";
+import { signup } from "@/lib/supabase/actions";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -17,9 +17,9 @@ export default function LoginPage() {
           <Input id="password" name="password" type="password" required />
         </div>
         <div className="flex justify-between">
-          <Button formAction={login}>Log in</Button>
-          <Link href="/signup">
-            <Button variant="secondary">Sign up</Button>
+          <Button formAction={signup}>Sign up</Button>
+          <Link href="/login">
+            <Button variant="outline">Log in</Button>
           </Link>
         </div>
       </form>

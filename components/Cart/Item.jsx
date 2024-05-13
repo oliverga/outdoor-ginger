@@ -28,12 +28,14 @@ export default function Item({ imgSrc, name, price }) {
           <div className="row-start-2 col-start-2 flex gap-4 items-center">
             <Button
               size="icon"
+              variant="outline"
               className="border p-1 w-8 h-8 rounded-md hover:bg-neutral-300 transition duration-200 hover:border-neutral-300"
             >
               <IconPlus size={24} strokeWidth={1.5} color={"black"} />
             </Button>
             <p>1</p>
             <Button
+              variant="outline"
               size="icon"
               className="border p-1 w-8 h-8 rounded-md hover:bg-neutral-300 transition duration-200 hover:border-neutral-300"
             >
