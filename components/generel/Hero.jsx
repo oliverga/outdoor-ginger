@@ -22,7 +22,7 @@ function Hero({ title, imageSrc, height, children }) {
         </div>
         <div className="z-30 place-self-center">{rightSideChildren}</div>
       </div>
-      <div className="rounded-t-[3rem] bg-ogBG-base col-span-2 h-12 z-40 absolute bottom-0 left-0 w-full"></div>
+      <div className="rounded-t-[3rem] bg-ogBG-base col-span-2 h-12 z-30 absolute bottom-0 left-0 w-full"></div>
       <div className=" bg-gradient-to-tr from-ogLabel-base to-transparent  w-full h-full absolute top-0 left-0 z-20 opacity-75"></div>
       <Image
         src={imageSrc}

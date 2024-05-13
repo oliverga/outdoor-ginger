@@ -14,10 +14,10 @@ export default function ShoppingCart({ cartRef }) {
         initial={{ y: "-100%" }}
         animate={{ y: "0px" }}
         exit={{ y: "-130%" }}
-        transition={{ duration: 1, type: "spring", bounce: 0.2 }}
+        transition={{ duration: 0.8, type: "spring", bounce: 0.2 }}
         className="md:mr-8 cart:mr-0"
       >
-        <div className="bg-ogBG-base rounded-b-2xl overflow-hidden max-h-[550px] md:max-h-[650px] md:max-w-96 pt-16 md:pt-32 ml-auto flex flex-col justify-between pointer-events-auto ">
+        <div className="bg-ogBG-base rounded-b-2xl overflow-hidden max-h-[550px] md:max-h-[650px] md:max-w-96 pt-16 md:pt-40 ml-auto flex flex-col justify-between pointer-events-auto ">
           <div className="px-8 overflow-x-scroll scrollbar scrollbar-thumb-ogPrimary scrollbar-track-ogBG-base">
             <Item
               imgSrc="/knife.png"
