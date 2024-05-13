@@ -55,8 +55,8 @@ export default function ShoppingCart({ cartRef }) {
               price="99.95 kr"
             />
           </div>
-          <div className="bg-neutral-200">
-            <div className="px-12 pt-4 pb-2 flex flex-col gap-4">
+          <div className="bg-neutral-200 md:pb-4">
+            <div className="px-12 pt-4 pb-2 flex flex-col gap-3">
               <div className=" flex justify-between font-normal">
                 <p>Subtotal</p>
                 <p>99.95 kr</p>
@@ -86,7 +86,7 @@ export default function ShoppingCart({ cartRef }) {
               <Button variant="primary" size="sm" className="md:">
                 Checkout
               </Button>
-              <hr className="bg-neutral-300 h-[8px] w-1/2 mx-auto rounded-full mt-3" />
+              <hr className="block md:hidden bg-neutral-300 h-[8px] w-1/2 mx-auto rounded-full mt-3" />
             </div>
           </div>
         </div>
