@@ -2,6 +2,8 @@ import NewsletterBanner from "@/components/NewsletterBanner";
 import SupportBanner from "@/components/SupportBanner";
 import LatestYT from "@/components/generel/LatestYT";
 import Hero from "@/components/generel/Hero";
+import SponsorBanner from "@/components/generel/SponsorBanner";
+import AboutBlock from "@/components/generel/AboutBlock";
 
 export default function Home() {
 	return (
@@ -11,9 +13,11 @@ export default function Home() {
 				imageSrc="/forsidehero.webp"
 				height="80vh"
 				bgPos="bottom"
-			></Hero>
-			<section className="h-screen"></section>
+			/>
+			<AboutBlock />
 			<LatestYT />
+			<SponsorBanner />
+			<SponsorBanner type="static" />
 			<SupportBanner />
 			<NewsletterBanner />
 		</main>

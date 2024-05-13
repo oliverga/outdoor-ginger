@@ -33,7 +33,7 @@
     "embla-carousel-react": "^8.0.2",
     "framer-motion": "^11.1.7",
     "lucide-react": "^0.376.0",
-    "next": "14.2.2",
+    "next": "^14.2.3",
     "next-sanity": "^9.0.12",
     "next-themes": "^0.3.0",
     "react": "^18",
@@ -41,6 +41,7 @@
     "react-dom": "^18",
     "sonner": "^1.4.41",
     "tailwind-merge": "^2.3.0",
+    "tailwind-scrollbar": "^3.1.0",
     "tailwindcss-animate": "^1.0.7",
     "zustand": "^4.5.2"
   },

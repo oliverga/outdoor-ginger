@@ -14,12 +14,23 @@ module.exports = {
     extend: {
       screens: {
         md: "912px",
+        cart: "1280px",
         "vh-sm": { raw: "(max-height: 595px)" },
       },
       zIndex: {
         60: 60,
         70: 70,
         80: 80,
+      },
+      gridTemplateRows: {
+       'latestYT': '1fr 3fr',
+      },
+      gridTemplateColumns: {
+        'cartLayout': '1fr 3fr 1fr',
+      },
+      spacing: {  
+        '108': '26rem',
+        '144': '36rem',
       },
       colors: {
         input: "hsl(var(--input))",
@@ -140,5 +151,5 @@ module.exports = {
       display: ["var(--font-syne)"],
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography"), require("@tailwindcss/container-queries")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography"), require("@tailwindcss/container-queries"), require('tailwind-scrollbar'),],
 };

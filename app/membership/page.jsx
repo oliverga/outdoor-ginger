@@ -9,8 +9,8 @@ export default function Page() {
   return (
     <main className="relative">
       <Hero title="Membership" imageSrc="/membershiphero.webp" height="60vh">
-        <div id="right" className="mt-72 md:mt-0 w-dvw md:left-auto px-6 md:top-1/3 md:px-0 md:w-80 absolute left-1/2 transform -translate-x-1/2">
-          <Card className="rounded-2xl">
+        <div id="right" className="mt-72 md:mt-0 w-dvw md:left-auto px-6 md:top-1/3 md:px-0 md:w-80 absolute left-1/2 transform -translate-x-1/2 z-40">
+          <Card className="rounded-2xl z-50">
             <CardHeader>
               <CardTitle className="font-normal mb-2">Become a Member</CardTitle>
               <CardDescription className="font-light">
@@ -21,7 +21,7 @@ export default function Page() {
               <p className="text-3xl font-semibold">
                 50 kr <span className="text-sm font-light text-ogLabel-muted ">/ Month </span>
               </p>
-              <Button size="default" className="bg-ogPrimary hover:bg-ogPrimary-dark text-base">
+              <Button size="default" className="bg-ogPrimary hover:bg-ogPrimary-dark text-base text-ogBG-base">
                 Subscribe
               </Button>
             </CardFooter>
@@ -36,7 +36,7 @@ export default function Page() {
               <AccordionContent className="text-ogLabel-muted text-sm">Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-              <AccordionTrigger className="text-lg">What's in it for me?</AccordionTrigger>
+              <AccordionTrigger className="text-lg">{"What's in it for me?"}</AccordionTrigger>
               <AccordionContent className="text-ogLabel-muted text-sm">Yes. It comes with default styles that matches the other components&apos; aesthetic.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
