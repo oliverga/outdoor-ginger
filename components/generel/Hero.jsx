@@ -9,10 +9,10 @@ function Hero({ title, imageSrc, height, children }) {
     (child) => child.props.id === "right",
   );
   return (
-    <section className="relative mb-12 px-8">
+    <section className="relative mb-12 ">
       <div
         style={{ height: height }}
-        className="overflow-hidden grid grid-cols-2 max-w-5xl mx-auto pb-24"
+        className="overflow-hidden grid grid-cols-2 max-w-5xl mx-auto pb-24 px-8"
       >
         <div className="place-self-end z-30 w-full">
           <h1 className="text-4xl md:text-7xl font-bold text-ogBG-base uppercase">
