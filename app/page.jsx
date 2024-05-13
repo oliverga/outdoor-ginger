@@ -3,6 +3,7 @@ import SupportBanner from "@/components/SupportBanner";
 import LatestYT from "@/components/generel/LatestYT";
 import Hero from "@/components/generel/Hero";
 import SponsorBanner from "@/components/generel/SponsorBanner";
+import AboutBlock from "@/components/generel/AboutBlock";
 
 export default function Home() {
 	return (
@@ -12,7 +13,8 @@ export default function Home() {
 				imageSrc="/forsidehero.webp"
 				height="80vh"
 				bgPos="bottom"
-			></Hero>
+			/>
+			<AboutBlock />
 			<LatestYT />
 			<SponsorBanner />
 			<SponsorBanner type="static" />
