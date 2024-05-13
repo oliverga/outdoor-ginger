@@ -187,7 +187,7 @@ function Header() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.8, type: "spring" }}
               >
-                <p className=" cursor-default">{progress}</p>
+                <p className=" cursor-default text-ogBG-base">{progress}</p>
               </motion.div>
             </div>
           </div>
