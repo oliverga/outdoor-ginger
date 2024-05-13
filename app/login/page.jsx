@@ -2,6 +2,7 @@ import { Label } from "@/components/ui/label";
 import { login, signup } from "./actions";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function LoginPage() {
   return (
@@ -17,7 +18,9 @@ export default function LoginPage() {
         </div>
         <div className="flex justify-between">
           <Button formAction={login}>Log in</Button>
-          <Button formAction={signup}>Sign up</Button>
+          <Link href="/signup">
+            <Button variant="outline">Sign up</Button>
+          </Link>
         </div>
       </form>
     </main>
