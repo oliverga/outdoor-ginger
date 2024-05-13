@@ -107,8 +107,8 @@ function MobileHeader() {
   }, [cartOpen]);
 
   return (
-    <header className="md:hidden z-50">
-      <div className="fixed top-0 left-0 w-screen px-2 py-4 mx-auto z-50">
+    <header className="md:hidden z-60">
+      <div className="fixed top-0 left-0 w-screen px-2 py-4 mx-auto z-60">
         <div className="w-full h-16 bg-ogBG-base rounded-xl flex items-center justify-between px-2 border border-x-neutral-200 border-t-neutral-200 border-b-0 border-opacity-50 shadow-lg">
           <Link
             href="/"
@@ -205,7 +205,9 @@ function MobileHeader() {
               </ul>
             </nav>
             <div className="absolute top-[60vh] flex items-center justify-center vh-sm:hidden">
-              <img
+              <Image
+                width={120}
+                height={120}
                 src="/icons/flameWhite.svg"
                 alt="flame icon"
                 className="h-[120vw] w-full object-cover"

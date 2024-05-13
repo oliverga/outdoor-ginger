@@ -19,7 +19,7 @@ function Header() {
   const linkStyle = (path) =>
     pathname === path ? "p-2 text-ogPrimary" : "p-2";
 
-  const progress = "84%";
+  const progress = "64%";
 
   const { scrollY } = useScroll();
 
@@ -142,7 +142,7 @@ function Header() {
               </nav>
               <IconShoppingCart
                 size={24}
-                className=" stroke-[1.5px] cursor-pointer"
+                className={`stroke-[1.5px] cursor-pointer ${cartOpen ? "text-ogPrimary" : "text-ogLabel-base "}`}
                 onClick={toggleCart}
               />
             </div>
