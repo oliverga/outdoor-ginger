@@ -8,9 +8,9 @@ import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/comp
 export default function Page() {
   return (
     <main className="relative">
-      <Hero title="Membership" imageSrc="/membershiphero.webp" height="80vh">
-        <div id="right" className="mt-72 md:mt-0 w-dvw md:left-auto px-6 md:top-1/3 md:px-0 md:w-80 absolute left-1/2 transform -translate-x-1/2">
-          <Card className="rounded-2xl">
+      <Hero title="Membership" imageSrc="/membershiphero.webp" height="60vh">
+        <div id="right" className="mt-72 md:mt-0 w-dvw md:left-auto px-6 md:top-1/3 md:px-0 md:w-80 absolute left-1/2 transform -translate-x-1/2 z-40">
+          <Card className="rounded-2xl z-50">
             <CardHeader>
               <CardTitle className="font-normal mb-2">Become a Member</CardTitle>
               <CardDescription className="font-light">
