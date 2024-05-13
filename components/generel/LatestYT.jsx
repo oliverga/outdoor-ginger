@@ -93,7 +93,7 @@ export default function LatestYT() {
 					height={360}
 				/>
 			</div>
-			<div className="hidden md:block row-start-2 col-start-1 w-max opacity-25 rotate-180 absolute -mt-108 -ml-96">
+			<div className="hidden md:block row-start-2 col-start-1 w-max opacity-25 rotate-180 -mt-108 -ml-96">
 				<Image
 					src="/icons/flameWhite.svg"
 					alt="background flame icon"

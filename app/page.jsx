@@ -17,7 +17,6 @@ export default function Home() {
 			<AboutBlock />
 			<LatestYT />
 			<SponsorBanner />
-			<SponsorBanner type="static" />
 			<SupportBanner />
 			<NewsletterBanner />
 		</main>
