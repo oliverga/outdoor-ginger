@@ -11,10 +11,10 @@ export default function ShoppingCart({ cartRef }) {
     <div className="overflow-hidden fixed -top-6 left-0 z-40 w-full px-2 md:px-0 mt-12 max-w-7xl mx-auto md:left-1/2 md:transform md:-translate-x-1/2 h-[100%] pointer-events-none">
       <motion.div
         ref={cartRef}
-        initial={{ y: "-100%" }}
-        animate={{ y: "0px" }}
-        exit={{ y: "-130%" }}
-        transition={{ duration: 0.8, type: "spring", bounce: 0.2 }}
+        initial={{ y: "-100%", opacity: 0 }}
+        animate={{ y: "0px", opacity: 1 }}
+        exit={{ y: "-100%", opacity: 0 }}
+        transition={{ duration: 0.8, type: "spring", bounce: 0.25 }}
         className="md:mr-8 cart:mr-0"
       >
         <div className="bg-ogBG-base rounded-b-2xl overflow-hidden max-h-[550px] md:max-h-[650px] md:max-w-96 pt-16 md:pt-40 ml-auto flex flex-col justify-between pointer-events-auto ">
