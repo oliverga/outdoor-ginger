@@ -110,3 +110,7 @@ h1 {
   background-color: var(--og-bg-sub);
   color: var(--og-label-base);
 }
+
+p {
+  color: oklch(var(--og-label-muted));
+}
