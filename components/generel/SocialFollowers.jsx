@@ -1,6 +1,5 @@
-"use client";
-
 import Image from "next/image";
+import AnimatedCount from "./AnimatedCount";
 
 export default function SocialFollowers() {
 	return (
@@ -24,7 +23,7 @@ export default function SocialFollowers() {
 								className="object-contain h-full w-full"
 							/>
 						</div>
-						<p className="text-ogPrimary md:text-3xl md:font-semibold">11K</p>
+						<AnimatedCount finalCount={11000} duration={1} />
 					</div>
 					<div className="flex items-center gap-1 md:gap-4">
 						<div className="aspect-square h-8 md:h-16">
@@ -36,7 +35,7 @@ export default function SocialFollowers() {
 								className="object-contain h-full w-full"
 							/>
 						</div>
-						<p className="text-ogPrimary md:text-3xl md:font-semibold">303K</p>
+						<AnimatedCount finalCount={303000} duration={3} />
 					</div>
 					<div className="flex items-center gap-1 md:gap-4">
 						<div className="aspect-square h-8 md:h-16">
@@ -48,7 +47,7 @@ export default function SocialFollowers() {
 								className="object-contain h-full w-full"
 							/>
 						</div>
-						<p className="text-ogPrimary md:text-3xl md:font-semibold">15K</p>
+						<AnimatedCount finalCount={15000} duration={1} />
 					</div>
 				</div>
 			</div>
