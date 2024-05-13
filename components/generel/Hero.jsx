@@ -27,9 +27,11 @@ function Hero({ title, imageSrc, height, children }) {
       <Image
         src={imageSrc}
         alt=""
-        width={1920}
-        height={1000}
+        width={920}
+        height={500}
         className="object-cover object-center w-full h-full absolute top-0 left-0 z-10"
+        placeholder="blur"
+        blurDataURL={`{imageSrc}?blur=50`}
       />
     </section>
   );

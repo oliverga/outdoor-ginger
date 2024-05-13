@@ -19,7 +19,7 @@ import {
 export default function Page() {
   return (
     <main className="relative">
-      <Hero title="Membership" imageSrc="/membershiphero.webp" height="60lvh">
+      <Hero title="Membership" imageSrc="/membershiphero.webp" height="60svh">
         <div
           id="right"
           className="mt-72 md:mt-0 w-dvw md:left-auto px-6 md:top-1/3 md:px-0 md:w-80 absolute left-1/2 transform -translate-x-1/2 z-40"

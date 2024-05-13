@@ -25,7 +25,7 @@ export default function Page() {
       <Hero
         title="Campfire Chronicles"
         imageSrc="/bloghero.webp"
-        height="50lvh"
+        height="50svh"
       ></Hero>
 
       <section className="pb-32 max-w-5xl mx-auto px-8">
