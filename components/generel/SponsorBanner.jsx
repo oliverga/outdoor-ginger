@@ -75,7 +75,7 @@ export default function SponsorBanner({ type = "rolling" }) {
 									href={sponsor.Sponsor_Website}
 									target="_blank"
 									key={index}
-									className="aspect-square h-20"
+									className="aspect-square h-20 hover:scale-105 transition-transform duration-300 ease-in-out"
 								>
 									<Image
 										src={urlFor(sponsor.Sponsor_Logo).url()}
@@ -104,7 +104,7 @@ export default function SponsorBanner({ type = "rolling" }) {
 									href={sponsor.Sponsor_Website}
 									target="_blank"
 									key={index}
-									className="aspect-video w-28 md:w-72"
+									className="aspect-video w-28 md:w-72 hover:scale-105 transition-transform duration-300 ease-in-out"
 								>
 									<Image
 										src={urlFor(sponsor.Sponsor_Logo).url()}

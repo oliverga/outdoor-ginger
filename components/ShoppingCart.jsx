@@ -8,7 +8,7 @@ import { Button } from "./ui/button";
 
 export default function ShoppingCart({ cartOpen, cartRef }) {
 	return (
-		<div className="overflow-hidden fixed top-0 left-0 z-40 w-full px-2 md:px-0 mt-12 drop-shadow-md max-w-[1280px] mx-auto md:left-1/2 md:transform md:-translate-x-1/2">
+		<div className="overflow-hidden fixed top-0 left-0 z-40 w-full px-2 md:px-0 mt-12 drop-shadow-xl max-w-[1280px] mx-auto md:left-1/2 md:transform md:-translate-x-1/2">
 			<motion.div
 				ref={cartRef}
 				initial={{ y: "-100vh" }}
