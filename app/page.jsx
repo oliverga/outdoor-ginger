@@ -5,6 +5,7 @@ import Hero from "@/components/generel/Hero";
 import SponsorBanner from "@/components/generel/SponsorBanner";
 import AboutBlock from "@/components/generel/AboutBlock";
 import JoinTheClub from "@/components/generel/JoinTheClub";
+import SocialFollowers from "@/components/generel/SocialFollowers";
 
 export default function Home() {
 	return (
@@ -18,6 +19,7 @@ export default function Home() {
 			<AboutBlock />
 			<LatestYT />
 			<JoinTheClub />
+			<SocialFollowers />
 			<SponsorBanner />
 			<SupportBanner />
 			<NewsletterBanner />
