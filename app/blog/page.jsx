@@ -21,12 +21,13 @@ const authors = await client.fetch(authorQuery);
 
 export default function Page() {
   return (
-    <main className="">
+    <main>
       <Hero
         title="Campfire Chronicles"
         imageSrc="/bloghero.webp"
-        height="50vh"
+        height="50svh"
       ></Hero>
+
       <section className="pb-32 max-w-5xl mx-auto px-8">
         <div className="flex flex-col md:grid grid-cols-3 gap-6">
           <div className=" col-span-1 flex flex-col gap-6">
@@ -50,7 +51,7 @@ function Article({ post }) {
     <div className="@container">
       <article
         key={post.slug.current}
-        className="mx-auto border rounded-xl overflow-hidden w-full shadow-md"
+        className="mx-auto border rounded-xl overflow-hidden w-full shadow-sm"
       >
         <Link href={`/blog/${post.slug.current}`}>
           {post.mainImage && (
