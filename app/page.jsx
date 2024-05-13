@@ -4,6 +4,7 @@ import LatestYT from "@/components/generel/LatestYT";
 import Hero from "@/components/generel/Hero";
 import SponsorBanner from "@/components/generel/SponsorBanner";
 import AboutBlock from "@/components/generel/AboutBlock";
+import JoinTheClub from "@/components/generel/JoinTheClub";
 
 export default function Home() {
 	return (
@@ -16,6 +17,7 @@ export default function Home() {
 			/>
 			<AboutBlock />
 			<LatestYT />
+			<JoinTheClub />
 			<SponsorBanner />
 			<SupportBanner />
 			<NewsletterBanner />
