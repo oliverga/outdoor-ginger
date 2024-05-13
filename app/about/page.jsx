@@ -1,3 +1,4 @@
+import { client, urlFor } from "@/lib/sanity/client";
 import Hero from "@/components/generel/Hero";
 import Image from "next/image";
 import OrangeBanner from "@/layouts/OrangeBanner";
@@ -5,7 +6,17 @@ import SponsorBanner from "@/components/generel/SponsorBanner";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import ConnectBanner from "@/components/ConnectBanner";
-export default function Page() {
+import { PortableText } from "next-sanity";
+
+const testimonialsQuery = '*[_type == "testimonials"]{Sponsor_Name, content}';
+
+const testimonials = await client.fetch(testimonialsQuery, {
+  next: {
+    revalidate: process.env.NODE_ENV === "development" ? 30 : 3600,
+  },
+});
+console.log(testimonials);
+export default function AboutMe() {
   return (
     <main className="">
       <Hero title="About August" imageSrc="/aboutMe.png" height="80svh">
@@ -51,8 +62,16 @@ export default function Page() {
         <div></div>
       </div>
       <SponsorBanner type="static" />
-      <section className="px-6 md:px-0 pb-32 max-w-5xl mx-auto">
-        <h2>Testimonials</h2>
+      <section className="px-6 md:px-0 pb-32 max-w-5xl mx-auto my-10">
+        <h2 className="font-display text-3xl uppercase font-bold mb-6">Testimonials</h2>
+        {testimonials.map((testimonial, index) => (
+          <div className="prose md:prose-lg prose-h3:italic prose-p:italic prose-p:text-ogLabel-muted w-auto prose-h3:font-light prose-p:font-light prose-p:text-sm prose-h3:text-sm" key={index}>
+            <PortableText value={testimonial.content} />
+
+            <h3>{testimonial.Sponsor_Name}</h3>
+            <div className="bg-ogLabel-link h-0.5 w-28 mb-4"></div>
+          </div>
+        ))}
       </section>
       <ConnectBanner />
     </main>
