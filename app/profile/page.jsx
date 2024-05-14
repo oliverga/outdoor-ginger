@@ -1,5 +1,5 @@
-import LogoutButton from "@/components/LogoutButton";
-
+import { Button } from "@/components/ui/button";
+import { logout } from "@/lib/supabase/actions";
 const { createClient } = require("@/lib/supabase/server");
 const { redirect } = require("next/navigation");
 
@@ -16,7 +16,9 @@ export default async function PrivatePage() {
     <main className="min-h-screen flex flex-col items-center justify-center prose mx-auto prose-h1:font-bold">
       <h1>Secret profile</h1>
       <p>Hello {data.user.email}</p>
-      <LogoutButton />
+      <form action={logout}>
+        <Button type="submit">Log out</Button>
+      </form>
     </main>
   );
 }

@@ -1,10 +1,10 @@
 "use client";
 
-import Item from "./Cart/Item";
+import Item from "./Item";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { Checkbox } from "./ui/checkbox";
-import { Button } from "./ui/button";
+import { Checkbox } from "../ui/checkbox";
+import { Button } from "../ui/button";
 
 export default function ShoppingCart({ cartRef }) {
   return (

@@ -2,7 +2,7 @@
 
 import { createClient } from "@/lib/supabase/client";
 
-import useAuthStore from "@/store/authStore";
+import useAuthStore from "@/lib/store/authStore";
 import { useEffect, useRef } from "react";
 import { toast } from "sonner";
 
