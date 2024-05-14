@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import Link from "next/link";
 
 function SupportBanner() {
   return (
     <section className="h-[50vh] bg-ogPrimary-lightest text-ogPrimary flex flex-col items-center justify-evenly text-center px-4 py-6">
-      <h1 className="text-6xl md:text-8xl font-bold text-center">
+      <h1 className="font-display font-semibold uppercase text-4xl md:text-5xl text-center">
         Support August
       </h1>
       <div className="flex flex-col md:flex-row items-center gap-8">

@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import SupportBanner from "@/components/SupportBanner";
+import SupportBanner from "@/components/generel/SupportBanner";
 import { Button } from "@/components/ui/button";
 import Hero from "@/components/generel/Hero";
 import Image from "next/image";

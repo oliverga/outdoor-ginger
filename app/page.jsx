@@ -1,5 +1,5 @@
-import NewsletterBanner from "@/components/NewsletterBanner";
-import SupportBanner from "@/components/SupportBanner";
+import NewsletterBanner from "@/components/generel/NewsletterBanner";
+import SupportBanner from "@/components/generel/SupportBanner";
 import LatestYT from "@/components/generel/LatestYT";
 import Hero from "@/components/generel/Hero";
 import SponsorBanner from "@/components/generel/SponsorBanner";
