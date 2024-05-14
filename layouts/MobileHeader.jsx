@@ -135,7 +135,12 @@ function MobileHeader() {
                 src="/lottie/burgerMenu.lottie"
                 background="transparent"
                 speed="3"
-                style={{ width: "48px" }}
+                style={{
+                  width: "48px",
+                  userSelect: "none",
+                  webkitUserSelect: "none",
+                  MsUserSelect: "none",
+                }}
                 playMode="normal"
                 onClick={handleClick1}
               ></dotlottie-player>
@@ -160,7 +165,13 @@ function MobileHeader() {
                   src="/lottie/closeMatches.lottie"
                   background="transparent"
                   speed="2"
-                  style={{ width: "65px", height: "65px" }}
+                  style={{
+                    width: "65px",
+                    height: "65px",
+                    userSelect: "none",
+                    webkitUserSelect: "none",
+                    MsUserSelect: "none",
+                  }}
                   playMode="normal"
                   onClick={handleClick2}
                 />
