@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { Button } from "../ui/button";
 import {
   Card,
   CardContent,
@@ -12,6 +11,7 @@ import {
 import Image from "next/image";
 import { urlFor } from "@/lib/sanity/client";
 import useAuthStore from "@/lib/store/authStore";
+import { Button } from "../ui/button";
 
 export default function ProductCard({ product }) {
   const { user } = useAuthStore();

@@ -1,7 +1,7 @@
 "use client";
 
 import Item from "./Item";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { Checkbox } from "../ui/checkbox";
 import { Button } from "../ui/button";
