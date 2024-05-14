@@ -51,7 +51,7 @@ export default function SponsorBanner({ type = "rolling" }) {
 
   if (type == "rolling") {
     return (
-      <article className="bg-ogPrimary py-2 overflow-hidden py-20">
+      <article className="bg-ogPrimary py-6 overflow-hidden">
         <motion.div
           className="flex gap-8 justify-center items-center"
           animate={controls}
