@@ -36,7 +36,6 @@ export default function CookieConsentDialog() {
 	const handleAgree = () => {
 		console.log("User agreed to necessary cookies");
 		localStorage.setItem("hasVisitedBefore", "true");
-		const cookies = document.cookie.split(";");
 
 		handleClose();
 	};
