@@ -25,7 +25,19 @@ export default async function RootLayout({ children }) {
         <MobileHeader />
         <Header />
         <AuthSubscriber />
-        <Toaster />
+        <Toaster
+          richColors={true}
+          toastOptions={{
+            style: {
+              background: "oklch(var(--og-bg-base))",
+              color: "oklch(var(--og-label-base))",
+              border: "1px solid oklch(var(--og-border-input))",
+              borderRadius: "var(--og-radius-mobile)",
+            },
+          }}
+          theme="light"
+        />
+        <CookieConsentDialog />
         {children}
         <Footer />
       </body>
