@@ -23,7 +23,7 @@ export default function SocialFollowers() {
 								className="object-contain h-full w-full"
 							/>
 						</div>
-						<AnimatedCount finalCount={11000} duration={1} />
+						<AnimatedCount finalCount={12000} duration={1} />
 					</div>
 					<div className="flex items-center gap-1 md:gap-4">
 						<div className="aspect-square h-8 md:h-16">
@@ -35,7 +35,7 @@ export default function SocialFollowers() {
 								className="object-contain h-full w-full"
 							/>
 						</div>
-						<AnimatedCount finalCount={303000} duration={3} />
+						<AnimatedCount finalCount={333000} duration={3} />
 					</div>
 					<div className="flex items-center gap-1 md:gap-4">
 						<div className="aspect-square h-8 md:h-16">
@@ -47,7 +47,7 @@ export default function SocialFollowers() {
 								className="object-contain h-full w-full"
 							/>
 						</div>
-						<AnimatedCount finalCount={15000} duration={1} />
+						<AnimatedCount finalCount={24000} duration={1} />
 					</div>
 				</div>
 			</div>
