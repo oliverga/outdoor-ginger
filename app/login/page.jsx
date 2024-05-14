@@ -27,7 +27,7 @@ export default async function LoginPage() {
         </div>
         <Button formAction={login}>Log in</Button>
 
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-0 mt-2">
           <p className="text-sm">Don&apos;t have an account?</p>{" "}
           <Link href="/signup">
             <Button variant="link" className="font-normal flex flex-col">

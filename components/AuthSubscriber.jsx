@@ -21,7 +21,6 @@ export default function AuthSubscriber() {
           setUser(session?.user || null);
         } else if (event === "SIGNED_IN") {
           // handle sign in event
-          toast.success("You have been signed in");
           setUser(session.user);
         } else if (event === "SIGNED_OUT") {
           // handle sign out event
@@ -35,6 +34,8 @@ export default function AuthSubscriber() {
         } else if (event === "USER_UPDATED") {
           // handle user updated event
           setUser(session.user);
+        } else {
+          setUser(session?.user || null);
         }
         toastShown.current[event] = true;
       }
