@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ShoppingCart from "@/components/cart/ShoppingCart";
+import ShoppingCart from "@/components/Cart/ShoppingCart";
 
 function MobileHeader() {
   const playerRef1 = useRef();
