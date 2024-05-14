@@ -12,7 +12,7 @@ import {
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import useAuthStore from "@/lib/store/authStore";
-import ShoppingCart from "@/components/ShoppingCart";
+import ShoppingCart from "@/components/cart/ShoppingCart";
 
 function Header() {
   const { user } = useAuthStore();
