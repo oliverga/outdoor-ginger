@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Checkbox } from "../ui/checkbox";
-import { Button } from "../ui/button";
-import Item from "./Item";
+import { Checkbox } from "./ui/checkbox";
+import { Button } from "./ui/button";
+import Item from "./cart/Item";
 
 export default function ShoppingCart({ cartRef }) {
   return (
