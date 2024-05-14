@@ -9,10 +9,10 @@ import {
   useScroll,
   AnimatePresence,
 } from "framer-motion";
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import useAuthStore from "@/store/authStore";
-import ShoppingCart from "@/components/ShoppingCart";
+import useAuthStore from "@/lib/store/authStore";
+import ShoppingCart from "@/components/cart/ShoppingCart";
 
 function Header() {
   const { user } = useAuthStore();
