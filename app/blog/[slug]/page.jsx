@@ -1,7 +1,6 @@
 import Hero from "@/components/generel/Hero";
 import { client, urlFor } from "@/lib/sanity/client";
 import { PortableText } from "next-sanity";
-import Image from "next/image";
 
 export async function generateStaticParams() {
   const slugQuery = '*[_type == "post"]{slug}';

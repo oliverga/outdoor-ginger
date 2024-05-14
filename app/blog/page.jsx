@@ -13,13 +13,7 @@ const posts = await client.fetch(postQuery, {
   },
 });
 
-console.log(posts);
-
-const authorQuery = '*[_type == "author"]{_id, name, mainImage, instagram}';
-
-const authors = await client.fetch(authorQuery);
-
-export default function Page() {
+export default async function Page() {
   return (
     <main>
       <Hero

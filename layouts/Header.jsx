@@ -9,11 +9,18 @@ import {
   useScroll,
   AnimatePresence,
 } from "framer-motion";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, use } from "react";
 import { usePathname } from "next/navigation";
 import ShoppingCart from "@/components/ShoppingCart";
+import useAuthStore from "@/store/authStore";
 
 function Header() {
+  const { user } = useAuthStore();
+
+  useEffect(() => {
+    console.log(user);
+  }, [user]);
+
   const pathname = usePathname();
 
   const linkStyle = (path) =>
@@ -108,7 +115,7 @@ function Header() {
                       href="/equipment"
                       onClick={() => setCartOpen(false)}
                     >
-                      My equipment
+                      Equipment
                     </Link>
                   </li>
                   <li>
@@ -129,7 +136,28 @@ function Header() {
                       About me
                     </Link>
                   </li>
-                  <li>
+                  {user ? (
+                    <li>
+                      <Link
+                        className={linkStyle("/profile")}
+                        href="/profile"
+                        onClick={() => setCartOpen(false)}
+                      >
+                        My Profile
+                      </Link>
+                    </li>
+                  ) : (
+                    <li>
+                      <Link
+                        className={linkStyle("/signup")}
+                        href="/login"
+                        onClick={() => setCartOpen(false)}
+                      >
+                        <Button variant="outline">Log in</Button>
+                      </Link>
+                    </li>
+                  )}
+                  {/* <li>
                     <Link
                       className={linkStyle("/about#contact")}
                       href="/about#contact"
@@ -137,7 +165,7 @@ function Header() {
                     >
                       Contact
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </nav>
               <IconShoppingCart
