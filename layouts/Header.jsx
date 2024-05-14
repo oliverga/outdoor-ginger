@@ -11,8 +11,8 @@ import {
 } from "framer-motion";
 import { useState, useEffect, use } from "react";
 import { usePathname } from "next/navigation";
-import ShoppingCart from "@/components/cart/ShoppingCart";
 import useAuthStore from "@/lib/store/authStore";
+import ShoppingCart from "@/components/cart/ShoppingCart";
 
 function Header() {
   const { user } = useAuthStore();
