@@ -18,19 +18,41 @@ export default function CookieConsentDialog() {
 		setIsClient(true);
 	}, []);
 
+	useEffect(() => {
+		const hasVisitedBefore = localStorage.getItem("hasVisitedBefore");
+		console.log("hasVisitedBefore", hasVisitedBefore);
+
+		if (!hasVisitedBefore) {
+			setOpen(true);
+		} else {
+			setOpen(false);
+		}
+	}, []);
+
 	const handleClose = () => {
 		setOpen(false);
 	};
 
 	const handleAgree = () => {
-		// Handle the logic when the user agrees to necessary cookies
 		console.log("User agreed to necessary cookies");
+		localStorage.setItem("hasVisitedBefore", "true");
+		const cookies = document.cookie.split(";");
+
 		handleClose();
 	};
 
 	const handleDeny = () => {
-		// Handle the logic when the user denies cookies
 		console.log("User denied cookies");
+
+		const cookies = document.cookie.split(";");
+
+		for (let i = 0; i < cookies.length; i++) {
+			const cookie = cookies[i];
+			const eqPos = cookie.indexOf("=");
+			const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+			document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+		}
+
 		handleClose();
 	};
 
@@ -39,9 +61,8 @@ export default function CookieConsentDialog() {
 	}
 
 	return (
-		<Dialog open={open} onOpenChange={setOpen}>
+		<Dialog open={open}>
 			<DialogContent>
-				<DialogClose className="close-button" onClick={handleClose} />
 				<DialogTitle>{"Use of Cookies"}</DialogTitle>
 				<DialogDescription>
 					{
@@ -50,7 +71,7 @@ export default function CookieConsentDialog() {
 				</DialogDescription>
 				<div className="flex justify-center gap-4">
 					<Button onClick={handleDeny} variant="secondary">
-						Deny
+						Turn off Cookies
 					</Button>
 					<Button onClick={handleAgree} variant="primary">
 						Agree to Necessary
