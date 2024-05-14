@@ -8,21 +8,31 @@ import JoinTheClub from "@/components/generel/JoinTheClub";
 import SocialFollowers from "@/components/generel/SocialFollowers";
 
 export default function Home() {
-	return (
-		<main>
-			<Hero
-				title="Outdoor Ginger"
-				imageSrc="/forsidehero.webp"
-				height="80vh"
-				bgPos="bottom"
-			/>
-			<AboutBlock />
-			<LatestYT />
-			<JoinTheClub />
-			<SocialFollowers />
-			<SponsorBanner />
-			<SupportBanner />
-			<NewsletterBanner />
-		</main>
-	);
+  return (
+    <main>
+      <Hero
+        title="Outdoor Ginger"
+        imageSrc="/forsidehero.webp"
+        height="80vh"
+        bgPos="bottom"
+      />
+      <div className="space-y-32">
+        <div>
+          <AboutBlock />
+        </div>
+        <div>
+          <LatestYT />
+        </div>
+        <div>
+          <JoinTheClub />
+        </div>
+        <div>
+          <SocialFollowers />
+          <SponsorBanner />
+          <SupportBanner />
+          <NewsletterBanner />
+        </div>
+      </div>
+    </main>
+  );
 }
