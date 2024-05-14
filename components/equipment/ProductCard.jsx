@@ -16,8 +16,6 @@ import { Button } from "../ui/button";
 export default function ProductCard({ product }) {
   const { user } = useAuthStore();
 
-  console.log("productcard user", user);
-
   return (
     <Card
       className=" bg-ogBG-base rounded-xl overflow-hidden shadow w-full max-w-sm h-fit"

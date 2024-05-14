@@ -16,10 +16,9 @@ import ShoppingCart from "@/components/Cart/ShoppingCart";
 
 function Header() {
   const { user } = useAuthStore();
-
-  useEffect(() => {
-    console.log(user);
-  }, [user]);
+  const [hidden, setHidden] = useState(false);
+  const [prevScroll, setPrevScroll] = useState(0);
+  const [cartOpen, setCartOpen] = useState(false);
 
   const pathname = usePathname();
 
@@ -29,10 +28,6 @@ function Header() {
   const progress = "64%";
 
   const { scrollY } = useScroll();
-
-  const [hidden, setHidden] = useState(false);
-  const [prevScroll, setPrevScroll] = useState(0);
-  const [cartOpen, setCartOpen] = useState(false);
 
   const handleVisibility = (scrollPosition) => {
     const shouldHide = scrollPosition > prevScroll && scrollPosition > 60;
