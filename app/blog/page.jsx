@@ -4,8 +4,6 @@ import { format } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
 
-import { createClient } from "@/lib/supabase/server";
-
 const postQuery =
   '*[_type == "post"]{title, slug, author, publishedAt, mainImage, content}';
 
@@ -16,10 +14,6 @@ const posts = await client.fetch(postQuery, {
 });
 
 export default async function Page() {
-  const supabase = createClient();
-  const { data, error } = await supabase.from("test").select("*");
-  console.log(data, error);
-
   return (
     <main>
       <Hero

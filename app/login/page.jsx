@@ -3,8 +3,17 @@ import { login } from "@/lib/supabase/actions";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { createClient } from "@/lib/supabase/server";
+import { redirect } from "next/navigation";
 
-export default function LoginPage() {
+export default async function LoginPage() {
+  const supabase = createClient();
+
+  const { data, error } = await supabase.auth.getUser();
+  if (data?.user) {
+    redirect("/");
+  }
+
   return (
     <main className="min-h-screen flex flex-col justify-center items-center">
       <form className="flex flex-col gap-4">
@@ -16,10 +25,14 @@ export default function LoginPage() {
           <Label htmlFor="password">Password:</Label>
           <Input id="password" name="password" type="password" required />
         </div>
-        <div className="flex justify-between">
-          <Button formAction={login}>Log in</Button>
+        <Button formAction={login}>Log in</Button>
+
+        <div className="flex flex-col items-center gap-2">
+          <p className="text-sm">Don&apos;t have an account?</p>{" "}
           <Link href="/signup">
-            <Button variant="secondary">Sign up</Button>
+            <Button variant="link" className="font-normal flex flex-col">
+              Sign up
+            </Button>
           </Link>
         </div>
       </form>
