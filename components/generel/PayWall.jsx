@@ -20,7 +20,6 @@ export default function Paywall({ post }) {
 			break;
 		}
 	}
-	console.log(freeContent);
 
 	if (!user) {
 		return (
