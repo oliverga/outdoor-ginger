@@ -8,6 +8,7 @@ import JoinTheClub from "@/components/generel/JoinTheClub";
 import SocialFollowers from "@/components/generel/SocialFollowers";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import AnimatedCount from "@/components/generel/AnimatedCount";
 
 export default function Home() {
 	return (
@@ -30,8 +31,8 @@ export default function Home() {
 						Become a member
 					</Button>
 				</div>
-				<div id="right">
-					<div className="flex gap-2 -ml-12 bg-ogBG-base ">
+				<div id="right" className="absolute left-44 top-32">
+					<div className="flex gap-2 items-center mb-16 bg-[#F5F5F5]/75 px-1 py-1 rounded-full w-max">
 						<Image
 							src="/profile.webp"
 							alt="August Vallant"
@@ -39,9 +40,34 @@ export default function Home() {
 							height={500}
 							className="rounded-full aspect-square w-8 h-8"
 						/>
-						<div>
-							<p>August Vallant</p>
-							<p>Adventure Influencer</p>
+						<div className="pr-2 uppercase">
+							<p className="text-[0.7rem] font-medium text-ogPrimary">
+								August Vallant
+							</p>
+							<p className="text-[0.6rem] font-light text-ogPrimary">
+								Adventure Influencer
+							</p>
+						</div>
+					</div>
+					<div className="flex gap-2 items-center ml-24 bg-[#F5F5F5]/75 px-1 py-1 rounded-full w-max">
+						<div className="bg-ogPrimary rounded-full p-[5px]">
+							<Image
+								src="/icons/instagramWhite.svg"
+								alt="August Vallant"
+								width={500}
+								height={500}
+								className="aspect-square w-5 h-5"
+							/>
+						</div>
+						<div className="pr-2 uppercase">
+							<AnimatedCount
+								finalCount={333000}
+								duration={3}
+								className="text-[1rem]"
+							/>
+							<p className="text-[0.45rem] font-light text-ogPrimary">
+								Followers
+							</p>
 						</div>
 					</div>
 				</div>

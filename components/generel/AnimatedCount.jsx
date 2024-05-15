@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const AnimatedCount = ({ finalCount, duration = 1 }) => {
+const AnimatedCount = ({ finalCount, duration = 1, className }) => {
 	const { ref, inView } = useInView({
 		triggerOnce: true,
 	});
@@ -45,7 +45,7 @@ const AnimatedCount = ({ finalCount, duration = 1 }) => {
 		<motion.p
 			ref={ref}
 			animate={controls}
-			className="text-ogPrimary md:text-3xl md:font-semibold w-8 md:w-16"
+			className={`text-ogPrimary md:text-3xl md:font-semibold w-8 md:w-16 ${className} `}
 		>
 			{Math.floor(count / 1000)}K
 		</motion.p>
