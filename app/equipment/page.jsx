@@ -36,7 +36,11 @@ const categoriesWithProducts = categories.map((category) => ({
 export default function Page() {
   return (
     <main>
-      <Hero title="Equipment" imageSrc="/equipmenthero.webp" height="40svh" />
+      <Hero
+        title="Equipment"
+        imageSrc="/equipmenthero.webp"
+        height="h-96 md:h-[40vh]"
+      />
       <div className="min-h-screen max-w-5xl mx-auto px-8 pb-24">
         <div className="flex flex-wrap justify-center gap-12  -mt-10 md:mt-0">
           {products.map((product) => (

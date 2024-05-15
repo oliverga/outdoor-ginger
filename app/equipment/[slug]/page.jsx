@@ -37,9 +37,9 @@ export default async function Page({ params }) {
 
   return (
     <main className="min-h-screen">
-      <Hero imageSrc={image} height="30svh" />
+      <Hero imageSrc={image} height="h-48 md:h-[30vh]" />
       <section className="container mx-auto max-w-5xl md:grid grid-cols-2 prose pb-24">
-        <div className="px-8 pb-8">
+        <div className="md:px-8 pb-8 -mt-10 md:mt-0">
           <Image
             src={image}
             alt={product.title}

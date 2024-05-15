@@ -34,7 +34,7 @@ export default async function Page({ params }) {
 
   return (
     <main>
-      <Hero imageSrc={imgUrl} height="40svh"></Hero>
+      <Hero imageSrc={imgUrl} height="h-96 md:h-[40vh]"></Hero>
       <article className="prose md:prose-lg prose-neutral mx-auto px-8 pb-24">
         <h1 className="text-3xl md:text-5xl font-bold">{post[0].title}</h1>
         <p>
