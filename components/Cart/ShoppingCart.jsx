@@ -10,7 +10,7 @@ import useAuthStore from "@/lib/store/authStore";
 import { toast } from "sonner";
 import { useEffect } from "react";
 
-export default function ShoppingCart({ cartRef }) {
+export default function ShoppingCart({ setCartOpen }) {
   const {
     cart,
     addToCart,
@@ -42,12 +42,12 @@ export default function ShoppingCart({ cartRef }) {
 
   const handleRemoveAllItems = () => {
     removeAllItems();
+    setCartOpen(false);
   };
 
   return (
     <div className="overflow-hidden fixed -top-6 md:top-7 left-0 z-50 md:z-60 w-full px-2 md:px-0 mt-12 max-w-7xl mx-auto md:left-1/2 md:transform md:-translate-x-1/2 h-[100%] pointer-events-none ">
       <motion.div
-        ref={cartRef}
         initial={{ y: "-100%", opacity: 0 }}
         animate={{ y: "0px", opacity: 1 }}
         exit={{ y: "-100%", opacity: 0 }}

@@ -218,7 +218,9 @@ function Header() {
           </div>
         </div>
       </motion.div>
-      <AnimatePresence>{cartOpen && <ShoppingCart />}</AnimatePresence>
+      <AnimatePresence>
+        {cartOpen && <ShoppingCart setCartOpen={setCartOpen} />}
+      </AnimatePresence>
     </header>
   );
 }
