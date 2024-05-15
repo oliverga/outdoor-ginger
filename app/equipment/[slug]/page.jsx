@@ -49,7 +49,7 @@ export default async function Page({ params }) {
           />
         </div>
         <div className="flex flex-col gap-4">
-          <h1 className=" mb-0">{product.title}</h1>
+          <h1 className="mb-0 font-bold">{product.title}</h1>
           <ProductInteraction product={product} />
           <PortableText value={product.body} />
           <Accordion type="single" collapsible className="w-full my-4">

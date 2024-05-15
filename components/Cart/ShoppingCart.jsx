@@ -8,10 +8,22 @@ import Item from "./Item";
 import useCartStore from "@/lib/store/cartStore";
 import useAuthStore from "@/lib/store/authStore";
 import { toast } from "sonner";
+import { useEffect } from "react";
 
 export default function ShoppingCart({ cartRef }) {
-  const { cart, addToCart, removeFromCart, removeAllFromCart } = useCartStore();
+  const {
+    cart,
+    addToCart,
+    removeFromCart,
+    removeAllFromCart,
+    loadCart,
+    removeAllItems,
+  } = useCartStore();
   const { user } = useAuthStore();
+
+  useEffect(() => {
+    loadCart();
+  }, [loadCart]);
 
   const handleAddToCart = (product) => {
     addToCart(product);
@@ -26,6 +38,10 @@ export default function ShoppingCart({ cartRef }) {
   const handleRemoveAllFromCart = (product) => {
     removeAllFromCart(product._id);
     toast.success(`All ${product.title} removed from cart`);
+  };
+
+  const handleRemoveAllItems = () => {
+    removeAllItems();
   };
 
   return (
@@ -106,7 +122,12 @@ export default function ShoppingCart({ cartRef }) {
                   </p>
                 </div>
                 <Link href="/checkout" className="w-full">
-                  <Button variant="primary" size="sm" className="w-full">
+                  <Button
+                    variant="primary"
+                    size="sm"
+                    className="w-full"
+                    onClick={handleRemoveAllItems}
+                  >
                     Checkout
                   </Button>
                 </Link>
