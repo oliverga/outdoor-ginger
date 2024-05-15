@@ -24,7 +24,7 @@ export default function AboutMe() {
           <p className="text-ogLabel-faint font-extralight text-sm md:text-2xl italic w-max">Anything is possible if you dare to be curious</p>
         </div>
       </Hero>
-      <section className="px-6 md:px-0 pb-8 md:pb-32 md:max-w-5xl md:mx-auto">
+      <section className="px-6 md:px-0 pb-8 md:py-32 md:max-w-5xl md:mx-auto">
         <div className="flex flex-col md:grid grid-cols-3 grid-rows-1">
           <div className=" col-span-1 flex flex-col mb-4">
             <h2 className="font-display text-3xl md:text-5xl uppercase font-bold mb-6">about</h2>

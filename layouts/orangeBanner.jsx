@@ -6,7 +6,7 @@ export default function OrangeBanner({ h2, children }) {
     <article className="mb-6 px-8 bg-ogPrimary py-8 md:py-0 pb-10 md:pb-20 grid grid-cols-2 grid-rows-1 overflow-y-hidden overflow-x-hidden">
       <div className="md:max-w-5xl md:mx-auto col-start-1 row-start-1 col-span-3 row-span-2 mb-24 z-20 md:flex md:flex-col md:justify-center md:items-center">
         <div>
-          <h2 className="mb-2 font-display font-semibold leading-7 uppercase text-ogBG-base text-3xl md:text-5xl">{h2}</h2>
+          <h2 className="mb-2 font-display font-semibold leading-7 uppercase text-ogBG-base text-3xl md:text-6xl">{h2}</h2>
         </div>
 
         {children}
