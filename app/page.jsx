@@ -44,7 +44,7 @@ export default function Home() {
 							className="rounded-full aspect-square w-8 h-8 md:w-11 md:h-11"
 						/>
 						<div className="pr-2 md:pr-4 uppercase">
-							<p className="text-[0.7rem] md:text-[1rem] font-medium md:font-semibold text-ogPrimary">
+							<p className="text-[0.7rem] md:text-[1rem] font-semibold text-ogPrimary">
 								August Vallant
 							</p>
 							<p className="text-[0.6rem] md:text-[0.9rem] font-light text-ogPrimary">
