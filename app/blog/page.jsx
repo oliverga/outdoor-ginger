@@ -49,13 +49,15 @@ function Article({ post }) {
       >
         <Link href={`/blog/${post.slug.current}`}>
           {post.mainImage && (
-            <Image
-              src={urlFor(post.mainImage).url()}
-              alt=""
-              width={800}
-              height={400}
-              className="aspect-video @xl:aspect-[16/7] object-cover object-center w-full  "
-            />
+            <div className="overflow-hidden">
+              <Image
+                src={urlFor(post.mainImage).url()}
+                alt=""
+                width={800}
+                height={400}
+                className="aspect-video @xl:aspect-[16/7] object-cover object-center w-full hover:scale-[102%] transition-all duration-500"
+              />
+            </div>
           )}
           <div className="m-4 space-y-2">
             <h2 className=" font-medium text-xl">{post.title}</h2>

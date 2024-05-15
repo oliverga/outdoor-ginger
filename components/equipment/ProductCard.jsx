@@ -23,13 +23,15 @@ export default function ProductCard({ product }) {
     >
       {product.images && product.images.length > 0 && (
         <Link href={`/equipment/${product.slug.current}`}>
-          <Image
-            src={urlFor(product.images[0]).url()}
-            alt={product.title}
-            width={300}
-            height={300}
-            className="object-cover w-full"
-          />
+          <div className="overflow-hidden">
+            <Image
+              src={urlFor(product.images[0]).url()}
+              alt={product.title}
+              width={300}
+              height={300}
+              className="object-cover w-full hover:scale-[102%] transition-all duration-500"
+            />
+          </div>
         </Link>
       )}
       <CardContent className="p-6 flex flex-col gap-4">
