@@ -32,6 +32,27 @@ export default function Page() {
           </Card>
         </div>
       </Hero>
+      <section className="px-6 md:px-0 mt-52 max-w-5xl mx-auto">
+        <div>
+          <h2 className="text-3xl ">Membership Benefits</h2>
+          <p>
+            Unlock the secrets of the wilderness and master your mindset with our exclusive one-on-one masterclass. With over 500 nights spent in nature, I bring unparalleled outdoor expertise and powerful mental resilience training. As one of the toughest and most experienced
+            guides, I am dedicated to supporting individuals from all backgrounds in overcoming mental barriers and embracing outdoor challenges.
+          </p>
+        </div>
+        <div>
+          <h3>Personalized Coaching: Gain direct access to me for one-on-one sessions, tailored to your specific needs and goals.</h3>
+          <h3>Exclusive Content: Enjoy access to members-only posts, videos, and articles packed with expert advice, tips, and insights. </h3>
+          <h3> Community Support: Join a vibrant community of like-minded individuals, share experiences, and receive support and motivation.</h3>
+          <h3> Live Q&A Sessions: Participate in live sessions where you can ask questions and get real-time advice. </h3>
+          <h3>Special Offers: Receive early access to events, workshops, and special discounts on gear and courses.</h3>
+        </div>
+        <div>
+          <h3>Exclusive posts</h3>
+
+          <h3>Join today and transform your approach to nature and life with expert guidance and a supportive community!</h3>
+        </div>
+      </section>
       <div className="px-6 md:px-0 mt-52 max-w-5xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between">
           <Accordion type="single" collapsible className="md:w-1/2 mb-10">

@@ -28,7 +28,7 @@ export default function AboutMe() {
         <div className="flex flex-col md:grid grid-cols-3 grid-rows-1">
           <div className=" col-span-1 flex flex-col mb-4">
             <h2 className="font-display text-3xl md:text-5xl uppercase font-bold mb-6">about</h2>
-            <p className=" text-sm md:text-xl w-144">
+            <p className=" text-sm md:text-xl md:w-144">
               August, known as the outdoorginger, embarked on his journey with the wind in his hair and the thrill of adventure in his heart. From a young age, he embraced the call of the wild, navigating the trails and conquering the great outdoors. With each expedition, he
               honed his skills and forged a path of his own, earning accolades and admiration along the way. Now, as a seasoned explorer, August stands ready to inspire and ignite the spirit of adventure in all who dare to follow.
             </p>
