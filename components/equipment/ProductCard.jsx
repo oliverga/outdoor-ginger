@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   Card,
   CardContent,
@@ -8,13 +9,20 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
-import Image from "next/image";
+import { Button } from "../ui/button";
 import { urlFor } from "@/lib/sanity/client";
 import useAuthStore from "@/lib/store/authStore";
-import { Button } from "../ui/button";
+import useCartStore from "@/lib/store/cartStore";
+import { toast } from "sonner";
 
 export default function ProductCard({ product }) {
   const { user } = useAuthStore();
+  const { addToCart } = useCartStore();
+
+  const handleAddToCart = () => {
+    addToCart(product);
+    toast.success(`1 ${product.title} added to cart`);
+  };
 
   return (
     <Card
@@ -60,7 +68,7 @@ export default function ProductCard({ product }) {
             {product.description}
           </CardDescription>
         </div>
-        <Button variant="primary" className="">
+        <Button variant="primary" onClick={handleAddToCart}>
           Add to cart
         </Button>
       </CardContent>

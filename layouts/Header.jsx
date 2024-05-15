@@ -12,10 +12,15 @@ import {
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import useAuthStore from "@/lib/store/authStore";
+import useCartStore from "@/lib/store/cartStore";
 import ShoppingCart from "@/components/Cart/ShoppingCart";
 
 function Header() {
   const { user } = useAuthStore();
+  const { cart } = useCartStore();
+
+  const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+
   const [hidden, setHidden] = useState(false);
   const [prevScroll, setPrevScroll] = useState(0);
   const [cartOpen, setCartOpen] = useState(false);
@@ -152,11 +157,18 @@ function Header() {
                   ) : null}
                 </ul>
               </nav>
-              <IconShoppingCart
-                size={24}
-                className={`stroke-[1.5px] cursor-pointer ${cartOpen ? "text-ogPrimary" : "text-ogLabel-base "}`}
-                onClick={toggleCart}
-              />
+              <div className="relative">
+                {totalItems > 0 && (
+                  <div className="absolute -top-2.5 -right-2.5 bg-ogPrimary text-ogBG-base rounded-full p-1 text-[10px] font-medium aspect-square w-4 h-4 flex items-center justify-center cursor-default">
+                    {totalItems}
+                  </div>
+                )}
+                <IconShoppingCart
+                  size={24}
+                  className={`stroke-[1.5px] cursor-pointer ${cartOpen ? "text-ogPrimary" : "text-ogLabel-base "}`}
+                  onClick={toggleCart}
+                />
+              </div>
             </div>
           </div>
         </div>

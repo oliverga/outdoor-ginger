@@ -1,3 +1,4 @@
+import ProductInteraction from "@/components/equipment/ProductInteraction";
 import Hero from "@/components/generel/Hero";
 import {
   Accordion,
@@ -5,7 +6,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
 import { client, urlFor } from "@/lib/sanity/client";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
@@ -50,10 +50,7 @@ export default async function Page({ params }) {
         </div>
         <div className="flex flex-col gap-4">
           <h1 className=" mb-0">{product.title}</h1>
-          <h2 className="text-xl font-medium ">{product.price} EUR</h2>
-          <Button variant="primary" className="w-fit">
-            Add to cart
-          </Button>
+          <ProductInteraction product={product} />
           <PortableText value={product.body} />
           <Accordion type="single" collapsible className="w-full my-4">
             <AccordionItem value="item-1" defaultOpen={true} className="">
