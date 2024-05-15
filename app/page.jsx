@@ -15,18 +15,18 @@ export default function Home() {
 		<main>
 			<Hero title="Outdoor Ginger" imageSrc="/forsidehero.webp" bgPos="bottom">
 				<div id="left" className="mt-4 -mb-6">
-					<div className="hidden md:block">
-						<p>
+					<div className="hidden md:block font-light w-144 my-8">
+						<p className="text-ogBG-base">
 							August Vallant is an outdoor influencer who takes it to the next
 							level.
 						</p>
-						<p>Join him on his next adventure!</p>
+						<p className="text-ogBG-base">Join him on his next adventure!</p>
 					</div>
 					<Button
 						href="/membership"
 						size="md"
 						variant="primary"
-						className="capitalize"
+						className="capitalize md:mb-12"
 					>
 						Become a member
 					</Button>
