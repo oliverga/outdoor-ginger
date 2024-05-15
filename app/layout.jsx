@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./normalize.css";
 import { Inter, Syne } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import Footer from "@/layouts/Footer";
