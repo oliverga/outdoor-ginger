@@ -47,8 +47,8 @@ export default async function Page({ params }) {
 	return (
 		<main>
 			<Hero imageSrc={imgUrl} height="h-96 md:h-[40vh]"></Hero>
-			<div className="md:grid grid-cols-blogLayout max-w-5xl mx-auto">
-				<article className="prose md:prose-lg prose-neutral mx-auto px-8 pb-12 md:pb-24">
+			<div className="md:relative md:grid grid-cols-blogLayout max-w-5xl mx-auto">
+				<article className="row-span-2 prose md:prose-lg prose-neutral mx-auto px-8 pb-12 md:pb-24">
 					<h1 className="text-3xl md:text-5xl font-bold">{post[0].title}</h1>
 					<p>
 						By{" "}
@@ -70,13 +70,18 @@ export default async function Page({ params }) {
 
 					<Paywall post={post} />
 				</article>
-				<div className="flex flex-col gap-4 px-8 md:px-0 mb-12 max-w-[650px] md:max-w-[730px] mx-auto">
+				<div className="col-start-2 flex flex-col gap-4 px-8 md:px-0 mb-12 max-w-[650px] md:max-w-[730px] mx-auto md:mt-108">
 					{posts
 						.filter((post) => post.slug.current !== currentPostSlug)
 						.slice(-2)
 						.map((post) => {
 							return <ArticleCard post={post} key={post.slug.current} />;
 						})}
+				</div>
+				<div className="hidden md:block absolute right-[-485px] top-32 bg-ogPrimary w-[800px] pl-10 pb-10 pt-32 rounded-3xl">
+					<h2 className="capitalize text-5xl font-display font-semibold text-ogPrimary-lightest">
+						Training in <br /> the Pyranees
+					</h2>
 				</div>
 			</div>
 		</main>
