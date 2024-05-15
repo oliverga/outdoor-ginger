@@ -19,7 +19,7 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }) {
 	const postQuery =
-		'*[_type == "post" && slug.current == $slug]{slug, title, author, publishedAt, mainImage, content}';
+		'*[_type == "post" && slug.current == $slug]{slug, title, author, publishedAt, mainImage, content, Youtube_Short_URL, Youtube_Short_Title}';
 
 	const post = await client.fetch(postQuery, {
 		slug: params.slug,
@@ -44,6 +44,12 @@ export default async function Page({ params }) {
 	});
 
 	let currentPostSlug = post[0].slug.current;
+
+	let brokenTitle;
+	if (post[0].Youtube_Short_Title) {
+		const title = post[0].Youtube_Short_Title;
+		brokenTitle = breakString(title, 10, 10);
+	}
 
 	return (
 		<main>
@@ -79,13 +85,49 @@ export default async function Page({ params }) {
 							return <ArticleCard post={post} key={post.slug.current} />;
 						})}
 				</div>
-				<div className="hidden md:block absolute right-[-485px] top-32 bg-ogPrimary w-[800px] pl-10 pb-10 pt-32 rounded-3xl">
-					<ReelEmbed />
-					<h2 className="capitalize text-5xl font-display font-semibold text-ogPrimary-lightest">
-						Training in <br /> the Pyranees
-					</h2>
+				<div className="hidden md:block absolute right-[-485px] top-32 bg-ogPrimary w-[800px] pl-10 pb-10 pt-32 h-60 rounded-3xl">
+					{post[0].Youtube_Short_URL && (
+						<div>
+							<ReelEmbed Youtube_Short_URL={post[0].Youtube_Short_URL} />
+							{post[0].Youtube_Short_Title && (
+								<h2 className="capitalize text-5xl font-display font-semibold text-ogPrimary-lightest">
+									{brokenTitle}
+								</h2>
+							)}
+						</div>
+					)}
 				</div>
 			</div>
 		</main>
 	);
+}
+
+function breakString(input, firstLineLength, secondLineLength) {
+	const words = input.split(" ");
+	let line = "";
+	let result = [];
+	let breakCount = 0;
+
+	for (let i = 0; i < words.length; i++) {
+		if ((line + words[i]).length > firstLineLength && breakCount < 1) {
+			result.push(
+				<>
+					{line.trim()}
+					<br />
+				</>
+			);
+			line = "";
+			breakCount++;
+		} else if (breakCount >= 1 && (line + words[i]).length > secondLineLength) {
+			line = line.trim() + "...";
+			break;
+		}
+		line += words[i] + " ";
+	}
+
+	if (breakCount === 0 || line.trim().length > 0) {
+		result.push(<>{line.trim()}</>);
+	}
+
+	return result;
 }
