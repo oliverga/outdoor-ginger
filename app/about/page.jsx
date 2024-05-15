@@ -42,8 +42,8 @@ export default function AboutMe() {
         <div className="flex flex-col items-center">
           <p className="text-ogBG-base mb-1 md:mb-4 text-left text-base md:text-2xl">August&apos;s Journey of Self-Discovery & Adventure</p>
           <p className="text-ogBG-base font-normal leading-5 text-sm md:text-xl md:w-2/3">
-            Augustt&apos;s story isnt&apos;t just about the destinations he&apos;s reached; it&apos;s about the lessons learned along the way. Through the trials and triumphs of life on the road, het&apos;s discovered a profound sense of self-reliance and resilience, forging a
-            path that defies convention and embraces the unknown.
+            Augustt&apos;s story isnt&apos;t just about the destinations he&apos;s reached&apos; it&apos;s about the lessons learned along the way. Through the trials and triumphs of life on the road, het&apos;s discovered a profound sense of self-reliance and resilience, forging
+            a path that defies convention and embraces the unknown.
           </p>
         </div>
       </OrangeBanner>
