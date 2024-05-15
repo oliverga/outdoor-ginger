@@ -29,7 +29,7 @@ export default async function SignupPage() {
         <Button formAction={signup}>Sign up</Button>
 
         <div className="flex flex-col items-center gap-0 mt-2">
-          <p className="text-sm">Already have an account?</p>{" "}
+          <p className="text-sm">Already a member?</p>{" "}
           <Link href="/login">
             <Button variant="link" className="font-normal flex flex-col">
               Log in
