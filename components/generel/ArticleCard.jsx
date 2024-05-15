@@ -8,7 +8,7 @@ export default function ArticleCard({ post }) {
 		<article>
 			<Link
 				href={`/blog/${post.slug.current}`}
-				className="flex gap-4 border rounded-xl overflow-hidden items-center shadow-md max-w-80"
+				className="flex gap-3 border rounded-xl overflow-hidden items-center shadow-md max-w-80"
 			>
 				<Image
 					src={urlFor(post.mainImage).url()}
@@ -19,8 +19,8 @@ export default function ArticleCard({ post }) {
 				/>
 				<div className="">
 					<h2>
-						{post.title.length > 23
-							? post.title.slice(0, 23) + "..."
+						{post.title.length > 22
+							? post.title.slice(0, 22) + "..."
 							: post.title}
 					</h2>
 					<p>{format(new Date(post.publishedAt), "PPP")}</p>

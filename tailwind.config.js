@@ -27,6 +27,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         cartLayout: "1fr 3fr 1fr",
+        blogLayout: "2fr 1fr",
       },
       spacing: {
         108: "26rem",

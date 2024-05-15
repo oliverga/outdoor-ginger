@@ -47,7 +47,7 @@ export default async function Page({ params }) {
 	return (
 		<main>
 			<Hero imageSrc={imgUrl} height="h-96 md:h-[40vh]"></Hero>
-			<div>
+			<div className="md:grid grid-cols-blogLayout max-w-5xl mx-auto">
 				<article className="prose md:prose-lg prose-neutral mx-auto px-8 pb-12 md:pb-24">
 					<h1 className="text-3xl md:text-5xl font-bold">{post[0].title}</h1>
 					<p>
@@ -70,7 +70,7 @@ export default async function Page({ params }) {
 
 					<Paywall post={post} />
 				</article>
-				<div className="flex flex-col gap-4 px-8 mb-12 max-w-[650px] md:max-w-[730px] mx-auto">
+				<div className="flex flex-col gap-4 px-8 md:px-0 mb-12 max-w-[650px] md:max-w-[730px] mx-auto">
 					{posts
 						.filter((post) => post.slug.current !== currentPostSlug)
 						.slice(-2)
