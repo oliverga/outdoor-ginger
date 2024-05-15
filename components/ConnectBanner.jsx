@@ -4,18 +4,16 @@ import Link from "next/link";
 
 function ConnectBanner() {
   return (
-    <section className="bg-ogPrimary-lightest text-ogPrimary flex flex-col text-center  px-6 py-6 relative">
-      <div className="absolute -top-12 right-24 transform translate-x-1/2 -translate-y-1/2">
-        <Image src="/phone.png" alt="" width={64} height={64} className="w-44" />
-      </div>
-      <div className="">
-        <h2 className="text-3xl md:text-8xl font-bold text-left font-display uppercase leading-7 pb-6">
-          Connect <br></br> and embark on <br></br> the journey
-        </h2>
-        <div className="flex flex-col md:flex-row">
-          <div className="flex md:flex-col">
+    <section className="bg-ogPrimary-lightest text-ogPrimary flex flex-col justify-items-start px-6 md:px-0 py-10">
+      <div>
+        <div className="bg-ogPrimary-lightest text-ogPrimary md:px-0 md:my-20 md:max-w-5xl md:mx-auto">
+          <div className="flex flex-col justify-center">
+            <h2 className="text-3xl md:text-5xl font-semibold leading-7 text-left  font-display uppercase mb-5">
+              Connect <br /> and Embark on <br />
+              the Journey
+            </h2>
             <Link target="blank" href="mailto:contact@outdoorginger.com">
-              <Button size="default" className="bg-ogPrimary text-ogPrimary-lightest hover:bg-ogPrimary-dark font-semibold text-base uppercase rounded-xl underline">
+              <Button size="lg" className="bg-ogPrimary text-ogPrimary-lightest hover:bg-ogPrimary-dark font-semibold text-base uppercase rounded-xl underline">
                 Get in touch
               </Button>
             </Link>
