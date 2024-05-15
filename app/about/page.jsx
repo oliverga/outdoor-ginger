@@ -1,7 +1,7 @@
 import { client, urlFor } from "@/lib/sanity/client";
 import Hero from "@/components/generel/Hero";
 import Image from "next/image";
-import OrangeBanner from "@/layouts/orangeBanner";
+import OrangeBanner from "@/layouts/OrangeBanner";
 import SponsorBanner from "@/components/generel/SponsorBanner";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
