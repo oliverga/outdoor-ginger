@@ -30,8 +30,8 @@ export default async function LoginPage() {
         <div className="flex flex-col items-center gap-0 mt-2">
           <p className="text-sm">Not a member?</p>{" "}
           <Link href="/membership">
-            <Button variant="link" className="font-normal flex flex-col">
-              Learn more
+            <Button variant="signup" className="font-normal flex flex-col">
+              Sign up
             </Button>
           </Link>
         </div>
