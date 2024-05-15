@@ -2,7 +2,7 @@ import Hero from "@/components/generel/Hero";
 import { client, urlFor } from "@/lib/sanity/client";
 import Paywall from "@/components/generel/PayWall";
 import ArticleCard from "@/components/generel/ArticleCard";
-import InstaEmbed from "@/components/generel/InstaEmbed";
+import ReelEmbed from "@/components/generel/ReelEmbed";
 
 export async function generateStaticParams() {
 	const slugQuery = '*[_type == "post"]{slug}';
@@ -80,7 +80,7 @@ export default async function Page({ params }) {
 						})}
 				</div>
 				<div className="hidden md:block absolute right-[-485px] top-32 bg-ogPrimary w-[800px] pl-10 pb-10 pt-32 rounded-3xl">
-					<InstaEmbed />
+					<ReelEmbed />
 					<h2 className="capitalize text-5xl font-display font-semibold text-ogPrimary-lightest">
 						Training in <br /> the Pyranees
 					</h2>
