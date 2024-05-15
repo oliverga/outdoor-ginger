@@ -1,8 +1,6 @@
 import Hero from "@/components/generel/Hero";
 import { client, urlFor } from "@/lib/sanity/client";
-import { PortableText } from "next-sanity";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import Paywall from "@/components/generel/PayWall";
 
 export async function generateStaticParams() {
 	const slugQuery = '*[_type == "post"]{slug}';
@@ -33,7 +31,6 @@ export default async function Page({ params }) {
 	);
 
 	const imgUrl = urlFor(post[0].mainImage).url();
-	const freeContent = post[0].content.slice(0, 3);
 
 	return (
 		<main>
@@ -58,33 +55,7 @@ export default async function Page({ params }) {
 					})}
 				</p>
 
-				<PortableText value={freeContent} />
-
-				{post[0].content.length > freeContent.length && (
-					<div className="-mt-28 relative z-10">
-						<div className="h-28 bg-gradient-to-b from-transparent to-ogBG-base" />
-						<div className=" bg-ogBG-base rounded-lg px-8 py-4 drop-shadow-xl">
-							<p className="text-xl capitalize text-ogLabel-title">
-								become a member!
-							</p>
-							<p>
-								You&apos;ve reached the end of the free preview. To continue
-								reading, please subscribe.
-							</p>
-							<div className="flex justify-between items-center">
-								<p>
-									<span className="text-2xl text-ogLabel-title font-semibold">
-										9$
-									</span>{" "}
-									/ Month
-								</p>
-								<Link href="/membership">
-									<Button variant="primary">Subscribe</Button>
-								</Link>
-							</div>
-						</div>
-					</div>
-				)}
+				<Paywall post={post} />
 			</article>
 		</main>
 	);
