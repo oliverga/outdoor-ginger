@@ -13,7 +13,7 @@ export default function Home() {
 			<Hero
 				title="Outdoor Ginger"
 				imageSrc="/forsidehero.webp"
-				height="80vh"
+				height="h-96 md:h-[80vh]"
 				bgPos="bottom"
 			/>
 			<div className="space-y-32">
