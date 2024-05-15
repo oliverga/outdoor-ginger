@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function AboutBlock() {
 	return (
-		<article className="px-8 mb-12 max-w-5xl mx-auto flex flex-col md:flex-row md:gap-8 md:items-center">
+		<article className="px-8 mb-8 -mt-10 max-w-5xl mx-auto flex flex-col md:flex-row md:gap-8 md:items-center">
 			<div className="aspect-square w-48 h-48 md:w-80 md:h-80 mx-auto mb-4">
 				<Image
 					src="/waterSitting.png"

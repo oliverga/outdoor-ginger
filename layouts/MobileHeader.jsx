@@ -5,12 +5,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ShoppingCart from "@/components/ShoppingCart";
+import ShoppingCart from "@/components/Cart/ShoppingCart";
+import useAuthStore from "@/lib/store/authStore";
 
 function MobileHeader() {
   const playerRef1 = useRef();
   const playerRef2 = useRef();
   const [isDivVisible, setIsDivVisible] = useState(false);
+
+  const { user } = useAuthStore();
 
   const handleClick1 = () => {
     const player = playerRef1.current;
@@ -132,7 +135,12 @@ function MobileHeader() {
                 src="/lottie/burgerMenu.lottie"
                 background="transparent"
                 speed="3"
-                style={{ width: "48px" }}
+                style={{
+                  width: "48px",
+                  userSelect: "none",
+                  webkitUserSelect: "none",
+                  MsUserSelect: "none",
+                }}
                 playMode="normal"
                 onClick={handleClick1}
               ></dotlottie-player>
@@ -147,9 +155,9 @@ function MobileHeader() {
             initial={{ y: "-100%" }}
             animate={{ y: "0%" }}
             exit={{ y: "-120%" }}
-            transition={{ duration: 0.5, type: "spring" }}
+            transition={{ type: "spring", bounce: 0.2 }}
           >
-            <nav className="flex flex-col row-start-1">
+            <nav className="flex flex-col row-start-1 justify-between">
               <div className="place-self-end">
                 <dotlottie-player
                   key={isDivVisible}
@@ -157,36 +165,53 @@ function MobileHeader() {
                   src="/lottie/closeMatches.lottie"
                   background="transparent"
                   speed="2"
-                  style={{ width: "65px", height: "65px" }}
+                  style={{
+                    width: "65px",
+                    height: "65px",
+                    userSelect: "none",
+                    webkitUserSelect: "none",
+                    MsUserSelect: "none",
+                  }}
                   playMode="normal"
                   onClick={handleClick2}
                 />
               </div>
-              <ul className="flex flex-col vh-sm:mx-8 vh-sm:flex-row justify-between gap-4 items-center flex-wrap text-3xl font-display font-bold text-background capitalize">
+              <ul className="flex flex-col vh-sm:mx-8 vh-sm:flex-row justify-between gap-4 items-center flex-wrap text-3xl font-display font-bold text-ogBG-base capitalize">
                 <li>
                   <Link href="/" onClick={() => setIsDivVisible(false)}>
                     Home
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    href="/membership"
-                    onClick={() => setIsDivVisible(false)}
-                  >
-                    Membership
-                  </Link>
-                </li>
+                {user === null ? (
+                  <li>
+                    <Link
+                      href="/membership"
+                      onClick={() => setIsDivVisible(false)}
+                    >
+                      Membership
+                    </Link>
+                  </li>
+                ) : (
+                  <li>
+                    <Link
+                      href="/profile"
+                      onClick={() => setIsDivVisible(false)}
+                    >
+                      Your Membership
+                    </Link>
+                  </li>
+                )}
                 <li>
                   <Link
                     href="/equipment"
                     onClick={() => setIsDivVisible(false)}
                   >
-                    My equipment
+                    Equipment
                   </Link>
                 </li>
                 <li>
                   <Link href="/blog" onClick={() => setIsDivVisible(false)}>
-                    Campfire Chronicles
+                    Blog
                   </Link>
                 </li>
                 <li>
@@ -194,14 +219,13 @@ function MobileHeader() {
                     About me
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    href="/about#contact"
-                    onClick={() => setIsDivVisible(false)}
-                  >
-                    Contact
-                  </Link>
-                </li>
+                {user === null ? (
+                  <li>
+                    <Link href="/login" onClick={() => setIsDivVisible(false)}>
+                      Login
+                    </Link>
+                  </li>
+                ) : null}
               </ul>
             </nav>
             <div className="absolute top-[60vh] flex items-center justify-center vh-sm:hidden">

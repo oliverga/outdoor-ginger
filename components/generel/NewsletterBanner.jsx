@@ -1,11 +1,11 @@
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
+import { Button } from "../ui/button";
+import { Input } from "../ui/input";
 
 function NewsletterBanner() {
   return (
     <section className="h-[50vh] bg-ogPrimary flex flex-col items-center justify-evenly text-center px-4 py-6">
       <div className=" space-y-3">
-        <h1 className="text-6xl md:text-8xl font-bold text-ogPrimary-lightest">
+        <h1 className="font-display font-bold uppercase text-5xl md:text-7xl text-ogPrimary-lightest">
           Campfire Chronicles
         </h1>
         {/* <h2 className=" font-display text-ogPrimary-lighter text-xl font-medium">

@@ -8,7 +8,7 @@ export default function LatestYT() {
 	const [videos, setVideos] = useState([]);
 
 	useEffect(() => {
-		const apiKey = "AIzaSyBDx6YWmbbZ-on7sEt3sRtiER6XtZEhATk";
+		const apiKey = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
 		const channelId = "UCo7ll072evLTI3hawAW3pMQ";
 		const maxResults = 20;
 
@@ -62,11 +62,11 @@ export default function LatestYT() {
 	}, []);
 
 	return (
-		<article className="bg-ogPrimary pt-8 grid grid-cols-2 grid-rows-latestYT overflow-y-hidden md:overflow-x-hidden">
+		<article className="bg-ogPrimary pt-8 pb-8 grid grid-cols-2 grid-rows-latestYT overflow-y-hidden md:overflow-x-hidden">
 			<h2 className="row-start-1 col-start-1 col-span-2 font-display font-semibold text-ogPrimary-lightest uppercase text-4xl md:text-5xl place-self-center text-center ml-6">
 				Latest Adventures
 			</h2>
-			<div className="flex md:flex-wrap md:justify-around gap-4 self-end row-start-2 col-start-1 col-span-2 mt-4 mb-12 ml-6 md:m-auto md:mb-16 z-20 overflow-x-scroll md:overflow-x-visible md:max-w-5xl">
+			<div className="flex md:flex-wrap md:justify-evenly gap-14 self-end row-start-2 col-start-1 col-span-2 mt-4 mb-12 ml-6 md:m-auto md:mb-16 z-20 overflow-x-scroll md:overflow-x-visible md:max-w-5xl">
 				{videos.length > 0 &&
 					videos.map((video) => (
 						<iframe

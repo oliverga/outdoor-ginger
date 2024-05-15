@@ -4,6 +4,8 @@ import { Toaster } from "@/components/ui/sonner";
 import Footer from "@/layouts/Footer";
 import Header from "@/layouts/Header";
 import MobileHeader from "@/layouts/MobileHeader";
+import CookieConsentDialog from "@/components/CookiesConsentDialog";
+import AuthSubscriber from "@/components/AuthSubscriber";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,18 +18,13 @@ const syne = Syne({
   variable: "--font-syne",
 });
 
-export const metadata = {
-  title: "Outdoor Ginger",
-  description: "Outdoor Ginger is an adventurer who loves the outdoors.",
-};
-
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${syne.variable}`}>
       <body className="bg-ogBG-base text-ogLabel-base">
         <MobileHeader />
         <Header />
-        <>{children}</>
+        <AuthSubscriber />
         <Toaster
           richColors={true}
           toastOptions={{
@@ -40,6 +37,8 @@ export default function RootLayout({ children }) {
           }}
           theme="light"
         />
+        <CookieConsentDialog />
+        {children}
         <Footer />
       </body>
     </html>

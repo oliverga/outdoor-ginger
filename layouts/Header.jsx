@@ -9,11 +9,22 @@ import {
   useScroll,
   AnimatePresence,
 } from "framer-motion";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import ShoppingCart from "@/components/ShoppingCart";
+import useAuthStore from "@/lib/store/authStore";
+import useCartStore from "@/lib/store/cartStore";
+import ShoppingCart from "@/components/Cart/ShoppingCart";
 
 function Header() {
+  const { user } = useAuthStore();
+  const { cart } = useCartStore();
+
+  const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+
+  const [hidden, setHidden] = useState(false);
+  const [prevScroll, setPrevScroll] = useState(0);
+  const [cartOpen, setCartOpen] = useState(false);
+
   const pathname = usePathname();
 
   const linkStyle = (path) =>
@@ -22,10 +33,6 @@ function Header() {
   const progress = "64%";
 
   const { scrollY } = useScroll();
-
-  const [hidden, setHidden] = useState(false);
-  const [prevScroll, setPrevScroll] = useState(0);
-  const [cartOpen, setCartOpen] = useState(false);
 
   const handleVisibility = (scrollPosition) => {
     const shouldHide = scrollPosition > prevScroll && scrollPosition > 60;
@@ -91,24 +98,36 @@ function Header() {
               </Link>
             </motion.div>
             <div className="flex gap-8 items-center w-full justify-end">
-              <nav className="w-full max-w-xl">
+              <nav className={`w-full ${user ? "max-w-md" : "max-w-xl"}`}>
                 <ul className="flex w-full justify-between items-center text-sm font-normal whitespace-nowrap">
-                  <li>
-                    <Link
-                      className={linkStyle("/membership")}
-                      href="/membership"
-                      onClick={() => setCartOpen(false)}
-                    >
-                      Membership
-                    </Link>
-                  </li>
+                  {user ? (
+                    <li>
+                      <Link
+                        className={linkStyle("/profile")}
+                        href="/profile"
+                        onClick={() => setCartOpen(false)}
+                      >
+                        Your membership
+                      </Link>
+                    </li>
+                  ) : (
+                    <li>
+                      <Link
+                        className={linkStyle("/membership")}
+                        href="/membership"
+                        onClick={() => setCartOpen(false)}
+                      >
+                        Membership
+                      </Link>
+                    </li>
+                  )}
                   <li>
                     <Link
                       className={linkStyle("/equipment")}
                       href="/equipment"
                       onClick={() => setCartOpen(false)}
                     >
-                      My equipment
+                      Equipment
                     </Link>
                   </li>
                   <li>
@@ -117,7 +136,7 @@ function Header() {
                       href="/blog"
                       onClick={() => setCartOpen(false)}
                     >
-                      Campfire Chronicles
+                      Blog
                     </Link>
                   </li>
                   <li>
@@ -129,22 +148,27 @@ function Header() {
                       About me
                     </Link>
                   </li>
-                  <li>
-                    <Link
-                      className={linkStyle("/about#contact")}
-                      href="/about#contact"
-                      onClick={() => setCartOpen(false)}
-                    >
-                      Contact
-                    </Link>
-                  </li>
+                  {user === null ? (
+                    <li>
+                      <Link href="/login" onClick={() => setCartOpen(false)}>
+                        <Button variant="outline">Log in</Button>
+                      </Link>
+                    </li>
+                  ) : null}
                 </ul>
               </nav>
-              <IconShoppingCart
-                size={24}
-                className={`stroke-[1.5px] cursor-pointer ${cartOpen ? "text-ogPrimary" : "text-ogLabel-base "}`}
-                onClick={toggleCart}
-              />
+              <div className="relative">
+                {totalItems > 0 && (
+                  <div className="absolute -top-2.5 -right-2.5 bg-ogPrimary text-ogBG-base rounded-full p-1 text-[10px] font-medium aspect-square w-4 h-4 flex items-center justify-center cursor-default">
+                    {totalItems}
+                  </div>
+                )}
+                <IconShoppingCart
+                  size={24}
+                  className={`stroke-[1.5px] cursor-pointer ${cartOpen ? "text-ogPrimary" : "text-ogLabel-base "}`}
+                  onClick={toggleCart}
+                />
+              </div>
             </div>
           </div>
         </div>

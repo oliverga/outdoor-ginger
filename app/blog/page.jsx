@@ -13,24 +13,18 @@ const posts = await client.fetch(postQuery, {
   },
 });
 
-console.log(posts);
-
-const authorQuery = '*[_type == "author"]{_id, name, mainImage, instagram}';
-
-const authors = await client.fetch(authorQuery);
-
-export default function Page() {
+export default async function Page() {
   return (
     <main>
       <Hero
         title="Campfire Chronicles"
         imageSrc="/bloghero.webp"
-        height="50svh"
+        height="h-96 md:h-[50vh]"
       ></Hero>
 
       <section className="pb-32 max-w-5xl mx-auto px-8">
         <div className="flex flex-col md:grid grid-cols-3 gap-6">
-          <div className=" col-span-1 flex flex-col gap-6">
+          <div className=" col-span-1 flex flex-col gap-6 -mt-10 md:mt-0">
             {posts.slice(0, Math.ceil(posts.length / 2)).map((post) => {
               return <Article post={post} key={post.slug.current} />;
             })}
@@ -55,13 +49,15 @@ function Article({ post }) {
       >
         <Link href={`/blog/${post.slug.current}`}>
           {post.mainImage && (
-            <Image
-              src={urlFor(post.mainImage).url()}
-              alt=""
-              width={800}
-              height={400}
-              className="aspect-video @xl:aspect-[16/7] object-cover object-center w-full  "
-            />
+            <div className="overflow-hidden">
+              <Image
+                src={urlFor(post.mainImage).url()}
+                alt=""
+                width={800}
+                height={400}
+                className="aspect-video @xl:aspect-[16/7] object-cover object-center w-full hover:scale-[102%] transition-all duration-500"
+              />
+            </div>
           )}
           <div className="m-4 space-y-2">
             <h2 className=" font-medium text-xl">{post.title}</h2>

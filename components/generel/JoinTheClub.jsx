@@ -10,7 +10,7 @@ export default function JoinTheClub() {
 			</h2>
 			<div className="flex md:flex-wrap justify-around md:justify-around md:px-12 gap-6 my-6 row-span-2">
 				<div className="flex flex-col gap-1 items-center">
-					<div className="aspect-square w-20 md:w-32 bg-ogPrimary p-6 rounded-full">
+					<div className="aspect-square w-20 md:w-32 h-20 md:h-32 bg-ogPrimary p-6 rounded-full">
 						<Image
 							src="/icons/health.svg"
 							alt="Join the club"
@@ -24,7 +24,7 @@ export default function JoinTheClub() {
 					</h3>
 				</div>
 				<div className="flex flex-col gap-1 items-center">
-					<div className="aspect-square w-20 md:w-32 bg-ogPrimary p-6 rounded-full">
+					<div className="aspect-square w-20 md:w-32 h-20 md:h-32 bg-ogPrimary p-6 rounded-full">
 						<Image
 							src="/icons/deStress.svg"
 							alt="Join the club"
@@ -38,7 +38,7 @@ export default function JoinTheClub() {
 					</h3>
 				</div>
 				<div className="flex flex-col gap-1 items-center">
-					<div className="aspect-square w-20 md:w-32 bg-ogPrimary p-6 rounded-full">
+					<div className="aspect-square w-20 md:w-32 h-20 md:h-32 bg-ogPrimary p-6 rounded-full">
 						<Image
 							src="/icons/simplicity.svg"
 							alt="Join the club"
