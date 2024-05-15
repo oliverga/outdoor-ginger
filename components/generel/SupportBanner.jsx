@@ -58,13 +58,13 @@ function SupportBanner({ type = "banner" }) {
 	} else if (type == "original") {
 		return (
 			<article className="px-8 my-12 max-w-5xl flex flex-col items-center mx-auto md:grid md:grid-cols-2 md:grid-rows-2">
-				<div className="aspect-square col-start-2 row-span-2 w-40 md:w-80 h-40 md:h-80 md:place-self-center">
+				<div className="aspect-square col-start-2 row-span-2 w-48 h-48 md:w-80 md:h-80 md:place-self-center">
 					<Image
 						src="/fire.png"
 						alt="August sitting by a campfire"
 						width={500}
 						height={500}
-						className="w-full h-full object-cover rounded-full"
+						className="w-full h-full object-cover rounded-full drop-shadow-lg"
 					/>
 				</div>
 				<h2 className="col-start-1 row-start-1 my-4 text-4xl md:text-5xl font-display font-semibold uppercase text-center md:text-left md:self-start md:mt-8">

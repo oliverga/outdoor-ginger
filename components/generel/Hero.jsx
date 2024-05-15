@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-function Hero({ title, imageSrc, height = "h-[80vh]", children }) {
+function Hero({ title, imageSrc, height = "h-96 md:h-[80vh]", children }) {
 	const leftSideChildren = React.Children.toArray(children).filter(
 		(child) => child.props.id === "left"
 	);
