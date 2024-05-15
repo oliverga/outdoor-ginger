@@ -19,53 +19,66 @@ console.log(testimonials);
 export default function AboutMe() {
   return (
     <main className="">
-      <Hero title="About August" imageSrc="/aboutMe.png" height="80svh">
-        <div id="left" className="md:mt-8 w-full">
-          <p className="text-ogLabel-faint font-extralight md:text-2xl italic">
-            Anything is possible if you dare to be curious
-          </p>
+      <Hero title="About August" imageSrc="/aboutMe.png">
+        <div id="left" className="md:mt-2 w-full mb-8">
+          <p className="text-ogLabel-faint font-extralight md:text-2xl italic w-max">Anything is possible if you dare to be curious</p>
         </div>
       </Hero>
-      <section className="px-6 md:px-0 pb-32 max-w-5xl mx-auto">
-        <div className="flex flex-row space-between items-center">
-          <div className="w-1/2">
-            <h2 className="font-display text-3xl uppercase font-bold mb-6">august</h2>
-            <p className="">
+      <section className="px-6 md:px-0 pb-8 md:pb-32 md:max-w-5xl md:mx-auto">
+        <div className="flex flex-col md:grid grid-cols-3 grid-rows-1">
+          <div className=" col-span-1 flex flex-col mb-4">
+            <h2 className="font-display text-3xl md:text-5xl uppercase font-bold mb-6">august</h2>
+            <p className="md:w-96">
               August, known as the outdoorginger, embarked on his journey with the wind in his hair and the thrill of adventure in his heart. From a young age, he embraced the call of the wild, navigating the trails and conquering the great outdoors. With each expedition, he
               honed his skills and forged a path of his own, earning accolades and admiration along the way. Now, as a seasoned explorer, August stands ready to inspire and ignite the spirit of adventure in all who dare to follow.
             </p>
           </div>
-          <div className="mt-6 self-end">
-            <Image src="/aboutMe1.png" alt="" width={400} height={200} className="" />
+          <div className="md:col-span-2 flex md:self-center md:justify-end">
+            <Image src="/aboutMe1.png" alt="" width={1000} height={1000} className="mt-4 self-center md:w-auto" />
           </div>
         </div>
-
-        <div>
-          <div></div>
-        </div>
       </section>
-      <OrangeBanner h2="Beyond" />
-      <div className="px-6 md:px-0 pb-32 max-w-5xl mx-auto">
-        <div>
-          <h2 className="font-display text-3xl uppercase font-bold mb-6">Freedom Achievers</h2>
-          <p>
-            August&apos;s story isn&apos;t just about the destinations he&apos;s reached; it&apos;s about the lessons learned along the way. Through the trials and triumphs of life on the road, he&apos;s discovered a profound sense of self-reliance and resilience, forging a path
-            that defies convention and embraces the unknown.
+      <OrangeBanner h2="Beyond boundaries">
+        <div className="flex flex-col items-center">
+          <p className="text-ogBG-base mb-1 md:mb-4 text-left text-base md:text-2xl">August&apos;s Journey of Self-Discovery & Adventure</p>
+          <p className="text-ogBG-base font-normal leading-5 text-sm md:text-xl md:w-2/3">
+            Augustt&apos;s story isnt&apos;t just about the destinations he&apos;s reached; it&apos;s about the lessons learned along the way. Through the trials and triumphs of life on the road, het&apos;s discovered a profound sense of self-reliance and resilience, forging a
+            path that defies convention and embraces the unknown.
           </p>
-
-          <Link href="https://freedomachievers.org/" target="_blank">
-            <Button variant="primary" size="lg" className="bg-ogPrimary text-base hover:bg-ogPrimary-dark gap-1">
-              Join
-            </Button>
-          </Link>
         </div>
-        <div></div>
+      </OrangeBanner>
+      <div className="relative -top-36 md:-top-60">
+        <div className="flex justify-center">
+          <Image src="/waterSitting.png" alt="" width={1000} height={1000} className="w-80 md:w-1/3 rounded-full" />
+        </div>
       </div>
+      <div className="px-6 md:px-0 pb-8 md:max-w-5xl md:mx-auto">
+        <div className="md:grid grid-cols-3 grid-rows-1">
+          <div className="col-span-1 flex flex-col pb-4">
+            <h2 className="font-display text-3xl md:text-5xl mb-8  leading-7 uppercase font-bold ">Freedom Achievers</h2>
+            <div className="self-center">
+              <p className="mb-6">
+                August&apos;s story isn&apos;t just about the destinations he&apos;s reached; it&apos;s about the lessons learned along the way. Through the trials and triumphs of life on the road, he&apos;s discovered a profound sense of self-reliance and resilience, forging a
+                path that defies convention and embraces the unknown.
+              </p>
+              <Link href="https://freedomachievers.org/" target="_blank">
+                <Button variant="primary" size="lg" className="bg-ogPrimary text-base hover:bg-ogPrimary-dark gap-1 px-10 uppercase">
+                  Join now
+                </Button>
+              </Link>
+            </div>
+          </div>
+          <div className="md:col-span-2 flex md:justify-end">
+            <Image src="/freedomAugust.png" alt="" width={1000} height={1000} className="mt-8 md:w-96 rounded-full" />
+          </div>
+        </div>
+      </div>
+
       <SponsorBanner type="static" />
-      <section className="px-6 md:px-0 pb-32 max-w-5xl mx-auto my-10">
-        <h2 className="font-display text-3xl uppercase font-bold mb-6">Testimonials</h2>
+      <section className="px-6 md:px-0 max-w-5xl mx-auto my-10 md:my-24">
+        <h2 className="font-display text-3xl md:text-5xl uppercase font-bold mb-6 ">Testimonials</h2>
         {testimonials.map((testimonial, index) => (
-          <div className="prose md:prose-lg prose-h3:italic prose-p:italic prose-p:text-ogLabel-muted w-auto prose-h3:font-light prose-p:font-light prose-p:text-sm prose-h3:text-sm" key={index}>
+          <div className="prose md:prose-lg prose-h3:italic prose-p:italic prose-p:text-ogLabel-muted w-auto prose-h3:font-light prose-p:font-light prose-p:text-sm prose-h3:text-sm my-4" key={index}>
             <PortableText value={testimonial.content} />
 
             <h3>{testimonial.Sponsor_Name}</h3>
@@ -73,6 +86,16 @@ export default function AboutMe() {
           </div>
         ))}
       </section>
+      <div className="px-6 md:px-0 pb-10 max-w-5xl mx-auto mb-10 md:mb-0">
+        <div className="relative">
+          <div className="hidden lg:block absolute -top-40 -right-60 z-40">
+            <Image src="/computerAbout.png" alt="Laptop" width={1500} height={1500} className="max-w-[50vw] max-h-[90vh] object-contain" />
+          </div>
+          <div className="lg:hidden absolute top-16 right-20 transform translate-x-1/2 -translate-y-1/2">
+            <Image src="/threePhones.png" alt="" width={1200} height={1200} className="max-w-[50vw] max-h-[90vh] object-contain" />
+          </div>
+        </div>
+      </div>
       <ConnectBanner />
     </main>
   );
