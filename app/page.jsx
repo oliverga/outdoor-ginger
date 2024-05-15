@@ -9,6 +9,7 @@ import SocialFollowers from "@/components/generel/SocialFollowers";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import AnimatedCount from "@/components/generel/AnimatedCount";
+import Link from "next/link";
 
 export default function Home() {
 	return (
@@ -22,14 +23,11 @@ export default function Home() {
 						</p>
 						<p className="text-ogBG-base">Join him on his next adventure!</p>
 					</div>
-					<Button
-						href="/membership"
-						size="md"
-						variant="primary"
-						className="capitalize md:mb-12"
-					>
-						Become a member
-					</Button>
+					<Link href="/membership">
+						<Button size="md" variant="primary" className="capitalize md:mb-12">
+							Become a member
+						</Button>
+					</Link>
 				</div>
 				<div
 					id="right"
