@@ -93,17 +93,29 @@ function Header() {
               </Link>
             </motion.div>
             <div className="flex gap-8 items-center w-full justify-end">
-              <nav className="w-full max-w-xl">
+              <nav className={`w-full ${user ? "max-w-md" : "max-w-xl"}`}>
                 <ul className="flex w-full justify-between items-center text-sm font-normal whitespace-nowrap">
-                  <li>
-                    <Link
-                      className={linkStyle("/membership")}
-                      href="/membership"
-                      onClick={() => setCartOpen(false)}
-                    >
-                      Membership
-                    </Link>
-                  </li>
+                  {user ? (
+                    <li>
+                      <Link
+                        className={linkStyle("/profile")}
+                        href="/profile"
+                        onClick={() => setCartOpen(false)}
+                      >
+                        Your membership
+                      </Link>
+                    </li>
+                  ) : (
+                    <li>
+                      <Link
+                        className={linkStyle("/membership")}
+                        href="/membership"
+                        onClick={() => setCartOpen(false)}
+                      >
+                        Membership
+                      </Link>
+                    </li>
+                  )}
                   <li>
                     <Link
                       className={linkStyle("/equipment")}
@@ -131,32 +143,13 @@ function Header() {
                       About me
                     </Link>
                   </li>
-                  {user ? (
-                    <li>
-                      <Link
-                        className={linkStyle("/profile")}
-                        href="/profile"
-                        onClick={() => setCartOpen(false)}
-                      >
-                        My Profile
-                      </Link>
-                    </li>
-                  ) : (
+                  {user === null ? (
                     <li>
                       <Link href="/login" onClick={() => setCartOpen(false)}>
                         <Button variant="outline">Log in</Button>
                       </Link>
                     </li>
-                  )}
-                  {/* <li>
-                    <Link
-                      className={linkStyle("/about#contact")}
-                      href="/about#contact"
-                      onClick={() => setCartOpen(false)}
-                    >
-                      Contact
-                    </Link>
-                  </li> */}
+                  ) : null}
                 </ul>
               </nav>
               <IconShoppingCart
