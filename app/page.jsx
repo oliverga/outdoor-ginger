@@ -14,28 +14,35 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main>
-      <Hero title="Outdoor Ginger" imageSrc="/forsidehero.webp" bgPos="bottom">
-        <div id="left" className="mt-4 -mb-6">
-          <div className="hidden md:block font-light w-144 mb-8 mt-4">
-            <p className="text-ogBG-base">
-              August Vallat is an outdoor influencer who takes it to the next
-              level.
-            </p>
-            <p className="text-ogBG-base mt-2">
-              Join him on his next adventure!
-            </p>
-          </div>
+      <Hero
+        title="Outdoor Ginger"
+        imageSrc="/forsidehero.webp"
+        bgPos="bottom"
+        object="bottom"
+      >
+        <div
+          id="left"
+          className="hidden md:flex flex-col gap-4 w-full mt-4 text-lg"
+        >
+          <p className="text-ogBG-base max-w-[80%] opacity-80">
+            August Vallat is an outdoor influencer who takes it to the next
+            level.
+          </p>
+          <p className="text-ogBG-base opacity-80">
+            Join him on his next adventure!
+          </p>
           <Link href="/membership">
-            <Button size="md" variant="primary" className="capitalize md:mb-12">
+            <Button size="md" variant="primary" className="capitalize ">
               Become a member
             </Button>
           </Link>
         </div>
+
         <div
           id="right"
-          className="absolute left-44 top-32 md:left-[1050px] md:top-[350px]"
+          className="w-[110%] md:w-full mb-8 md:mb-0 flex flex-col gap-6 md:gap-32 p-8 md:p-12"
         >
-          <div className="flex gap-2 items-center mb-16 md:mb-40 bg-[#F5F5F5]/75 px-1 py-1 rounded-full w-max">
+          <div className="flex gap-2 items-center  bg-neutral-100 bg-opacity-75 px-2 py-2 rounded-full w-max">
             <Image
               src="/profile.webp"
               alt="August Vallant"
@@ -44,31 +51,31 @@ export default function Home() {
               className="rounded-full aspect-square w-8 h-8 md:w-11 md:h-11"
             />
             <div className="pr-2 md:pr-4 uppercase">
-              <p className="text-[10px] md:text-[1rem] font-semibold text-ogPrimary">
+              <p className="text-[10px] md:text-base font-semibold text-ogPrimary opacity-80">
                 August Vallat
               </p>
-              <p className="text-[9px] md:text-[13px] font-light text-ogPrimary-light">
+              <p className="text-[9px] md:text-[13px] font-normal text-ogPrimary opacity-60">
                 Adventure Influencer
               </p>
             </div>
           </div>
-          <div className="flex gap-2 items-center ml-24 md:ml-64 bg-[#F5F5F5]/75 px-1 py-1 rounded-full w-max">
-            <div className="bg-ogPrimary rounded-full p-[5px] md:p-[6px]">
+          <div className="flex gap-2 items-center  bg-neutral-100 bg-opacity-75 px-4 py-3 rounded-full w-fit pr-6 place-self-end">
+            <div className="bg-ogPrimary rounded-full p-1 md:p-2 opacity-80">
               <Image
                 src="/icons/instagramWhite.svg"
-                alt="August Vallant"
+                alt="Instagram"
                 width={500}
                 height={500}
                 className="aspect-square w-5 h-5 md:w-7 md:h-7"
               />
             </div>
-            <div className="pr-2 uppercase">
+            <div className=" uppercase ">
               <AnimatedCount
                 finalCount={333000}
                 duration={3}
-                className="text-base md:text-[1.4rem]"
+                className="text-base md:text-[1.4rem] opacity-80 "
               />
-              <p className="-mt-1 md:-mt-2 text-[7px] md:text-[0.6rem] font-light text-ogPrimary">
+              <p className="text-[9px] md:text-[13px] font-normal text-ogPrimary opacity-60 ">
                 Followers
               </p>
             </div>
