@@ -22,8 +22,8 @@ export default async function Page() {
         imageSrc="/bloghero.webp"
         height="h-96 md:h-[50vh]"
       >
-        <div id="left">
-          <p className="text-2xl font-medium opacity-70 font-display text-ogBG-base">
+        <div id="left" className="w-[300%] md:w-full">
+          <p className="text-xl md:text-2xl font-medium opacity-70 font-display text-ogBG-base">
             The Outdoor Ginger Blog
           </p>
         </div>

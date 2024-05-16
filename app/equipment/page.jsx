@@ -43,8 +43,8 @@ export default function Page() {
         imageSrc="/equipmenthero.webp"
         height="h-96 md:h-[40vh]"
       >
-        <div id="left">
-          <p className="text-2xl font-medium opacity-70 font-display text-ogBG-base">
+        <div id="left" className="w-[200%] md:w-full">
+          <p className="text-xl md:text-2xl font-medium opacity-70 font-display text-ogBG-base">
             Reliable gear for outdoor adventures
           </p>
         </div>
