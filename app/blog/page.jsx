@@ -24,8 +24,9 @@ export default async function Page() {
 				height="h-96 md:h-[50vh]"
 			></Hero>
 			<Globe />
-			<section className="pb-32 max-w-5xl mx-auto px-8">
-				<div className="flex flex-col md:grid grid-cols-3 gap-6">
+			<section className="pb-32 max-w-5xl mx-auto px-8 md:-mt-[500px] md:relative md:z-60">
+				<div className="h-28 bg-gradient-to-b from-transparent to-ogBG-base hidden md:block" />
+				<div className="flex flex-col md:grid grid-cols-3 gap-6 bg-ogBG-base">
 					<div className=" col-span-1 flex flex-col gap-6 -mt-6 md:mt-0">
 						{posts.slice(0, Math.ceil(posts.length / 2)).map((post) => {
 							return <Article post={post} key={post.slug.current} />;

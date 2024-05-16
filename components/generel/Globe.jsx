@@ -12,10 +12,10 @@ export default function Globe() {
 		projection: "globe",
 		// pitch: 60,
 		minZoom: 2.2,
-		maxZoom: 9,
+		maxZoom: 2.2,
 	});
 	return (
-		<div className="hidden md:block max-w-5xl mx-auto h-[800px]">
+		<div className="hidden md:block max-w-5xl mx-auto h-[800px] -mt-36 relative z-50">
 			<ReactMapGl
 				{...viewPort}
 				mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
@@ -23,6 +23,7 @@ export default function Globe() {
 				mapStyle="mapbox://styles/jaco7643/clw8yi1o5003801qr04ae7h3q"
 				attributionControl={false}
 			></ReactMapGl>
+			<div className="bg-ogBG-base h-28 -mt-28 relative z-60" />
 		</div>
 	);
 }
