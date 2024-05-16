@@ -38,7 +38,7 @@ export default async function SignupPage() {
           </Link>
         </div>
       </form>
-      <section className="prose">
+      <section className="prose px-8 ">
         <h1 className="text-center font-bold">Membership?</h1>
         <div className="flex flex-col gap-4">
           <p className="text-center">
@@ -47,7 +47,7 @@ export default async function SignupPage() {
             more.
           </p>
         </div>
-        <div className="flex md:flex-wrap justify-around md:justify-around md:px-12 gap-6 my-6 row-span-2">
+        <div className="flex md:flex-wrap justify-around md:justify-around md:px-12 gap-6 my-6 row-span-2 whitespace-nowrap">
           <div className="flex flex-col gap-1 items-center">
             <div className="aspect-square w-20 md:w-32 h-20 md:h-32 bg-ogPrimary p-6 rounded-full flex justify-center items-center">
               <Image
@@ -91,7 +91,7 @@ export default async function SignupPage() {
             </h3>
           </div>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center pb-32">
           <Button href="/membership" variant="link">
             Learn more
           </Button>
