@@ -15,7 +15,7 @@ export default async function SignupPage() {
   }
 
   return (
-    <main className="min-h-screen flex flex-col justify-center items-center">
+    <main className="min-h-screen flex flex-col justify-center items-center gap-32">
       <form className="flex flex-col gap-4">
         <div>
           <Label htmlFor="email">Email:</Label>
@@ -37,6 +37,9 @@ export default async function SignupPage() {
           </Link>
         </div>
       </form>
+      <section className="prose">
+        <h1 className="text-center">What is the membership?</h1>
+      </section>
     </main>
   );
 }
