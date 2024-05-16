@@ -67,7 +67,7 @@ function Header() {
   return (
     <header>
       <motion.div
-        className="hidden md:block fixed top-0 left-0 z-60 w-screen px-8 py-4"
+        className="hidden md:block fixed top-0 left-0 z-80 w-screen px-8 py-4"
         animate={{ y: hidden ? "-60%" : "0" }}
         transition={{
           duration: 0.8,
