@@ -7,7 +7,7 @@ import NewsletterBanner from "@/components/generel/NewsletterBanner";
 import Globe from "@/components/generel/Globe";
 
 const postQuery =
-	'*[_type == "post"]{title, slug, author, publishedAt, mainImage, content}';
+	'*[_type == "post"]{title, slug, author, publishedAt, mainImage, content, Latitude, Longitude}';
 
 const posts = await client.fetch(postQuery, {
 	next: {
@@ -23,7 +23,7 @@ export default async function Page() {
 				imageSrc="/bloghero.webp"
 				height="h-96 md:h-[50vh]"
 			></Hero>
-			<Globe />
+			<Globe posts={posts} />
 			<section className="pb-32 max-w-5xl mx-auto px-8 md:-mt-[500px] md:relative md:z-60">
 				<div className="h-28 bg-gradient-to-b from-transparent to-ogBG-base hidden md:block" />
 				<div className="flex flex-col md:grid grid-cols-3 gap-6 bg-ogBG-base">
