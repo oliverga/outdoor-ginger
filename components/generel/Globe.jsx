@@ -37,7 +37,7 @@ export default function Globe({ posts }) {
   }, [post]);
 
   return (
-    <div className="hidden md:block max-w-5xl mx-auto w-[820px] h-[680px] -mt-36 relative z-50 rounded-[100%] overflow-hidden">
+    <div className="hidden md:flex items-end justify-end max-w-5xl mx-auto w-[820px] h-[700px] -mt-36 relative z-50 rounded-[100%]  overflow-hidden">
       <ReactMapGl
         ref={mapRef}
         {...viewPort}
