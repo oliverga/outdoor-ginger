@@ -77,17 +77,14 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <div className="bg-ogPrimary flex flex-col justify-start">
-        <div className="px-6 md:px-0 my-4 pt-4 max-w-5xl mx-auto text-ogBG-base">
+      <div className="bg-banner-image bg-center bg-cover  h-[50vh] justify-start">
+        <div className="px-6 md:px-0 my-8 py-10 pt-20 max-w-5xl mx-auto text-ogBG-base">
           <div className="md:flex md:flex-col pb-2 ">
-            <h3 className="text-3xl md.text-5xl font-display uppercase font-bold mb-4">
+            <h3 className="text-4xl md.text-5xl font-display uppercase font-bold mb-4">
               Exclusive <br /> posts
             </h3>
-            <p className="text-sm font-normal text-ogBG-base">Join today and transform your approach to nature and life with expert guidance and a supportive community!</p>
+            <p className="text-sm font-normal text-ogBG-base text-balance md:w-1/2">Join today and transform your approach to nature and life with expert guidance and a supportive community!</p>
           </div>
-        </div>
-        <div className="flex justify-center">
-          <Image src="/augustWithWaterface.png" width={500} height={1000} alt="" className="w-72 md:w-96 h-auto rounded-full -mb-44 self-center shadow-lg" />
         </div>
       </div>
 
