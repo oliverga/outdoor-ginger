@@ -21,7 +21,7 @@ export default function Page() {
             </CardHeader>
             <CardFooter className="flex justify-between">
               <p className="text-3xl font-semibold">
-                50 kr <span className="text-sm font-light text-ogLabel-muted ">/ Month </span>
+                10 € <span className="text-sm font-light text-ogLabel-muted ">/ Month </span>
               </p>
               <Link href="/signup">
                 <Button size="default" className="bg-ogPrimary hover:bg-ogPrimary-dark text-base text-ogBG-base">
@@ -32,41 +32,97 @@ export default function Page() {
           </Card>
         </div>
       </Hero>
-      <section className="px-6 md:px-0 mt-52 max-w-5xl mx-auto">
-        <div>
-          <h2 className="text-3xl ">Membership Benefits</h2>
-          <p>
-            Unlock the secrets of the wilderness and master your mindset with our exclusive one-on-one masterclass. With over 500 nights spent in nature, I bring unparalleled outdoor expertise and powerful mental resilience training. As one of the toughest and most experienced
-            guides, I am dedicated to supporting individuals from all backgrounds in overcoming mental barriers and embracing outdoor challenges.
-          </p>
+      <section className="px-6 md:px-0 mt-52 md:mt-0 max-w-5xl mx-auto">
+        <div className="py-10 leading-relaxed flex flex-col md:flex-row gap-2 justify-between">
+          <div className="pb-6 self-center md:w-1/2">
+            <h2 className="text-lg font-bold pb-2 ">Unlock the secrets of the wilderness and master your mindset with our exclusive one-on-one masterclass.</h2>
+            <p className="text-sm">
+              With over 500 nights spent in nature, I bring unparalleled outdoor expertise and powerful mental resilience training. As one of the toughest and most experienced guides, I am dedicated to supporting individuals from all backgrounds in overcoming mental barriers and
+              embracing outdoor challenges.
+            </p>
+          </div>
         </div>
         <div>
-          <h3>Personalized Coaching: Gain direct access to me for one-on-one sessions, tailored to your specific needs and goals.</h3>
-          <h3>Exclusive Content: Enjoy access to members-only posts, videos, and articles packed with expert advice, tips, and insights. </h3>
-          <h3> Community Support: Join a vibrant community of like-minded individuals, share experiences, and receive support and motivation.</h3>
-          <h3> Live Q&A Sessions: Participate in live sessions where you can ask questions and get real-time advice. </h3>
-          <h3>Special Offers: Receive early access to events, workshops, and special discounts on gear and courses.</h3>
-        </div>
-        <div>
-          <h3>Exclusive posts</h3>
-
-          <h3>Join today and transform your approach to nature and life with expert guidance and a supportive community!</h3>
+          <h2 className="text-3xl md:text-5xl md:pb-10 font-display font-bold leading-7 uppercase ">
+            Membership <br /> Benefits
+          </h2>
+          <div className="my-4 md:my-16 flex flex-col md:flex-row gap-2 justify-between">
+            <div className="pb-6 self-center md:w-1/2">
+              <ul className="list-inside space-y-5">
+                <li>
+                  <p className="font-semibold pb-1 text-ogLabel-base">Personalized Coaching:</p>
+                  <p className="text-sm font-normal"> Gain direct access to me for one-on-one sessions, tailored to your specific needs and goals.</p>
+                </li>
+                <li>
+                  <p className="font-semibold pb-1 text-ogLabel-base">Exclusive Content:</p>
+                  <p className="text-sm font-normal"> Enjoy access to members-only posts, videos, and articles packed with expert advice, tips, and insights. </p>
+                </li>
+                <li>
+                  <p className="font-semibold pb-1 text-ogLabel-base">Community Support:</p>
+                  <p className="text-sm font-normal"> Join a vibrant community of like-minded individuals, share experiences, and receive support and motivation.</p>
+                </li>
+                <li>
+                  <p className="font-semibold pb-1 text-ogLabel-base">Live Q&A Sessions: </p>
+                  <p className="text-sm font-normal">Participate in live sessions where you can ask questions and get real-time advice. </p>
+                </li>
+                <li>
+                  <p className="font-semibold pb-1 text-ogLabel-base">Special Offers:</p>
+                  <p className="text-sm font-normal"> Receive early access to events, workshops, and special discounts on gear and courses.</p>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <Image src="/explorerAugust.png" width={1000} height={1000} alt="" className="w-96 self-center rounded-full" />
+            </div>
+          </div>
         </div>
       </section>
+      <div className="bg-ogPrimary flex flex-col justify-start">
+        <div className="px-6 md:px-0 my-4 pt-4 max-w-5xl mx-auto text-ogBG-base">
+          <div className="md:flex md:flex-col pb-2 ">
+            <h3 className="text-3xl md.text-5xl font-display uppercase font-bold mb-4">
+              Exclusive <br /> posts
+            </h3>
+            <p className="text-sm font-normal text-ogBG-base">Join today and transform your approach to nature and life with expert guidance and a supportive community!</p>
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <Image src="/augustWithWaterface.png" width={500} height={1000} alt="" className="w-72 md:w-96 h-auto rounded-full -mb-44 self-center shadow-lg" />
+        </div>
+      </div>
+
+      <section className="px-6 md:px-0 mt-64 max-w-5xl mx-auto">
+        <article className="my-36">
+          <h2 className="font-display text-3xl md:text-5xl font-bold uppercase">Testimonials</h2>
+          <Image src="/augustIntotheWild.png" width={1000} height={1000} alt="" />
+        </article>
+      </section>
+
       <div className="px-6 md:px-0 mt-52 max-w-5xl mx-auto">
+        <h2 className="font-display text-3xl md:text-5xl font-bold uppercase">FAQ</h2>
         <div className="flex flex-col md:flex-row justify-between">
           <Accordion type="single" collapsible className="md:w-1/2 mb-10">
             <AccordionItem value="item-1" defaultOpen={true}>
-              <AccordionTrigger className="text-lg">What is a membership?</AccordionTrigger>
-              <AccordionContent className="text-ogLabel-muted text-sm">Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
+              <AccordionTrigger className="text-lg">{"What's a membership?"}</AccordionTrigger>
+              <AccordionContent className="text-ogLabel-muted text-sm">A membership is when you join a group or club and get special benefits or access to things because you are part of it.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
               <AccordionTrigger className="text-lg">{"What's in it for me?"}</AccordionTrigger>
-              <AccordionContent className="text-ogLabel-muted text-sm">Yes. It comes with default styles that matches the other components&apos; aesthetic.</AccordionContent>
+              <AccordionContent className="text-ogLabel-muted text-sm">
+                With a membership, you get special perks, such as discounts, exclusive access to events, resources, or services, and the chance to connect with others who share your interests. And it&apos;s safe to say that outdoor ginger have something that all of us could learn
+                from!
+              </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
               <AccordionTrigger className="text-lg">What does it cost?</AccordionTrigger>
-              <AccordionContent className="text-ogLabel-muted text-sm">Yes. It&apos;s animated by default, but you can disable it if you prefer.</AccordionContent>
+              <AccordionContent className="text-ogLabel-muted text-sm">The membership costs 10€ a month</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger className="text-lg">How did August start camping?</AccordionTrigger>
+              <AccordionContent className="text-ogLabel-muted text-sm">
+                I started camping without any guidance because my parents aren&apos;t into nature or wilderness experiences. My motivation came from within. My family, being city folks, didn&apos;t like it, and my brother wasn&apos;t interested in hiking. None of my friends
+                wanted to join me either, as they were more into football and tennis. After many rejections, I began going on hikes alone and discovered that solo trips in the woods were the best. Now, I choose to camp in the mountains because I find them the most beautiful.
+              </AccordionContent>
             </AccordionItem>
           </Accordion>
           <div className="md:w-1/2 md:flex md:justify-end">

@@ -58,7 +58,7 @@ export default function AboutMe() {
             <h2 className="font-display text-3xl md:text-5xl mb-8 leading-7 uppercase font-bold ">Freedom Achievers</h2>
             <div className="self-center">
               <p className="mb-6 text-sm md:text-xl">Thousands of followers was build by a strong mental mindset and dedicated discipline, that im now teaching you so you can do the potentially same</p>
-              <Link href="https://freedomachievers.org/" target="_blank">
+              <Link href="/membership" target="_blank">
                 <Button variant="primary" size="lg" className="bg-ogPrimary text-base hover:bg-ogPrimary-dark gap-1 px-10 uppercase">
                   Join now
                 </Button>
