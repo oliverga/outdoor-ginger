@@ -8,7 +8,7 @@ export default function MemberBanner({ title, description, buttonText }) {
         {title}
       </h2>
       <p className="text-lg text-ogPrimary-lighter">{description}</p>
-      <Link href="/membership">
+      <Link href="/signup">
         <Button
           variant="primary"
           className="bg-ogPrimary-lighter text-ogPrimary-darkest hover:bg-ogPrimary-light"
