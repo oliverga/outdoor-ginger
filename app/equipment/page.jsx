@@ -42,7 +42,13 @@ export default function Page() {
         title="Equipment"
         imageSrc="/equipmenthero.webp"
         height="h-96 md:h-[40vh]"
-      />
+      >
+        <div id="left">
+          <p className="text-2xl font-medium opacity-70 font-display text-ogBG-base">
+            Reliable gear for outdoor adventures
+          </p>
+        </div>
+      </Hero>
       <div className="min-h-screen max-w-5xl mx-auto px-8 pb-24">
         <div className="flex flex-wrap justify-center gap-12  -mt-6 md:mt-0">
           {products.map((product) => (
