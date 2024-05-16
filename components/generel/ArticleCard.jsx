@@ -5,10 +5,10 @@ import { format } from "date-fns";
 
 export default function ArticleCard({ post }) {
 	return (
-		<article>
+		<article className="focus:outline-none">
 			<Link
 				href={`/blog/${post.slug.current}`}
-				className="flex gap-3 border rounded-xl overflow-hidden items-center shadow-md max-w-80"
+				className="flex gap-3 border rounded-xl overflow-hidden items-center shadow-md max-w-80 focus:outline-none"
 			>
 				<Image
 					src={urlFor(post.mainImage).url()}
