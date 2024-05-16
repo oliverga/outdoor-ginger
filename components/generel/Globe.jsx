@@ -1,9 +1,10 @@
 "use client";
-import { useState, useEffect, use } from "react";
+import { useState, useEffect, useRef } from "react";
 import ReactMapGl, { Marker, Popup } from "react-map-gl";
 import MapPin from "./MapPin";
 import PopUpContent from "./PopUpContent";
 import { usePostStore } from "@/lib/store/postStore";
+("react-map-gl");
 
 export default function Globe({ posts }) {
 	const [viewPort, setViewPort] = useState({
@@ -21,13 +22,24 @@ export default function Globe({ posts }) {
 
 	const { post, setPost } = usePostStore();
 
+	const mapRef = useRef();
+
 	useEffect(() => {
-		console.log(post);
+		if (post && post.Latitude && post.Longitude) {
+			const map = mapRef.current.getMap();
+			map.easeTo({
+				duration: 1000,
+				center: [post.Longitude, post.Latitude],
+				offset: [-0, -200],
+				essential: true,
+			});
+		}
 	}, [post]);
 
 	return (
 		<div className="hidden md:block max-w-5xl mx-auto h-[800px] -mt-36 relative z-50">
 			<ReactMapGl
+				ref={mapRef}
 				{...viewPort}
 				mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
 				onMove={(evt) => setViewPort(evt.viewPort)}
