@@ -145,7 +145,7 @@ function Header() {
                       href="/about"
                       onClick={() => setCartOpen(false)}
                     >
-                      About me
+                      About
                     </Link>
                   </li>
                   {user === null ? (

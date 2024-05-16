@@ -216,7 +216,7 @@ function MobileHeader() {
                 </li>
                 <li>
                   <Link href="/about" onClick={() => setIsDivVisible(false)}>
-                    About me
+                    About
                   </Link>
                 </li>
                 {user === null ? (
