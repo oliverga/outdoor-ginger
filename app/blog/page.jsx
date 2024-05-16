@@ -21,7 +21,13 @@ export default async function Page() {
         title="Campfire Chronicles"
         imageSrc="/bloghero.webp"
         height="h-96 md:h-[50vh]"
-      ></Hero>
+      >
+        <div id="left">
+          <p className="text-2xl font-medium opacity-70 font-display text-ogBG-base">
+            The Outdoor Ginger Blog
+          </p>
+        </div>
+      </Hero>
 
       <section className="pb-32 max-w-5xl mx-auto px-8">
         <div className="flex flex-col md:grid grid-cols-3 gap-6">
