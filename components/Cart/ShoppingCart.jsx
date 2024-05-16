@@ -46,7 +46,7 @@ export default function ShoppingCart({ setCartOpen, cartRef }) {
   };
 
   return (
-    <div className="overflow-hidden fixed -top-6 md:top-7 left-0 z-50 md:z-60 w-full px-2 md:px-0 mt-12 max-w-7xl mx-auto md:left-1/2 md:transform md:-translate-x-1/2 h-[100%] pointer-events-none ">
+    <div className="overflow-hidden fixed -top-6 md:top-7 left-0 z-40 md:z-80 w-full px-2 md:px-0 mt-12 max-w-7xl mx-auto md:left-1/2 md:transform md:-translate-x-1/2 h-[100%] pointer-events-none ">
       <motion.div
         ref={cartRef}
         initial={{ y: "-100%", opacity: 0 }}
