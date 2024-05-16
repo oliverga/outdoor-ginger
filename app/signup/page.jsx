@@ -16,7 +16,7 @@ export default async function SignupPage() {
   }
 
   return (
-    <main className="min-h-screen flex flex-col justify-center items-center gap-32 mt-32">
+    <main className="min-h-screen flex flex-col justify-center items-center gap-32 mt-64">
       <form className="flex flex-col gap-4">
         <div>
           <Label htmlFor="email">Email:</Label>
