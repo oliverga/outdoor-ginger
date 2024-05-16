@@ -72,7 +72,7 @@ export default function AboutMe() {
       </div>
 
       <SponsorBanner type="static" />
-      <section className="px-6 md:px-0  max-w-5xl mx-auto my-10 md:py-24">
+      <section className="px-6 md:px-0  max-w-5xl mx-auto my-20 md:py-28">
         <h2 className="font-display text-3xl md:text-5xl uppercase font-bold mb-6 ">Testimonials</h2>
         {testimonials.map((testimonial, index) => (
           <div className="prose md:prose-lg prose-h3:italic prose-p:italic prose-p:text-ogLabel-muted w-auto prose-h3:font-light prose-p:font-light prose-p:text-sm prose-h3:text-sm my-4" key={index}>
@@ -83,16 +83,11 @@ export default function AboutMe() {
           </div>
         ))}
       </section>
-      <div className="px-6 md:px-0 pb-10 max-w-5xl mx-auto mb-10 md:mb-0">
-        <div className="relative">
-          <div className="hidden lg:block absolute -top-40 -right-60 z-40">
-            <Image src="/computerAbout.png" alt="Laptop" width={2000} height={2000} className="max-w-[50vw] max-h-[90vh] object-contain" />
-          </div>
-          <div className="lg:hidden absolute top-16 right-20 transform translate-x-1/2 -translate-y-1/2">
-            <Image src="/threePhones.png" alt="" width={1400} height={1400} className="max-w-[50vw] max-h-[90vh] object-contain" />
-          </div>
-        </div>
-      </div>
+      <article className="flex justify-end -mt-28 md:-mt-40">
+        <Image src="/computerAbout.png" alt="Laptop" width={2000} height={2000} className="hidden md:block object-contain w-96 md:w-[800px] -mb-32 md:-mb-[450px] z-10 drop-shadow-lg" />
+        <Image src="/threePhones.png" alt="" width={1400} height={1400} className="lg:hidden object-contain w-64 md:w-[700px] -mb-20 md:-mb-44 z-10 drop-shadow-lg" />
+      </article>
+
       <ConnectBanner />
     </main>
   );
