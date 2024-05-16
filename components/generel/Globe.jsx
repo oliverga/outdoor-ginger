@@ -10,8 +10,8 @@ export default function Globe({ posts }) {
 	const [viewPort, setViewPort] = useState({
 		latitude: 11.333566,
 		longitude: 1.398978,
-		width: "100%",
-		height: "800px",
+		width: "820px",
+		height: "820px",
 		zoom: 2.2,
 		projection: "globe",
 		minZoom: 2.2,
@@ -37,7 +37,7 @@ export default function Globe({ posts }) {
 	}, [post]);
 
 	return (
-		<div className="hidden md:block max-w-5xl mx-auto h-[800px] -mt-36 relative z-50">
+		<div className="hidden md:block max-w-5xl mx-auto w-[820px] h-[820px] -mt-36 relative z-50 rounded-[100%] overflow-hidden">
 			<ReactMapGl
 				ref={mapRef}
 				{...viewPort}
