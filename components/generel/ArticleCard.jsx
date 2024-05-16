@@ -4,54 +4,54 @@ import { client, urlFor } from "@/lib/sanity/client";
 import { format } from "date-fns";
 
 export default function ArticleCard({ post }) {
-	return (
-		<article className="focus:outline-none">
-			<Link
-				href={`/blog/${post.slug.current}`}
-				className="flex gap-3 border rounded-xl overflow-hidden items-center shadow-md max-w-80 focus:outline-none"
-			>
-				<Image
-					src={urlFor(post.mainImage).url()}
-					alt=""
-					width={800}
-					height={400}
-					className="aspect-square w-20 h-20"
-				/>
-				<div className="">
-					<h2>
-						{post.title.length > 22
-							? post.title.slice(0, 22) + "..."
-							: post.title}
-					</h2>
-					<p>{format(new Date(post.publishedAt), "PPP")}</p>
-				</div>
-			</Link>
-		</article>
-		// <div className="@container">
-		// 	<article
-		// 		key={post.slug.current}
-		// 		className="mx-auto border rounded-xl overflow-hidden w-full shadow-sm"
-		// 	>
-		// 		<Link href={`/blog/${post.slug.current}`}>
-		// 			{post.mainImage && (
-		// 				<div className="overflow-hidden">
-		// 					<Image
-		// 						src={urlFor(post.mainImage).url()}
-		// 						alt=""
-		// 						width={800}
-		// 						height={400}
-		// 						className="aspect-video @xl:aspect-[16/7] object-cover object-center w-full hover:scale-[102%] transition-all duration-500"
-		// 					/>
-		// 				</div>
-		// 			)}
-		// 			<div className="m-4 space-y-2">
-		// 				<h2 className=" font-medium text-xl">{post.title}</h2>
-		// 				<p className="text-xs text-ogLabel-faint">
-		// 					{format(new Date(post.publishedAt), "PPP")}
-		// 				</p>
-		// 			</div>
-		// 		</Link>
-		// 	</article>
-		// </div>
-	);
+  return (
+    <article className="focus:outline-none">
+      <Link
+        href={`/blog/${post.slug.current}`}
+        className="flex gap-3 border rounded-xl overflow-hidden items-center shadow-md max-w-80 w-full focus:outline-none"
+      >
+        <Image
+          src={urlFor(post.mainImage).url()}
+          alt=""
+          width={800}
+          height={400}
+          className="aspect-square w-20 h-20"
+        />
+        <div className="pr-2">
+          <h2 className="">
+            {post.title.length > 40
+              ? post.title.slice(0, 40) + "..."
+              : post.title}
+          </h2>
+          <p>{format(new Date(post.publishedAt), "PPP")}</p>
+        </div>
+      </Link>
+    </article>
+    // <div className="@container">
+    // 	<article
+    // 		key={post.slug.current}
+    // 		className="mx-auto border rounded-xl overflow-hidden w-full shadow-sm"
+    // 	>
+    // 		<Link href={`/blog/${post.slug.current}`}>
+    // 			{post.mainImage && (
+    // 				<div className="overflow-hidden">
+    // 					<Image
+    // 						src={urlFor(post.mainImage).url()}
+    // 						alt=""
+    // 						width={800}
+    // 						height={400}
+    // 						className="aspect-video @xl:aspect-[16/7] object-cover object-center w-full hover:scale-[102%] transition-all duration-500"
+    // 					/>
+    // 				</div>
+    // 			)}
+    // 			<div className="m-4 space-y-2">
+    // 				<h2 className=" font-medium text-xl">{post.title}</h2>
+    // 				<p className="text-xs text-ogLabel-faint">
+    // 					{format(new Date(post.publishedAt), "PPP")}
+    // 				</p>
+    // 			</div>
+    // 		</Link>
+    // 	</article>
+    // </div>
+  );
 }
