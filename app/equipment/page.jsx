@@ -2,6 +2,7 @@ import Hero from "@/components/generel/Hero";
 import { client } from "@/lib/sanity/client";
 import ProductCard from "@/components/equipment/ProductCard";
 import SponsorBanner from "@/components/generel/SponsorBanner";
+import MemberBanner from "@/components/generel/MemberBanner";
 
 const productQuery =
   '*[_type == "product"]{title, slug, description, mainContent, price, memberPrice, images, tags, category, _id}';
@@ -49,6 +50,12 @@ export default function Page() {
           ))}
         </div>
       </div>
+      <MemberBanner
+        title="25% Discount for members"
+        description="Join 'FREEDOM ACHIEVERS' to get access to exclusive content,
+        discounts and more!"
+        buttonText="Become a member"
+      />
       <SponsorBanner />
     </main>
   );
