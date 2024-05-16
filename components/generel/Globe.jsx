@@ -1,25 +1,29 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import ReactMapGl, { Marker, Popup } from "react-map-gl";
 import MapPin from "./MapPin";
 import PopUpContent from "./PopUpContent";
+import { usePostStore } from "@/lib/store/postStore";
 
 export default function Globe({ posts }) {
 	const [viewPort, setViewPort] = useState({
-		// latitude: 55.515097,
-		// longitude: 11.866122,
+		latitude: 11.333566,
+		longitude: 1.398978,
 		width: "100%",
 		height: "800px",
 		zoom: 2.2,
 		projection: "globe",
-		// pitch: 60,
 		minZoom: 2.2,
 		maxZoom: 2.2,
 	});
 
 	const filteredPosts = posts.filter((post) => post.Latitude && post.Longitude);
 
-	const [selectedPost, setSelectedPost] = useState(null);
+	const { post, setPost } = usePostStore();
+
+	useEffect(() => {
+		console.log(post);
+	}, [post]);
 
 	return (
 		<div className="hidden md:block max-w-5xl mx-auto h-[800px] -mt-36 relative z-50">
@@ -42,21 +46,22 @@ export default function Globe({ posts }) {
 									onClick={(e) => {
 										e.preventDefault();
 										e.stopPropagation();
-										setSelectedPost(post);
+										setPost(post);
+										console.log(post);
 									}}
 								/>
 							</Marker>
 						);
 					})}
-				{selectedPost ? (
+				{post ? (
 					<Popup
-						latitude={selectedPost.Latitude}
-						longitude={selectedPost.Longitude}
+						latitude={post.Latitude}
+						longitude={post.Longitude}
 						onClose={() => {
-							setSelectedPost(null);
+							setPost(null);
 						}}
 					>
-						<PopUpContent selectedPost={selectedPost} />
+						<PopUpContent selectedPost={post} />
 					</Popup>
 				) : null}
 			</ReactMapGl>
