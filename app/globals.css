@@ -114,3 +114,13 @@ h1 {
 p {
   color: oklch(var(--og-label-muted));
 }
+
+div .mapboxgl-popup-content {
+  padding: 0;
+  border-radius: 14px;
+}
+
+button.mapboxgl-popup-close-button {
+  top: 5px;
+  right: 8px;
+}

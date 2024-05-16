@@ -5,7 +5,6 @@ import Image from "next/image";
 
 const ReelEmbed = ({ Youtube_Short_URL }) => {
 	const videoId = Youtube_Short_URL.split("/").pop();
-	console.log(videoId);
 	return (
 		<div
 			className="absolute top-[-350px] -left-1 z-50 grid grid-cols-1 grid-rows-1 place-items-center"
