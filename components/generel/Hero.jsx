@@ -5,7 +5,7 @@ function Hero({
   title,
   imageSrc,
   height = "h-96 md:h-[80vh]",
-  object = "center",
+  bgPos = "object-center",
   children,
 }) {
   const leftSideChildren = React.Children.toArray(children).filter(
@@ -34,7 +34,7 @@ function Hero({
         alt=""
         width={920}
         height={500}
-        className={`object-cover object-${object} w-full h-full absolute top-0 left-0 z-10`}
+        className={`object-cover ${bgPos} w-full h-full absolute top-0 left-0 z-10`}
         placeholder="blur"
         blurDataURL={`{imageSrc}?blur=50`}
       />

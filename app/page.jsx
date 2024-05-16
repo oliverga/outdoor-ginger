@@ -18,7 +18,7 @@ export default function Home() {
         title="Outdoor Ginger"
         imageSrc="/forsidehero.webp"
         bgPos="bottom"
-        object="bottom"
+        object="object-bottom"
       >
         <div
           id="left"
