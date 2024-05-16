@@ -1,5 +1,6 @@
 import Image from "next/image";
 import AnimatedCount from "./AnimatedCount";
+import Link from "next/link";
 
 export default function SocialFollowers() {
 	return (
@@ -9,11 +10,15 @@ export default function SocialFollowers() {
 				alt="Screenshots of social media"
 				width={900}
 				height={900}
-				className="object-contain w-96 md:w-[700px] -mb-32 md:-mb-44 z-10 drop-shadow-lg"
+				className="object-contain w-96 md:w-[700px] -mb-32 md:-mb-44 z-10 drop-shadow-lg pointer-events-none"
 			/>
 			<div className="flex justify-center px-8 bg-ogPrimary-lightest w-full h-full pt-24 pb-20">
 				<div className="flex gap-4 justify-around w-full max-w-5xl">
-					<div className="flex items-center gap-1 md:gap-4">
+					<Link
+						href="https://www.youtube.com/@OutdoorGinger"
+						target="_blank"
+						className="flex items-center gap-1 md:gap-4"
+					>
 						<div className="aspect-square h-8 md:h-16">
 							<Image
 								src="/icons/youtube.svg"
@@ -24,8 +29,12 @@ export default function SocialFollowers() {
 							/>
 						</div>
 						<AnimatedCount finalCount={12000} duration={1} />
-					</div>
-					<div className="flex items-center gap-1 md:gap-4">
+					</Link>
+					<Link
+						href="https://www.instagram.com/outdoorgingerchannel/"
+						target="_blank"
+						className="flex items-center gap-1 md:gap-4"
+					>
 						<div className="aspect-square h-8 md:h-16">
 							<Image
 								src="/icons/instagram.svg"
@@ -36,8 +45,12 @@ export default function SocialFollowers() {
 							/>
 						</div>
 						<AnimatedCount finalCount={333000} duration={3} />
-					</div>
-					<div className="flex items-center gap-1 md:gap-4">
+					</Link>
+					<Link
+						href="https://www.tiktok.com/@outdoorginger"
+						target="_blank"
+						className="flex items-center gap-1 md:gap-4"
+					>
 						<div className="aspect-square h-8 md:h-16">
 							<Image
 								src="/icons/tiktok.svg"
@@ -48,7 +61,7 @@ export default function SocialFollowers() {
 							/>
 						</div>
 						<AnimatedCount finalCount={24000} duration={1} />
-					</div>
+					</Link>
 				</div>
 			</div>
 		</article>

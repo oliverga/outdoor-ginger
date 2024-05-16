@@ -3,6 +3,7 @@ import { client, urlFor } from "@/lib/sanity/client";
 import Paywall from "@/components/generel/PayWall";
 import ArticleCard from "@/components/generel/ArticleCard";
 import ReelEmbed from "@/components/generel/ReelEmbed";
+import NewsletterBanner from "@/components/generel/NewsletterBanner";
 
 export async function generateStaticParams() {
 	const slugQuery = '*[_type == "post"]{slug}';
@@ -98,6 +99,7 @@ export default async function Page({ params }) {
 					)}
 				</div>
 			</div>
+			<NewsletterBanner />
 		</main>
 	);
 }
