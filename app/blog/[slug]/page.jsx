@@ -4,6 +4,14 @@ import Paywall from "@/components/generel/PayWall";
 import ArticleCard from "@/components/generel/ArticleCard";
 import ReelEmbed from "@/components/generel/ReelEmbed";
 import NewsletterBanner from "@/components/generel/NewsletterBanner";
+import {
+	Breadcrumb,
+	BreadcrumbList,
+	BreadcrumbItem,
+	BreadcrumbLink,
+	BreadcrumbPage,
+	BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 export async function generateStaticParams() {
 	const slugQuery = '*[_type == "post"]{slug}';
@@ -55,6 +63,23 @@ export default async function Page({ params }) {
 	return (
 		<main>
 			<Hero imageSrc={imgUrl} height="h-96 md:h-[40vh]"></Hero>
+			<nav className="px-8 max-w-5xl mx-auto">
+				<Breadcrumb>
+					<BreadcrumbList>
+						<BreadcrumbItem>
+							<BreadcrumbLink href="/blog">Blog</BreadcrumbLink>
+						</BreadcrumbItem>
+						<BreadcrumbSeparator />
+						<BreadcrumbItem>
+							<BreadcrumbPage>
+								{post[0].title.length > 30
+									? post[0].title.substring(0, 30) + "..."
+									: post[0].title}
+							</BreadcrumbPage>
+						</BreadcrumbItem>
+					</BreadcrumbList>
+				</Breadcrumb>
+			</nav>
 			<div className="md:relative md:grid grid-cols-blogLayout max-w-5xl mx-auto">
 				<article className="row-span-2 prose md:prose-lg prose-neutral mx-auto px-8 pb-12 md:pb-24">
 					<h1 className="text-3xl md:text-5xl font-bold">{post[0].title}</h1>
