@@ -73,8 +73,7 @@ export default function JoinTheClub() {
             <IconArticle className="h-8 w-8 text-ogLabel-base" />
             <h3 className="mt-4 text-xl font-semibold">Exclusive Articles</h3>
             <p className="mt-2 ">
-              Get behind-the-scenes footage, tutorials, and interviews with our
-              top outdoor influencer.
+              Get access to exclusive articles, tutorials, and interviews.
             </p>
           </div>
           <div className="rounded-lg bg-ogBG-base border p-6 shadow-lg">
