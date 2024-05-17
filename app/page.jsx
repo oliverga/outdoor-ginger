@@ -95,7 +95,10 @@ export default function Home() {
           <SocialFollowers />
           <SponsorBanner />
           <SupportBanner type="original" />
-          <NewsletterBanner />
+          <NewsletterBanner
+            title="Campfire Chronicles"
+            subtitle="The Outdoor Ginger Blog"
+          />
         </div>
       </div>
     </main>

@@ -30,7 +30,7 @@ export default function Page() {
       </Hero>
       <Globe posts={posts} />
       <BlogOverview posts={posts} />
-      <NewsletterBanner />
+      <NewsletterBanner title="Stay up to date" subtitle="" />
     </main>
   );
 }

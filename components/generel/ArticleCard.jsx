@@ -5,25 +5,29 @@ import { format } from "date-fns";
 
 export default function ArticleCard({ post }) {
   return (
-    <article className="focus:outline-none">
+    <article className="focus:outline-none ">
       <Link
         href={`/blog/${post.slug.current}`}
-        className="flex gap-3 border rounded-xl overflow-hidden items-center shadow-md max-w-80 w-full focus:outline-none"
+        className="flex gap-3 border rounded-xl overflow-hidden shadow max-w-md w-full focus:outline-none"
       >
-        <Image
-          src={urlFor(post.mainImage).url()}
-          alt=""
-          width={800}
-          height={400}
-          className="aspect-square w-20 h-20"
-        />
-        <div className="pr-2">
-          <h2 className="">
+        <div className="  w-full max-w-[100px]  aspect-square overflow-hidden ">
+          <Image
+            src={urlFor(post.mainImage).url()}
+            alt={post.title}
+            width={400}
+            height={400}
+            className=" object-cover object-center w-full h-full"
+          />
+        </div>
+        <div className="flex flex-col justify-center gap-2 py-4 px-2 pr-3">
+          <h2 className="font-medium">
             {post.title.length > 40
               ? post.title.slice(0, 40) + "..."
               : post.title}
           </h2>
-          <p>{format(new Date(post.publishedAt), "PPP")}</p>
+          <p className="text-sm text-ogLabel-faint">
+            {format(new Date(post.publishedAt), "PPP")}
+          </p>
         </div>
       </Link>
     </article>

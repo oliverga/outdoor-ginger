@@ -59,7 +59,7 @@ function SupportBanner({ type = "banner" }) {
     return (
       <article className="px-8 my-24 max-w-5xl flex flex-col items-center justify-between md:flex-row md:gap-8 mx-auto w-full ">
         <div className="flex flex-col items-center md:items-start gap-8 mb-8 md:mb-0">
-          <h2 className="text-4xl md:text-5xl font-display font-semibold uppercase text-center md:text-left md:self-start">
+          <h2 className="text-4xl md:text-5xl font-display font-bold uppercase text-center md:text-left md:self-start">
             Support August
           </h2>
           <div className="space-y-8 w-full max-w-md text-center md:text-left">

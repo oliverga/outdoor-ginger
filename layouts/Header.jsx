@@ -199,7 +199,7 @@ function Header() {
           <div className="w-fit h-fit  mx-auto flex justify-end">
             <div className="w-fit h-full max-w-xs bg-ogBG-sub justify-self-end rounded-b-xl flex justify-between gap-4 items-center px-2 py-2  z-30 ">
               <p className=" whitespace-nowrap text-sm font-normal cursor-default text-ogLabel-muted pl-2">
-                Goal: 10.000 kr.
+                Goal: 1500€
               </p>
               <Link
                 href="https://www.gofundme.com/f/outdoorginger"
