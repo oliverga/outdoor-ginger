@@ -16,8 +16,8 @@ export default async function SignupPage() {
   }
 
   return (
-    <main className="min-h-screen md:min-h-max flex flex-col justify-center items-center md:grid grid-cols-2 md:items-start gap-32 md:gap-12 mt-64 max-w-5xl mx-auto px-8">
-      <form className="flex flex-col gap-4">
+    <main className="min-h-screen  flex flex-col justify-center items-center md:flex-row md:justify-between gap-20 max-w-5xl mx-auto px-8  ">
+      <form className="flex flex-col gap-4  md:w-full">
         <div>
           <Label htmlFor="email">Email:</Label>
           <Input id="email" name="email" type="email" required />
@@ -41,7 +41,7 @@ export default async function SignupPage() {
           </Link>
         </div>
       </form>
-      <section className="prose px-8 ">
+      <div className="prose px-8 w-full ">
         <h1 className="text-center md:text-start font-bold">Membership?</h1>
         <div className="flex flex-col gap-4 md:-mt-8">
           <p className="text-center md:text-start">
@@ -50,7 +50,7 @@ export default async function SignupPage() {
             more.
           </p>
         </div>
-        <div className="flex md:flex-wrap justify-around md:justify-between md:px-0 gap-6 my-6 row-span-2 whitespace-nowrap ">
+        <div className="flex md:flex-wrap justify-evenly md:justify-between md:px-0 gap-6 my-6 row-span-2 whitespace-nowrap ">
           <div className="flex flex-col gap-1 items-center ">
             <div className="aspect-square w-20 h-20 bg-ogPrimary p-6 rounded-full flex justify-center items-center">
               <Image
@@ -65,7 +65,7 @@ export default async function SignupPage() {
               health
             </h3>
           </div>
-          <div className="flex flex-col gap-1 items-center">
+          <div className="flex flex-col gap-1 items-center  ml-4">
             <div className="aspect-square w-20 h-20 bg-ogPrimary p-6 rounded-full flex justify-center items-center">
               <Image
                 src="/icons/deStress.svg"
@@ -94,12 +94,12 @@ export default async function SignupPage() {
             </h3>
           </div>
         </div>
-        <div className="flex justify-center md:justify-end pb-32">
-          <Button href="/membership" variant="link">
+        <div className="flex justify-center md:justify-end  ">
+          <Button href="/membership" variant="link" className="">
             Learn more
           </Button>
         </div>
-      </section>
+      </div>
     </main>
   );
 }
