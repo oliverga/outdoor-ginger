@@ -21,8 +21,8 @@ console.log(whatPeopleSay);
 
 export default function Page() {
   return (
-    <main className="relative">
-      <Hero title="Membership" imageSrc="/membershiphero.webp" height="h-[70vh] md:h-[90vh]">
+    <main>
+      <Hero title="Membership" imageSrc="/membershiphero.webp" height="h-[70vh] md:h-[100vh]">
         <div id="right" className="mt-72 md:mt-0 w-dvw md:left-auto px-6 md:top-1/3 top-72 md:px-0 md:w-80 absolute left-1/2 transform -translate-x-1/2 z-40">
           <Card className="rounded-2xl z-50">
             <CardHeader>
@@ -44,31 +44,8 @@ export default function Page() {
           </Card>
         </div>
       </Hero>
-      <div className="space-y-32">
-        <section className="px-6 md:px-0 mb-10 md:my-32 max-w-5xl mx-auto">
-          {/* <div className="py-10 leading-relaxed flex flex-col md:flex-row gap-2 justify-between">
-          <div className="pb-6 self-center md:w-1/2"></div>
-        </div> */}
-          <div className="mt-52 md:mt-0">
-            <div className="my-4 md:pt-10  flex flex-col md:flex-row gap-2 justify-between">
-              <div className="self-center">
-                <h2 className="font-display text-3xl md:text-5xl font-bold uppercase pb-4 md:pb-10">Unluck the outdoors</h2>
-                <div className="md:w-1/2">
-                  <h3 className="text-lg md:text-xl font-bold pb-4 ">Unlock the secrets of the wilderness and master your mindset with my exclusive one-on-one masterclass.</h3>
-                  <Image src="/welcomingAugust.png" width={1000} height={1000} alt="" className=" self-center rounded-sm shadow-xl lg:hidden" />
-                </div>
-
-                <p className="text-sm md:text-base my-4 md:w-1/2">
-                  With over 500 nights spent in nature, I bring unparalleled outdoor expertise and powerful mental resilience training. As one of the toughest and most experienced guides, I am dedicated to supporting individuals from all backgrounds in overcoming mental barriers
-                  and embracing outdoor challenges.
-                </p>
-              </div>
-            </div>
-          </div>
-          <Image src="/welcomingAugust.png" width={1500} height={1000} alt="" className="md:block hidden w-full self-center rounded-sm shadow-xl" />
-        </section>
-
-        <section className="bg-mobileBanner-image md:bg-banner-image bg-center bg-cover h-[800px] md:h-[1000px] md:py-10  rounded-bl-[60px] rounded-br-[60px] rounded-tl-[60px] rounded-tr-[60px]">
+      <div className="space-y-32 ">
+        <section className="md:relative md:-mt-[5rem] mt-56 z-50 bg-mobileBanner-image md:bg-banner-image bg-center bg-cover h-[800px] md:h-[1000px] md:py-10  rounded-t-[3rem]">
           <div className="px-6 md:px-0 py-16 md:py-20 max-w-5xl mx-auto text-ogBG-base">
             <div className="md:flex md:flex-col pb-2">
               <h3 className="text-4xl md:text-5xl font-display uppercase font-bold mb-8 text-ogPrimary-lightest ">Exclusive perks</h3>
@@ -100,9 +77,30 @@ export default function Page() {
             </Button>
           </div>
         </section>
+        <section className="px-6 md:px-0 mb-10 md:my-32 max-w-5xl mx-auto">
+          {/* <div className="py-10 leading-relaxed flex flex-col md:flex-row gap-2 justify-between">
+          <div className="pb-6 self-center md:w-1/2"></div>
+        </div> */}
+          <div className=" md:mt-0">
+            <div className="my-4 md:pt-10  flex flex-col md:flex-row gap-2 justify-between">
+              <div className="self-center">
+                <h2 className="font-display text-3xl md:text-5xl font-bold uppercase pb-4 md:pb-10">Unluck the outdoors</h2>
+                <div className="md:w-1/2">
+                  <h3 className="text-lg md:text-xl font-bold pb-4 ">Unlock the secrets of the wilderness and master your mindset with my exclusive one-on-one masterclass.</h3>
+                  <Image src="/welcomingAugust.png" width={1000} height={1000} alt="" className=" self-center rounded-sm shadow-xl lg:hidden" />
+                </div>
 
+                <p className="text-sm md:text-base my-4 md:w-1/2">
+                  With over 500 nights spent in nature, I bring unparalleled outdoor expertise and powerful mental resilience training. As one of the toughest and most experienced guides, I am dedicated to supporting individuals from all backgrounds in overcoming mental barriers
+                  and embracing outdoor challenges.
+                </p>
+              </div>
+            </div>
+          </div>
+          <Image src="/welcomingAugust.png" width={1500} height={1000} alt="" className="md:block hidden w-full self-center rounded- shadow-xl" />
+        </section>
         <section className="px-6 md:px-0 mb-10 md:mt-0 max-w-5xl mx-auto ">
-          <article className="my-36">
+          <article>
             <h2 className="font-display text-3xl md:text-5xl font-bold uppercase md:pb-10">
               What <br /> members say
             </h2>
@@ -118,7 +116,7 @@ export default function Page() {
           </article>
         </section>
         <NewsletterBanner title="Campfire Chronicles" />
-        <section className="px-6 md:px-0 my-24 md:my-52 max-w-5xl mx-auto">
+        <section className="px-6 md:px-0 md:my-52 max-w-5xl mx-auto">
           <div className="">
             <h2 className="font-display text-3xl md:text-5xl font-bold uppercase">FAQ</h2>
             <div className="flex flex-col md:flex-row justify-between">
