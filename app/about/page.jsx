@@ -21,7 +21,7 @@ export default function AboutMe() {
     <main className="">
       <Hero
         title="About August"
-        imageSrc="/aboutMe.png"
+        imageSrc="/abouthero.webp"
         bg="bg-about"
         bgPos="bg-bottom"
         height="h-[90vh] md:h-[100vh]"
