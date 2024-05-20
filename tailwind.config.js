@@ -131,7 +131,8 @@ module.exports = {
       },
       backgroundImage: {
         "footer-image": "url('/footer_img.webp')",
-        "banner-image": "url('/augustIntotheWild.png')",
+        "banner-image": "url('/leftsidedAugust.png')",
+        "mobileBanner-image": "url('/orangeAugustInto.png')",
       },
     },
     keyframes: {
