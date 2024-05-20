@@ -54,7 +54,7 @@ export default function Page() {
               <div className="self-center">
                 <h2 className="font-display text-3xl md:text-5xl font-bold uppercase pb-4 md:pb-10">Unluck the outdoors</h2>
                 <div className="md:w-1/2">
-                  <h3 className="text-lg md:text-xl font-bold pb-4 ">Unlock the secrets of the wilderness and master your mindset with our exclusive one-on-one masterclass.</h3>
+                  <h3 className="text-lg md:text-xl font-bold pb-4 ">Unlock the secrets of the wilderness and master your mindset with my exclusive one-on-one masterclass.</h3>
                   <Image src="/welcomingAugust.png" width={1000} height={1000} alt="" className=" self-center rounded-sm shadow-xl lg:hidden" />
                 </div>
 

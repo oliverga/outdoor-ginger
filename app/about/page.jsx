@@ -42,7 +42,7 @@ export default function AboutMe() {
       <OrangeBanner h2="Beyond boundaries">
         <div className="flex flex-col items-center">
           <p className="text-ogBG-base mb-1 md:mb-4 text-left text-base md:text-2xl">August&apos;s Journey of Self-Discovery & Adventure</p>
-          <p className="text-ogBG-base font-normal leading-5 text-sm md:text-xl text-left md:w-2/4">
+          <p className="text-ogBG-base font-normal leading-5 text-sm md:text-xl text-center md:w-2/4">
             Augustt&apos;s story isnt&apos;t just about the destinations he&apos;s reached; it&apos;s about the lessons learned along the way. Through the trials and triumphs of life on the road, het&apos;s discovered a profound sense of self-reliance and resilience, forging a
             path that defies convention and embraces the unknown.
           </p>
@@ -76,9 +76,9 @@ export default function AboutMe() {
       <SponsorBanner type="static" />
       <section className="px-6 md:px-0  max-w-5xl mx-auto my-20 md:py-28">
         <h2 className="font-display text-3xl md:text-5xl uppercase font-bold mb-6 ">Testimonials</h2>
-        <h3 className="text-2xl mb-6 md:mb-10">What my partners say about me</h3>
+        <h3 className="text-2xl mb-6 md:mb-10 ">What my partners say</h3>
         {testimonials.map((testimonial, index) => (
-          <div className="prose md:prose-lg prose-h3:italic prose-p:italic prose-p:text-ogLabel-muted w-auto prose-h3:font-light prose-p:font-light prose-p:text-sm prose-p:md:text-base  prose-h3:text-sm prose-h3:md:text-xl my-4" key={index}>
+          <div className="prose md:prose-lg prose-h3:italic prose-p:italic prose-p:text-ogLabel-muted w-auto prose-h3:font-light prose-p:font-light prose-p:text-sm prose-p:md:text-lg  prose-h3:text-sm prose-h3:md:text-xl my-4" key={index}>
             <PortableText value={testimonial.content} />
 
             <h3>{testimonial.Sponsor_Name}</h3>
@@ -88,7 +88,7 @@ export default function AboutMe() {
       </section>
 
       <article className="flex justify-end -mt-28 md:-mt-40">
-        <Image src="/computerAbout.png" alt="Laptop" width={2000} height={2000} className="hidden md:block object-contain w-96 md:w-[900px] -mb-32 mr-48 md:-mb-[500px] z-10 drop-shadow-lg" />
+        <Image src="/computerAbout.png" alt="Laptop" width={2000} height={2000} className="hidden md:block object-contain w-96 md:w-[900px] -mb-32 mr-36 md:-mb-[500px] z-10 drop-shadow-lg" />
         <Image src="/threePhones.png" alt="" width={1400} height={1400} className="lg:hidden object-contain w-64 md:w-[700px] -mb-20 md:-mb-44 z-10 drop-shadow-lg" />
       </article>
 
