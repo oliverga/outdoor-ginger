@@ -94,11 +94,14 @@ export default async function SignupPage() {
             </h3>
           </div>
         </div>
-        <div className="flex justify-center md:justify-end  ">
+        <Link
+          href="/membership"
+          className="flex justify-center md:justify-end no-underline "
+        >
           <Button href="/membership" variant="link" className="">
             Learn more
           </Button>
-        </div>
+        </Link>
       </div>
     </main>
   );

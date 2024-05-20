@@ -30,7 +30,7 @@ function Header() {
   const linkStyle = (path) =>
     pathname === path ? "p-2 text-ogPrimary" : "p-2";
 
-  const progress = "64%";
+  const progress = "75%";
 
   const { scrollY } = useScroll();
 
