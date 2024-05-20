@@ -81,8 +81,8 @@ export default async function PrivatePage() {
           </div>
         </div>
       </div>
-      <section className=" w-screen rounded-t-[3rem] -mt-[3rem] z-50 relative bg-ogBG-base">
-        <div className="container px-8  py-12 md:py-16 lg:py-20 xl:py-24 ">
+      <section className=" w-screen rounded-t-[3rem] -mt-[3rem] z-50 relative bg-ogBG-base px-8">
+        <div className="max-w-7xl mx-auto py-12 md:py-16 lg:py-20 xl:py-24 ">
           <div className="grid gap-8 lg:grid-cols-[1fr_1fr] xl:grid-cols-[1fr_1fr_1fr]">
             <div>
               <h2 className="text-2xl font-semibold mb-4">
