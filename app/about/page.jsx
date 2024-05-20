@@ -24,6 +24,7 @@ export default function AboutMe() {
           <p className="text-ogLabel-faint font-extralight text-sm md:text-2xl italic w-max">Anything is possible if you dare to be curious</p>
         </div>
       </Hero>
+
       <section className="px-6 md:px-0 pb-8 md:py-32 md:max-w-5xl md:mx-auto">
         <div className="flex flex-col md:grid grid-cols-3 grid-rows-1">
           <div className=" col-span-1 flex flex-col mb-4">
@@ -47,6 +48,7 @@ export default function AboutMe() {
           </p>
         </div>
       </OrangeBanner>
+
       <div className="relative -top-36 md:-top-60">
         <div className="flex justify-center">
           <Image src="/waterSitting.png" alt="" width={1000} height={1000} className="w-80 md:w-1/3 rounded-full shadow-xl" />
@@ -84,8 +86,9 @@ export default function AboutMe() {
           </div>
         ))}
       </section>
+
       <article className="flex justify-end -mt-28 md:-mt-40">
-        <Image src="/computerAbout.png" alt="Laptop" width={2000} height={2000} className="hidden md:block object-contain w-96 md:w-[900px] -mb-32 mr-56 md:-mb-[450px] z-10 drop-shadow-lg" />
+        <Image src="/computerAbout.png" alt="Laptop" width={2000} height={2000} className="hidden md:block object-contain w-96 md:w-[900px] -mb-32 mr-48 md:-mb-[500px] z-10 drop-shadow-lg" />
         <Image src="/threePhones.png" alt="" width={1400} height={1400} className="lg:hidden object-contain w-64 md:w-[700px] -mb-20 md:-mb-44 z-10 drop-shadow-lg" />
       </article>
 
