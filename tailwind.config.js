@@ -133,6 +133,7 @@ module.exports = {
         "footer-image": "url('/footer_img.webp')",
         "banner-image": "url('/leftsidedAugust.png')",
         "mobileBanner-image": "url('/orangeAugustInto.png')",
+        "yourmembership": "url('/yourmembership.webp')",
       },
     },
     keyframes: {
