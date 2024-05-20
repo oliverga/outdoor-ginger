@@ -44,54 +44,53 @@ export default function Page() {
           </Card>
         </div>
       </Hero>
-      <section className="px-6 md:px-0 mb-10 md:mt-0 max-w-5xl mx-auto">
+      <section className="px-6 md:px-0 mb-10 md:mb-32 max-w-5xl mx-auto">
         {/* <div className="py-10 leading-relaxed flex flex-col md:flex-row gap-2 justify-between">
           <div className="pb-6 self-center md:w-1/2"></div>
         </div> */}
         <div className="mt-52 md:mt-0">
-          <div className="my-4 md:pt-10 md:pb-32 flex flex-col md:flex-row gap-2 justify-between">
+          <div className="my-4 md:pt-10  flex flex-col md:flex-row gap-2 justify-between">
             <div className="self-center">
               <h2 className="font-display text-3xl md:text-5xl font-bold uppercase pb-4 md:pb-10">Unluck the outdoors</h2>
-              <div className="md:w-1/2">
+              <div className="md:w-1/2 mr-10">
                 <h3 className="text-lg md:text-xl font-bold pb-4 ">Unlock the secrets of the wilderness and master your mindset with our exclusive one-on-one masterclass.</h3>
-                <Image src="/welcomingAugust.png" width={1000} height={1000} alt="" className="w-full self-center rounded-sm shadow-xl lg:hidden" />
+                <Image src="/welcomingAugust.png" width={1000} height={1000} alt="" className=" self-center rounded-sm shadow-xl lg:hidden" />
               </div>
 
-              <p className="text-sm md:text-base ">
+              <p className="text-sm md:text-base my-4 md:w-1/2">
                 With over 500 nights spent in nature, I bring unparalleled outdoor expertise and powerful mental resilience training. As one of the toughest and most experienced guides, I am dedicated to supporting individuals from all backgrounds in overcoming mental barriers
                 and embracing outdoor challenges.
               </p>
             </div>
-
-            <Image src="/welcomingAugust.png" width={1500} height={1000} alt="" className="md:block hidden w-[600px] self-end rounded-sm shadow-xl" />
           </div>
         </div>
+        <Image src="/welcomingAugust.png" width={1500} height={1000} alt="" className="md:block hidden w-full self-center rounded-sm shadow-xl" />
       </section>
 
       <section className="bg-mobileBanner-image md:bg-banner-image bg-center bg-cover h-[800px] md:h-[1000px] md:py-10  rounded-bl-[60px] rounded-br-[60px] rounded-tl-[60px] rounded-tr-[60px]">
         <div className="px-6 md:px-0 py-16 md:py-20 max-w-5xl mx-auto text-ogBG-base">
           <div className="md:flex md:flex-col pb-2">
-            <h3 className="text-4xl md:text-5xl font-display uppercase font-bold mb-8 ">Exclusive perks</h3>
+            <h3 className="text-4xl md:text-5xl font-display uppercase font-bold mb-8 text-ogPrimary-lightest ">Exclusive perks</h3>
             <ul className="list-inside space-y-5">
               <li>
-                <p className="font-bold md:text-2xl pb-1 text-ogBG-base">Personalized Coaching:</p>
-                <p className="text-sm md:text-xl font-semibold md:font-normal  text-ogBG-base text-balance md:w-6/12"> Gain direct access to me for one-on-one sessions, tailored to your specific needs and goals.</p>
+                <p className="font-bold md:text-2xl pb-1 text-ogPrimary-lightest">Personalized Coaching:</p>
+                <p className="text-sm md:text-xl font-semibold md:font-normal  text-ogPrimary-lightest text-balance md:w-6/12"> Gain direct access to me for one-on-one sessions, tailored to your specific needs and goals.</p>
               </li>
               <li>
-                <p className="font-bold md:text-2xl pb-1 text-ogBG-base">Exclusive Content:</p>
-                <p className="text-sm md:text-xl font-semibold md:font-normal  text-ogBG-base text-balance md:w-6/12"> Enjoy access to members-only posts, videos, and articles packed with expert advice, tips, and insights. </p>
+                <p className="font-bold md:text-2xl pb-1 text-ogPrimary-lightest">Exclusive Content:</p>
+                <p className="text-sm md:text-xl font-semibold md:font-normal  text-ogPrimary-lightest text-balance md:w-6/12"> Enjoy access to members-only posts, videos, and articles packed with expert advice, tips, and insights. </p>
               </li>
               <li>
-                <p className="font-bold md:text-2xl pb-1 text-ogBG-base">Community Support:</p>
-                <p className="text-sm md:text-xl font-semibold md:font-normal text-ogBG-base text-balance md:w-6/12"> Join a vibrant community of like-minded individuals, share experiences, and receive support and motivation.</p>
+                <p className="font-bold md:text-2xl pb-1 text-ogPrimary-lightest">Community Support:</p>
+                <p className="text-sm md:text-xl font-semibold md:font-normal text-ogPrimary-lightest text-balance md:w-6/12"> Join a vibrant community of like-minded individuals, share experiences, and receive support and motivation.</p>
               </li>
               <li>
-                <p className="font-bold md:text-2xl pb-1 text-ogBG-base">Live Q&A Sessions: </p>
-                <p className="text-sm md:text-xl font-semibold md:font-normal  text-ogBG-base text-balance md:w-6/12">Participate in live sessions where you can ask questions and get real-time advice. </p>
+                <p className="font-bold md:text-2xl pb-1 text-ogPrimary-lightest">Live Q&A Sessions: </p>
+                <p className="text-sm md:text-xl font-semibold md:font-normal  text-ogPrimary-lightest text-balance md:w-6/12">Participate in live sessions where you can ask questions and get real-time advice. </p>
               </li>
               <li>
-                <p className="font-bold md:text-2xl pb-1 text-ogBG-base">Special Offers:</p>
-                <p className="text-sm md:text-xl font-semibold md:font-normal  text-ogBG-base text-balance md:w-6/12"> Receive early access to events, workshops, and special discounts on gear and courses.</p>
+                <p className="font-bold md:text-2xl pb-1 text-ogPrimary-lightest">Special Offers:</p>
+                <p className="text-sm md:text-xl font-semibold md:font-normal  text-ogPrimary-lightest text-balance md:w-6/12"> Receive early access to events, workshops, and special discounts on gear and courses.</p>
               </li>
             </ul>
           </div>
@@ -117,7 +116,7 @@ export default function Page() {
           {/* <Image src="/augustIntotheWild.png" width={1000} height={1000} alt="" /> */}
         </article>
       </section>
-      <NewsletterBanner />
+      <NewsletterBanner title="Campfire Chronicles" />
       <section className="px-6 md:px-0 my-24 md:my-52 max-w-5xl mx-auto">
         <div className="">
           <h2 className="font-display text-3xl md:text-5xl font-bold uppercase">FAQ</h2>

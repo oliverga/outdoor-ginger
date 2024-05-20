@@ -7,8 +7,7 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { set } from "date-fns";
 
-const sponsorQuery =
-  '*[_type == "sponsor"]{Sponsor_Name, Sponsor_Website, Sponsor_Logo}';
+const sponsorQuery = '*[_type == "sponsor"]{Sponsor_Name, Sponsor_Website, Sponsor_Logo}';
 
 export default function SponsorBanner({ type = "rolling" }) {
   const [sponsors, setSponsors] = useState([]);
@@ -71,19 +70,8 @@ export default function SponsorBanner({ type = "rolling" }) {
             .flat()
             .map((sponsor, index) => {
               return (
-                <Link
-                  href={sponsor.Sponsor_Website}
-                  target="_blank"
-                  key={index}
-                  className="aspect-square h-20 hover:scale-105 transition-transform duration-300 ease-in-out"
-                >
-                  <Image
-                    src={urlFor(sponsor.Sponsor_Logo).url()}
-                    alt={sponsor.Sponsor_Name}
-                    width={400}
-                    height={400}
-                    className="object-contain w-full h-full"
-                  />
+                <Link href={sponsor.Sponsor_Website} target="_blank" key={index} className="aspect-square h-20 hover:scale-105 transition-transform duration-300 ease-in-out">
+                  <Image src={urlFor(sponsor.Sponsor_Logo).url()} alt={sponsor.Sponsor_Name} width={400} height={400} className="object-contain w-full h-full" />
                 </Link>
               );
             })}
@@ -94,47 +82,22 @@ export default function SponsorBanner({ type = "rolling" }) {
     return (
       <article className="my-6 px-8 bg-ogPrimary py-8 md:py-20 grid grid-cols-2 grid-rows-1 overflow-y-hidden overflow-x-hidden">
         <div className="max-w-5xl mx-auto col-start-1 row-start-1 col-span-2 row-span-2 z-20">
-          <h2 className="mb-2 font-display font-semibold uppercase text-ogBG-base text-4xl md:text-5xl">
-            Partners
-          </h2>
+          <h2 className="mb-2 font-display font-semibold  uppercase text-ogBG-base text-4xl md:text-5xl">Partners</h2>
           <div className="flex flex-wrap gap-x-2 md:gap-12 justify-around">
             {sponsors.map((sponsor, index) => {
               return (
-                <Link
-                  href={sponsor.Sponsor_Website}
-                  target="_blank"
-                  key={index}
-                  className="aspect-video w-28 md:w-72 hover:scale-105 transition-transform duration-300 ease-in-out"
-                >
-                  <Image
-                    src={urlFor(sponsor.Sponsor_Logo).url()}
-                    alt={sponsor.Sponsor_Name}
-                    width={400}
-                    height={400}
-                    className="object-contain w-full h-full"
-                  />
+                <Link href={sponsor.Sponsor_Website} target="_blank" key={index} className="aspect-video w-28 md:w-72 hover:scale-105 transition-transform duration-300 ease-in-out">
+                  <Image src={urlFor(sponsor.Sponsor_Logo).url()} alt={sponsor.Sponsor_Name} width={400} height={400} className="object-contain w-full h-full" />
                 </Link>
               );
             })}
           </div>
         </div>
         <div className="row-start-1 col-start-1 place-self-start opacity-25 rotate-180 aspect-square w-36 md:w-[1000px] -mt-20 -ml-20 md:-mt-[480px] md:-ml-[400px]">
-          <Image
-            src="/icons/flameWhite.svg"
-            alt="background flame icon"
-            width={900}
-            height={900}
-            className="object-contain w-full h-full"
-          />
+          <Image src="/icons/flameWhite.svg" alt="background flame icon" width={900} height={900} className="object-contain w-full h-full" />
         </div>
         <div className="row-start-1 col-start-2 opacity-25 place-self-end aspect-square w-36 md:w-[1000px] -mb-20 -mr-20 md:-mb-[480px] md:-mr-[400px]">
-          <Image
-            src="/icons/flameWhite.svg"
-            alt="background flame icon"
-            width={900}
-            height={900}
-            className="object-contain w-full h-full"
-          />
+          <Image src="/icons/flameWhite.svg" alt="background flame icon" width={900} height={900} className="object-contain w-full h-full" />
         </div>
       </article>
     );
