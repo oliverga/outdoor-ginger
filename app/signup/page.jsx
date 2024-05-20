@@ -32,7 +32,10 @@ export default async function SignupPage() {
         <div className="flex flex-col items-center md:items-start gap-0 mt-2">
           <p className="text-sm">Already a member?</p>{" "}
           <Link href="/login">
-            <Button variant="link" className="font-normal flex flex-col px-0">
+            <Button
+              variant="link"
+              className="font-normal flex flex-col md:px-0"
+            >
               Log in
             </Button>
           </Link>
@@ -47,8 +50,8 @@ export default async function SignupPage() {
             more.
           </p>
         </div>
-        <div className="flex md:flex-wrap justify-around md:justify-betweeen md:px-0 gap-6 my-6 row-span-2 whitespace-nowrap">
-          <div className="flex flex-col gap-1 items-center">
+        <div className="flex md:flex-wrap justify-around md:justify-between md:px-0 gap-6 my-6 row-span-2 whitespace-nowrap ">
+          <div className="flex flex-col gap-1 items-center ">
             <div className="aspect-square w-20 h-20 bg-ogPrimary p-6 rounded-full flex justify-center items-center">
               <Image
                 src="/icons/health.svg"
