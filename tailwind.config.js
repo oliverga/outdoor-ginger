@@ -134,6 +134,10 @@ module.exports = {
         "banner-image": "url('/leftsidedAugust.png')",
         "mobileBanner-image": "url('/orangeAugustInto.png')",
         "yourmembership": "url('/yourmembership.webp')",
+        "forside": "url('/forsidehero.webp')",
+        "blog": "url('/bloghero.webp')",
+        "equipment": "url('/equipmenthero.webp')",
+        "about": "url('/abouthero.webp')",
       },
     },
     keyframes: {

@@ -14,11 +14,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main>
-      <Hero
-        title="Outdoor Ginger"
-        imageSrc="/forsidehero.webp"
-        bgPos="object-bottom"
-      >
+      <Hero title="Outdoor Ginger" bgPos="bg-bottom" bg="bg-forside">
         <div
           id="left"
           className="hidden md:flex flex-col gap-4 w-full mt-4 text-lg"

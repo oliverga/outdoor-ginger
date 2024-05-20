@@ -42,6 +42,8 @@ export default function Page() {
         title="Equipment"
         imageSrc="/equipmenthero.webp"
         height="h-96 md:h-[40vh]"
+        bg="bg-equipment"
+        bgPos="bg-top"
       >
         <div id="left" className="w-[200%] md:w-full">
           <p className="text-xl md:text-2xl font-medium opacity-70 font-display text-ogBG-base">
