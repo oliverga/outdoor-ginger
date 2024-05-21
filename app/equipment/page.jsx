@@ -51,13 +51,15 @@ export default function Page() {
           </p>
         </div>
       </Hero>
-      <div className="min-h-screen max-w-5xl mx-auto px-8 pb-24">
-        <div className="flex flex-wrap justify-center gap-12  -mt-6 md:mt-0">
-          {products.map((product) => (
-            <ProductCard product={product} key={product._id} />
-          ))}
+      <section className="px-8">
+        <div className="min-h-screen max-w-7xl mx-auto pb-24">
+          <div className="flex flex-wrap justify-between gap-12 -mt-6 md:mt-0">
+            {products.map((product) => (
+              <ProductCard product={product} key={product._id} />
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
       <MemberBanner
         title="25% Discount for members"
         description="Join 'FREEDOM ACHIEVERS' to get access to exclusive content,

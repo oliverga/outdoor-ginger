@@ -12,7 +12,7 @@ function NewsletterBanner({ title, subtitle }) {
           {subtitle}
         </h2>
       </div>
-      <p className="text-ogPrimary-lighter max-w-lg text-lg">
+      <p className="text-ogPrimary-lightest max-w-lg text-lg leading-relaxed">
         Subscribe to get interesting stories, field reports, and other goodies
         straight to your inbox.
       </p>

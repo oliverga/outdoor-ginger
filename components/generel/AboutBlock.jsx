@@ -15,10 +15,10 @@ export default function AboutBlock() {
         />
       </div>
       <div className="flex flex-col items-center md:items-start gap-2">
-        <p className="italic text-center md:text-left text-ogLabel-muted text-lg my-3">
+        {/* <p className="italic text-center md:text-left text-ogLabel-muted text-lg my-3">
           “Anything is possible if you <br className="md:hidden" /> dare to be
           curious...”
-        </p>
+        </p> */}
         <h2 className="uppercase text-center md:text-left font-display font-semibold text-ogLabel-base text-4xl md:text-5xl my-6">
           About August
         </h2>
