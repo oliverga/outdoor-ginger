@@ -21,7 +21,7 @@ function Hero({
         className={`overflow-hidden grid grid-cols-2 max-w-7xl mx-auto pb-20 md:pb-32 ${height}`}
       >
         <div className="place-self-end z-30 w-full flex flex-col justify-end h-fit">
-          <h1 className="text-4xl md:text-7xl font-bold text-ogBG-base uppercase m-0">
+          <h1 className="text-4xl md:text-7xl font-bold text-ogBG-base uppercase m-0 tracking-tight leading-snug">
             {title}
           </h1>
           {leftSideChildren}

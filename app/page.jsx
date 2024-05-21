@@ -19,12 +19,13 @@ export default function Home() {
           id="left"
           className="hidden md:flex flex-col w-full gap-8 mt-8 text-lg"
         >
-          <p className="text-ogBG-base max-w-[80%] opacity-80 leading-tight">
-            I&apos;m an outdoor influencer who takes it to the next level. Join
-            me on my next adventure!
+          <p className="text-ogBG-base max-w-[80%] opacity-80 leading-normal text-lg">
+            I&apos;m an outdoor influencer who takes it to the next level.{" "}
+            <br />
+            Join me on my next adventure!
           </p>
           <Link href="/membership">
-            <Button size="md" variant="primary" className="capitalize ">
+            <Button size="md" variant="primary" className=" ">
               Become a member
             </Button>
           </Link>

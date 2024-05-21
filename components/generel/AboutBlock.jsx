@@ -22,14 +22,14 @@ export default function AboutBlock() {
         <h2 className="uppercase text-center md:text-left font-display font-semibold text-ogLabel-base text-4xl md:text-5xl my-6">
           About August
         </h2>
-        <p className="max-w-lg text-center md:text-left leading-normal text-ogLabel-base">
-          At just 19, August left Copenhagen on his bike, reaching the wild
-          landscapes of France, eschewing traditional schooling for adventure,
-          and teaching others in the process.
+        <p className="max-w-lg text-center md:text-left leading-normal text-ogLabel-base text-lg">
+          At just 19, I left Copenhagen on my bike, reaching the wild landscapes
+          of France, eschewing traditional schooling for adventure, and teaching
+          others in the process.
         </p>
         <Link href="/about">
-          <Button variant="link" size="" className="mt-4 capitalize px-0">
-            Learn more
+          <Button variant="link" size="" className="mt-4 px-0">
+            Hear more of my story
           </Button>
         </Link>
       </div>
