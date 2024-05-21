@@ -291,7 +291,7 @@ export default async function PrivatePage() {
               </div>
               <form className="flex space-x-2">
                 <Input
-                  className="max-w-lg flex-1"
+                  className="max-w-lg flex-1 bg-ogPrimary placeholder:text-ogPrimary-lightest text-ogPrimary-lightest border-ogPrimary-lighter focus-visible:ring-0 focus-visible:ring-offset-0"
                   placeholder="Enter your email"
                   type="email"
                 />

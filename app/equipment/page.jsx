@@ -53,7 +53,7 @@ export default function Page() {
       </Hero>
       <section className="px-8">
         <div className="min-h-screen max-w-7xl mx-auto pb-24">
-          <div className="flex flex-wrap justify-between gap-12 -mt-6 md:mt-0">
+          <div className="flex flex-wrap justify-center xl:justify-between gap-12 -mt-6 md:mt-0">
             {products.map((product) => (
               <ProductCard product={product} key={product._id} />
             ))}
