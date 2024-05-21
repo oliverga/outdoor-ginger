@@ -76,7 +76,7 @@ export default function Home() {
           </div>
         </div>
       </Hero>
-      <div className="space-y-32">
+      <div className="space-y-24">
         <div>
           <AboutBlock />
         </div>
