@@ -21,8 +21,8 @@ export default function ArticleCard({ post }) {
         </div>
         <div className="flex flex-col justify-center gap-2 py-4 px-2 pr-3">
           <h2 className="font-medium">
-            {post.title.length > 40
-              ? post.title.slice(0, 40) + "..."
+            {post.title.length > 24
+              ? post.title.slice(0, 24) + "..."
               : post.title}
           </h2>
           <p className="text-sm text-ogLabel-faint">
