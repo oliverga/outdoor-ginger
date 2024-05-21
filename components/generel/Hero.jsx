@@ -16,9 +16,9 @@ function Hero({
     (child) => child.props.id === "right",
   );
   return (
-    <section className={`relative mb-6 ${bg} ${bgPos} bg-cover`}>
+    <section className={`relative mb-6 ${bg} ${bgPos} bg-cover px-8 md:px-8 `}>
       <div
-        className={`overflow-hidden grid grid-cols-2 max-w-5xl mx-auto pb-20 md:pb-24 px-8 md:px-0 ${height} bg-${bg}`}
+        className={`overflow-hidden grid grid-cols-2 max-w-7xl mx-auto pb-20 md:pb-32 ${height}`}
       >
         <div className="place-self-end z-30 w-full flex flex-col justify-end h-fit">
           <h1 className="text-4xl md:text-7xl font-bold text-ogBG-base uppercase m-0">
