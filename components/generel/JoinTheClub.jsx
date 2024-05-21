@@ -6,12 +6,12 @@ import { IconArticle, IconCalendar, IconTag } from "@tabler/icons-react";
 export default function JoinTheClub() {
   return (
     <section className="px-8">
-      <div className="my-12 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between ">
+      <div className="my-12 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
         <div className="max-w-2xl text-center md:text-left flex flex-col gap-8 items-left ">
           <h2 className="text-4xl md:text-5xl font-display font-semibold uppercase text-center md:text-left ">
             Become a Member
           </h2>
-          <p className="leading-normal text-ogLabel-base text-lg">
+          <p className="leading-normal text-ogLabel-base text-lg text-left">
             Reignite your energy, embrace your true self, and discover peace
             with our exclusive membership. Enjoy a range of perks, including
             discounts and unique offers crafted for the adventurous spirit.
@@ -22,7 +22,7 @@ export default function JoinTheClub() {
             </Button>
           </Link>
         </div>
-        <div className="flex md:flex-wrap md:justify-around gap-6 my-6  max-w-sm">
+        <div className="flex p-8 flex-wrap justify-around gap-6 my-6  max-w-sm">
           <div className="flex flex-col gap-1 items-center">
             <div className="aspect-square w-28 md:w-32 h-28 md:h-32 bg-ogPrimary p-6 rounded-full">
               <Image
@@ -67,7 +67,7 @@ export default function JoinTheClub() {
           </div>
         </div>
       </div>
-      <div className=" py-12 md:py-12 md:pb-32 w-full max-w-7xl mx-auto">
+      <div className="pb-12 py-0 md:py-12 md:pb-32 w-full max-w-7xl  mx-auto">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3 ">
           <div className="rounded-lg bg-ogBG-base border p-6 shadow-md">
             <IconArticle className="h-8 w-8 text-ogLabel-base" />

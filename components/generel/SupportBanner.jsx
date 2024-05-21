@@ -56,12 +56,12 @@ function SupportBanner({ type = "banner" }) {
   } else if (type == "original") {
     return (
       <section className="px-8">
-        <article className="my-48 max-w-7xl flex flex-col items-center justify-between  md:flex-row md:gap-8 mx-auto w-full ">
+        <article className="my-32 md:my-48 max-w-7xl flex flex-col items-center justify-between  md:flex-row md:gap-8 mx-auto w-full ">
           <div className="flex flex-col items-center md:items-start gap-8 mb-8 md:mb-0">
             <h2 className="text-4xl md:text-5xl font-display font-semibold uppercase text-center md:text-left md:self-start">
               Support August
             </h2>
-            <div className="space-y-8 w-full max-w-md text-center md:text-left  text-lg leading-relaxed">
+            <div className="space-y-8 w-full max-w-md text-left  text-lg leading-relaxed">
               <p className="text-ogLabel-base ">
                 I&apos;m dedicated to inspiring others to get out and explore
                 nature and your support makes it happen.

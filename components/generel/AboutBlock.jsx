@@ -22,7 +22,7 @@ export default function AboutBlock() {
         <h2 className="uppercase text-center md:text-left font-display font-semibold text-ogLabel-base text-4xl md:text-5xl my-6">
           About August
         </h2>
-        <p className="max-w-lg text-center md:text-left leading-normal text-ogLabel-base text-lg">
+        <p className="max-w-lg text-left leading-normal text-ogLabel-base text-lg">
           At just 19, I left Copenhagen on my bike, reaching the wild landscapes
           of France, eschewing traditional schooling for adventure, and teaching
           others in the process.

@@ -5,14 +5,14 @@ function NewsletterBanner({ title, subtitle }) {
   return (
     <section className="h-[50vh] bg-ogPrimary flex flex-col items-center justify-evenly text-center px-4 py-6">
       <div className=" space-y-4">
-        <h1 className="font-display font-bold uppercase text-5xl md:text-7xl text-ogPrimary-lightest m-0">
+        <h1 className="font-display font-bold uppercase  text-4xl md:text-7xl text-ogPrimary-lightest m-0">
           {title}
         </h1>
         <h2 className=" font-display text-ogPrimary-lighter text-2xl font-medium m-0">
           {subtitle}
         </h2>
       </div>
-      <p className="text-ogPrimary-lightest max-w-lg text-lg leading-relaxed">
+      <p className="text-ogPrimary-lightest max-w-lg text-base md:text-lg leading-relaxed">
         Subscribe to get interesting stories, field reports, and other goodies
         straight to your inbox.
       </p>
