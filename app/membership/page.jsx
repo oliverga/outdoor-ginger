@@ -47,37 +47,25 @@ export default function Page() {
         </div>
       </Hero>
 
-      <section className="mb-10 md:py-10  rounded-t-[3rem]">
-        <div className="max-w-7xl mx-auto px-6 md:px-0 ">
-          <div className="flex flex-col md:w-1/2 gap-8 mt-56 md:mt-0">
-            <h2 className="font-bold text-4xl uppercase font-display ">Join the Adventure with Outdoor Ginger!</h2>
-            <h3 className="font-semibold text-xl md:w-2/3">Become an Exclusive Member of the Ultimate Wilderness Experience</h3>
-            <p>Dive into the wild like never before with Outdoor Ginger! As an exclusive member, you&apos;ll gain access to a world of adventure, exploration, and untamed beauty that only the true wilderness can offer.</p>
+      <section className="mb-10 md:py-10 pt-48 md:pt-0 rounded-t-[3rem]">
+        <div className="max-w-7xl mx-auto px-6 md:px-0 flex flex-col md:flex-row items-center ">
+          <div className="md:w-1/2">
+            <h2 className="font-bold text-2xl leading-6 md:text-4xl uppercase font-display ">Join the Adventure with Outdoor Ginger!</h2>
+            <h3 className="font-semibold text-lg leading-6 mt-4 md:text-xl md:w-2/3">Become an Exclusive Member of the Ultimate Wilderness Experience</h3>
+            <p className="mt-4">Dive into the wild like never before with Outdoor Ginger! As an exclusive member, you&apos;ll gain access to a world of adventure, exploration, and untamed beauty that only the true wilderness can offer.</p>
+          </div>
+          <div className="flex justify-center md:w-1/2 md:ml-auto ">
+            <Image src="/handdrawnAugust.png" alt="Description of image" width={500} height={500} className="w-44 md:w-auto h-fit " />
           </div>
         </div>
       </section>
       <ExclusivePerks />
       <MembershipCarousel />
       <UpcomingEvents />
-      <div className="bg-mobileFaQ-image md:bg-FAQ-image bg-center bg-cover h-[500px] md:h-[500px]">
-        <div className="my-10 md:my-32 max-w-7xl mx-auto px-6 md:px-0 text-center md:w-1/2">
-          <div className="flex flex-col items-center justify-center pt-20">
-            <p className="text-2xl md:text-2xl font-bold text-center text-balance text-ogPrimary-lightest pb-10">
-              Don&apos;t miss out on this opportunity to elevate your knowledge and network with like-minded professionals. Subscribe now and become part of our growing community!
-            </p>
-            <Link href="/signup">
-              <Button size="default" className="bg-ogPrimary hover:bg-ogPrimary-dark text-base text-ogBG-base">
-                Subscribe
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </div>
 
       {/* <SupportBanner /> */}
-
+      <NewsletterBanner title="Campfire Chronicles" />
       <MembershipAccordion />
-      {/* <NewsletterBanner title="Campfire Chronicles" /> */}
     </main>
   );
 }
