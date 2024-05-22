@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       backgroundSize: {
-        'zoom': '150%',
+        zoom: "150%",
       },
       backgroundPosition: {
         "top-left-center": "left top 120rem",
@@ -139,14 +139,13 @@ module.exports = {
         "footer-image": "url('/footer_img.webp')",
         "banner-image": "url('/leftsidedAugust.png')",
         "mobileBanner-image": "url('/orangeAugustInto.png')",
-        "yourmembership": "url('/yourmembership.webp')",
-        "forside": "url('/forsidehero.webp')",
-        "forside2": "url('/forsidehero2.webp')",
-        "blog": "url('/bloghero.webp')",
-        "equipment": "url('/equipmenthero.webp')",
-        "about": "url('/abouthero.webp')",
+        yourmembership: "url('/yourmembership.webp')",
+        forside: "url('/forsidehero.webp')",
+        forside2: "url('/forsidehero2.webp')",
+        blog: "url('/bloghero.webp')",
+        equipment: "url('/equipmenthero.webp')",
+        about: "url('/abouthero.webp')",
       },
-
     },
     keyframes: {
       "accordion-down": {
