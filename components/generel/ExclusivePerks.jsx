@@ -9,7 +9,7 @@ export default function JoinTheClub() {
       <div className="max-w-7xl mx-auto">
         <div className="mb-12 flex flex-col md:flex-row items-center gap-8 ">
           <div className="text-left flex flex-col gap-4 items-left">
-            <h2 className="text-4xl md:text-5xl font-display font-semibold uppercase text-left text-ogPrimary">
+            <h2 className="text-3xl leading-7 md:text-5xl font-display font-semibold uppercase text-left text-ogPrimary">
               Why Join Outdoor Ginger&apos;s <br /> Exclusive Membership?
             </h2>
           </div>

@@ -17,7 +17,7 @@ export default function MemberCarousel() {
   return (
     <div className="my-10 py-10 md:my-32">
       <div className="flex flex-col items-center justify-center px-6 md:px-0 ">
-        <h1 className="text-center text-2xl md:text-5xl font-bold mb-2 md:mb-10 uppercase">
+        <h1 className="text-center text-2xl md:text-7xl font-bold mb-2 md:mb-10 uppercase">
           Members <br /> testimonials
         </h1>
         <div className="w-full flex flex-col  max-w-full md:max-w-xl">
