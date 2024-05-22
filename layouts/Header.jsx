@@ -19,18 +19,17 @@ function Header() {
   const { user } = useAuthStore();
   const { cart } = useCartStore();
 
-  const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
-
   const [hidden, setHidden] = useState(false);
   const [prevScroll, setPrevScroll] = useState(0);
+  const [progress, setProgress] = useState("75%");
   const [cartOpen, setCartOpen] = useState(false);
+
+  const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
 
   const pathname = usePathname();
 
   const linkStyle = (path) =>
     pathname === path ? "p-2 text-ogPrimary" : "p-2";
-
-  const progress = "75%";
 
   const { scrollY } = useScroll();
 
@@ -172,12 +171,18 @@ function Header() {
             </div>
           </div>
         </div>
-        <div className="flex max-w-7xl mx-auto drop-shadow-xl">
+        <div className="flex max-w-7xl mx-auto drop-shadow-xl ">
           <div className="w-full">
             <div className=" h-3 w-full mx-auto flex bg-ogBG-sub relative z-30 rounded-bl-xl overflow-hidden ">
               <motion.div
-                className="w-0 h-3 bg-ogPrimary absolute top-0 left-0 "
-                animate={{ width: progress }}
+                className="w-0 h-3 absolute top-0 left-0"
+                animate={{
+                  width: progress,
+                  backgroundColor:
+                    progress === "100%"
+                      ? "oklch(var(--og-warning))"
+                      : "oklch(var(--og-primary))",
+                }}
                 transition={{ duration: 1.8, type: "spring" }}
               ></motion.div>
             </div>
@@ -187,19 +192,28 @@ function Header() {
                 animate={{ width: progress }}
                 transition={{ duration: 1.8, type: "spring" }}
               ></motion.div>
-              <motion.div
-                className=" origin-right -translate-x-full -translate-y-[1px] z-50 bg-ogPrimary text-ogBG-base h-fit p-2 rounded-b-xl text-sm font-medium opacity-0"
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.8, type: "spring" }}
-              >
-                <p className=" cursor-default text-ogBG-base">{progress}</p>
-              </motion.div>
+              {progress !== "100%" && (
+                <motion.div
+                  className="origin-right -translate-x-full -translate-y-[1px] z-50 text-ogBG-base h-fit p-2 rounded-b-xl text-sm font-medium opacity-0"
+                  animate={{
+                    opacity: 1,
+                    backgroundColor: "oklch(var(--og-primary))",
+                  }}
+                  transition={{ duration: 1.8, type: "spring" }}
+                >
+                  <p className="cursor-default text-ogBG-base">{progress}</p>
+                </motion.div>
+              )}
             </div>
           </div>
           <div className="w-fit h-fit  mx-auto flex justify-end">
-            <div className="w-fit h-full max-w-xs bg-ogBG-sub justify-self-end rounded-b-xl flex justify-between gap-4 items-center px-2 py-2  z-30 ">
-              <p className=" whitespace-nowrap text-sm font-normal cursor-default text-ogLabel-muted pl-2">
-                Goal: 1500€
+            <div
+              className={`w-fit h-full max-w-xs justify-self-end rounded-b-xl flex justify-between gap-4 items-center px-2 py-2 z-30 ${progress === "100%" ? "bg-ogWarning" : "bg-ogBG-sub"}`}
+            >
+              <p
+                className={`whitespace-nowrap text-sm font-normal cursor-default pl-2 ${progress === "100%" ? "text-ogWarning-darker" : "text-ogLabel-muted"}`}
+              >
+                {progress === "100%" ? "Fully funded!" : "Goal: 1500€"}
               </p>
               <Link
                 href="https://www.gofundme.com/f/outdoorginger"
@@ -208,7 +222,7 @@ function Header() {
                 <Button
                   variant="primary"
                   size="sm"
-                  className="bg-ogPrimary hover:bg-ogPrimary-dark gap-1"
+                  className={`gap-1 ${progress === "100%" ? "bg-ogWarning-dark hover:bg-ogWarning-darker text-ogWarning-lightest" : "bg-ogPrimary hover:bg-ogPrimary-dark"}`}
                 >
                   Donate
                   <IconHeartHandshake size={20} className="stroke-[1.5px]" />
