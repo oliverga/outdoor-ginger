@@ -7,6 +7,7 @@ import Header from "@/layouts/Header";
 import MobileHeader from "@/layouts/MobileHeader";
 import CookieConsentDialog from "@/components/CookiesConsentDialog";
 import AuthSubscriber from "@/components/AuthSubscriber";
+import Donation from "@/layouts/Donation";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -47,6 +48,7 @@ export default async function RootLayout({ children }) {
 				<CookieConsentDialog />
 				{children}
 				<Footer />
+				<Donation />
 			</body>
 		</html>
 	);
