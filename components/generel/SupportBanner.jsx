@@ -94,7 +94,7 @@ function SupportBanner({ type = "banner" }) {
                       width={100}
                       height={100}
                       alt="GoFundMe"
-                      className="w-56 max-h-12 pointer-events-none"
+                      className="w-56 max-h-12 pointer-events-none fill-ogBG-base"
                     />
                   </Button>
                 </Link>

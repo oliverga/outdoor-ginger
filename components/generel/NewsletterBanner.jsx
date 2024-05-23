@@ -28,7 +28,7 @@ function NewsletterBanner({ title, subtitle }) {
         />
         <Button
           size="lg"
-          className="bg-ogPrimary-dark text-ogPrimary-lightest hover:bg-ogPrimary-darker"
+          className="bg-ogPrimary-dark text-ogBG-base hover:bg-ogPrimary-darker"
         >
           Subscribe
         </Button>
