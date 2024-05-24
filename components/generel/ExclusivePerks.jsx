@@ -16,7 +16,9 @@ export default function JoinTheClub() {
       <div className="max-w-7xl mx-auto">
         <div className="mb-12 flex flex-col md:flex-row items-center gap-8 ">
           <div className="text-left flex flex-col gap-4 items-left">
-            <h2 className="">Why become a member?</h2>
+            <h2 className="text-3xl leading-7 md:text-5xl  font-semibold uppercase text-left font-display">
+              Why become a member?
+            </h2>
           </div>
         </div>
         <div class="">
