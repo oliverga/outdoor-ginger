@@ -22,7 +22,7 @@ export default function JoinTheClub() {
             </Button>
           </Link>
         </div>
-        <div className="flex p-8 flex-wrap justify-around gap-6 my-6  max-w-sm">
+        <div className="flex p-8 md:flex-wrap justify-around gap-6 my-6  max-w-sm">
           <div className="flex flex-col gap-1 items-center">
             <div className="aspect-square w-28 md:w-32 h-28 md:h-32 bg-ogPrimary p-6 rounded-full">
               <Image
