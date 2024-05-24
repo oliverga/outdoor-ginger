@@ -55,9 +55,9 @@ function SupportBanner({ type = "banner" }) {
     );
   } else if (type == "original") {
     return (
-      <section className="px-8">
-        <article className="my-32 md:my-48 max-w-7xl flex flex-col items-center justify-between  md:flex-row md:gap-8 mx-auto w-full ">
-          <div className="flex flex-col items-center md:items-start gap-8 mb-8 md:mb-0">
+      <section className="px-8 ">
+        <article className="my-32 md:my-48 max-w-7xl flex flex-col  md:flex-row justify-center items-center gap-20 md:gap-12 mx-auto">
+          <div className="flex flex-col items-start gap-8 mb-8 md:mb-0 order-2 md:order-1">
             <h2 className="text-4xl md:text-5xl font-display font-semibold uppercase text-center md:text-left md:self-start">
               Support August
             </h2>
@@ -101,7 +101,7 @@ function SupportBanner({ type = "banner" }) {
               </div>
             </div>
           </div>
-          <div className="aspect-square w-48 h-48 md:w-96 md:h-96 md:place-self-center mx-auto">
+          <div className="aspect-square w-48 h-48 md:w-96 md:h-96 order-1 md:order-2">
             <Image
               src="/fire.png"
               alt="August sitting by a campfire"
