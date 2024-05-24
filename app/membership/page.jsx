@@ -54,7 +54,7 @@ export default function Page() {
             <h3 className="font-semibold text-lg leading-6 mt-4 md:text-xl md:w-2/3">Become an Exclusive Member of the Ultimate Wilderness Experience</h3>
             <p className="mt-4">Dive into the wild like never before with Outdoor Ginger! As an exclusive member, you&apos;ll gain access to a world of adventure, exploration, and untamed beauty that only the true wilderness can offer.</p>
           </div>
-          <div className="flex justify-center md:w-1/2 md:ml-auto ">
+          <div className="flex justify-center h-fit md:w-80 md:ml-auto ">
             <Image src="/handdrawnAugust.png" alt="Description of image" width={500} height={500} className="w-44 md:w-auto h-fit " />
           </div>
         </div>
