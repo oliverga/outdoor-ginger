@@ -3,7 +3,7 @@ import { Input } from "../ui/input";
 
 function NewsletterBanner({ title, subtitle }) {
   return (
-    <section className="h-[50vh] bg-ogPrimary flex flex-col items-center justify-evenly text-center px-4 py-6">
+    <section className="h-fit bg-ogPrimary flex flex-col items-center gap-12 text-center px-4 py-16 md:py-24">
       <div className=" space-y-4">
         <h1 className="font-display font-bold uppercase  text-4xl md:text-7xl text-ogPrimary-lightest m-0">
           {title}

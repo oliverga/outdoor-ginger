@@ -2,7 +2,13 @@ import { client, urlFor } from "@/lib/sanity/client";
 import * as React from "react";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { PortableText } from "next-sanity";
 
 const whatPeopleSayQuery = '*[_type == "whatPeopleSay"]{Sponsor_Name, content}';
@@ -12,13 +18,13 @@ const whatPeopleSay = await client.fetch(whatPeopleSayQuery, {
     revalidate: process.env.NODE_ENV === "development" ? 30 : 3600,
   },
 });
-console.log(whatPeopleSay);
+
 export default function MemberCarousel() {
   return (
     <div className="my-10 py-10 md:my-32">
       <div className="flex flex-col items-center justify-center px-6 md:px-0 ">
         <h1 className="text-center text-2xl md:text-7xl font-bold mb-2 md:mb-10 uppercase">
-          Members <br /> testimonials
+          Member <br /> testimonials
         </h1>
         <div className="w-full flex flex-col  max-w-full md:max-w-xl">
           <Carousel>
@@ -29,11 +35,13 @@ export default function MemberCarousel() {
                     <Card>
                       <CardContent className="flex aspect-auto items-center justify-center p-6 h-96">
                         <div className="flex flex-col">
-                          <div className="text-sm md:text-xl pb-6 font-light italic">
+                          <div className="text-sm md:text-xl pb-6 italic">
                             <PortableText value={item.content} />
                           </div>
                           <div className="bg-ogLabel-link h-0.5 w-28 mb-4"></div>
-                          <h3 className="text-base md:text-xl">{item.Sponsor_Name}</h3>
+                          <h3 className="text-base md:text-xl">
+                            {item.Sponsor_Name}
+                          </h3>
                         </div>
                       </CardContent>
                     </Card>
