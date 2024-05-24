@@ -44,10 +44,10 @@ export default function Home() {
               className="rounded-full aspect-square w-8 h-8 md:w-11 md:h-11"
             />
             <div className="pr-2 md:pr-4 ">
-              <p className="text-[10px] md:text-base font-semibold text-ogPrimary ">
+              <p className="text-sm md:text-base font-medium text-ogPrimary ">
                 August Vallat
               </p>
-              <p className="text-[9px] md:text-[13px] font-normal text-ogLabel-base opacity-80">
+              <p className="text-xs font-normal text-ogLabel-base opacity-80">
                 Adventure Influencer
               </p>
             </div>
@@ -68,9 +68,9 @@ export default function Home() {
               <AnimatedCount
                 finalCount={333000}
                 duration={3}
-                className="text-base md:text-[1.4rem] p-0"
+                className="text-base p-0 "
               />
-              <p className="text-[9px] md:text-[13px] font-normal text-ogLabel-base opacity-80">
+              <p className="text-xs font-normal text-ogLabel-base opacity-80">
                 Followers
               </p>
             </div>

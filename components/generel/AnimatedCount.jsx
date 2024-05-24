@@ -45,7 +45,7 @@ const AnimatedCount = ({ finalCount, duration = 1, className }) => {
     <motion.p
       ref={ref}
       animate={controls}
-      className={`text-ogPrimary md:text-3xl md:font-semibold p-0 py-0 px-0 w-fit h-min leading-none ${className} `}
+      className={`text-ogPrimary  md:font-semibold p-0 py-0 px-0 w-fit h-min leading-none ${className} `}
       style={{
         lineHeight: "1",
       }}
