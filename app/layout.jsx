@@ -45,7 +45,7 @@ export default async function RootLayout({ children }) {
 					}}
 					theme="light"
 				/>
-				<CookieConsentDialog />
+				{/* <CookieConsentDialog /> */}
 				{children}
 				<Footer />
 				<Donation />
