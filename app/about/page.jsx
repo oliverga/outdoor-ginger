@@ -27,55 +27,55 @@ export default function AboutMe() {
         height="h-[90vh] md:h-[100vh]"
       >
         <div id="left" className="md:mt-2 w-full mb-8">
-          <p className="text-ogLabel-faint font-extralight text-sm md:text-2xl italic w-max">
-            Anything is possible if you dare to be curious
+          <p className="text-ogLabel-faint font-light md:text-2xl italic w-max">
+            &quot;Anything is possible if you dare to be curious&quot;
           </p>
         </div>
       </Hero>
 
-      <section className="px-6 md:px-0 pb-8 md:py-32 md:max-w-5xl md:mx-auto">
-        <div className="flex flex-col md:grid grid-cols-3 grid-rows-1">
-          <div className=" col-span-1 flex flex-col mb-4">
-            <h2 className="font-display text-3xl md:text-5xl uppercase font-bold mb-6">
-              about
+      <section className="px-8 md:py-32 md:max-w-7xl md:mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 ">
+          <div className=" flex flex-col mb-4 ">
+            <h2 className="font-display text-3xl md:text-5xl font-bold mb-6 uppercase">
+              Who is August?
             </h2>
-            <p className=" text-sm md:text-xl md:w-144">
-              August, known as the outdoorginger, embarked on his journey with
-              the wind in his hair and the thrill of adventure in his heart.
-              From a young age, he embraced the call of the wild, navigating the
-              trails and conquering the great outdoors. With each expedition, he
-              honed his skills and forged a path of his own, earning accolades
-              and admiration along the way. Now, as a seasoned explorer, August
-              stands ready to inspire and ignite the spirit of adventure in all
-              who dare to follow.
-            </p>
+
+            <div className=" md:text-lg max-w-xl w-full space-y-4">
+              <p>
+                August, known as Outdoor Ginger, embarked on his journey with
+                the wind in his hair and the thrill of adventure in his heart.
+              </p>
+              <p>
+                From a young age, he embraced the call of the wild, navigating
+                the trails and conquering the great outdoors.
+              </p>
+              <p>
+                With each expedition, he honed his skills and forged a path of
+                his own, earning accolades and admiration along the way.
+              </p>
+              <p>
+                Now, as a seasoned explorer, August stands ready to inspire and
+                ignite the spirit of adventure in all who dare to follow.
+              </p>
+            </div>
           </div>
-          <div className="md:col-span-2 flex md:self-center md:justify-end">
-            <Image
-              src="/aboutMe1.png"
-              alt=""
-              width={1000}
-              height={1000}
-              className="mt-4 md:w-1/2 self-center"
-            />
-          </div>
+          <Image
+            src="/aboutMe1.png"
+            alt=""
+            width={400}
+            height={400}
+            className="mt-4 self-center"
+          />
         </div>
       </section>
       <OrangeBanner h2="Beyond boundaries">
         <div className="flex flex-col items-center">
-          <p className="text-ogBG-base mb-1 md:mb-4 text-left text-base md:text-2xl">
-            August&apos;s Journey of Self-Discovery & Adventure
-          </p>
-          <p className="text-ogBG-base font-normal leading-5 text-sm md:text-xl text-center md:w-2/4">
-            Augustt&apos;s story isnt&apos;t just about the destinations
-            he&apos;s reached; it&apos;s about the lessons learned along the
-            way. Through the trials and triumphs of life on the road, het&apos;s
-            discovered a profound sense of self-reliance and resilience, forging
-            a path that defies convention and embraces the unknown.
+          <p className="text-ogBG-base font-normal leading-5 text-sm md:text-xl text-center max-w-xl mt-4 ">
+            August&apos;s journey is about lessons learned, self-reliance, and
+            resilience, embracing the unknown.
           </p>
         </div>
       </OrangeBanner>
-
       <div className="relative -top-36 md:-top-60">
         <div className="flex justify-center">
           <Image
@@ -87,50 +87,49 @@ export default function AboutMe() {
           />
         </div>
       </div>
-      <div className="px-6 md:px-0  md:pb-40 md:max-w-5xl md:mx-auto">
-        <div className="md:grid grid-cols-3 grid-rows-1">
-          <div className="col-span-1 flex flex-col pb-4">
+      <div className="px-8 md:pb-40 md:max-w-7xl md:mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 ">
+          <div className="flex flex-col pb-4">
             <h2 className="font-display text-3xl md:text-5xl mb-8 leading-7 uppercase font-bold ">
-              Freedom Achievers
+              Membership
             </h2>
-            <div className="self-center">
-              <p className="mb-6 text-sm md:text-xl">
+            <div>
+              <p className="mb-6 md:text-xl max-w-xl">
                 Thousands of followers was build by a strong mental mindset and
                 dedicated discipline, that im now teaching you so you can do the
                 potentially same
               </p>
-              <Link href="/membership" target="_blank">
+              <Link href="/membership">
                 <Button
                   variant="primary"
                   size="lg"
-                  className="bg-ogPrimary text-base hover:bg-ogPrimary-dark gap-1 px-10 uppercase"
+                  className="bg-ogPrimary text-base hover:bg-ogPrimary-dark gap-1 px-10"
                 >
-                  Join now
+                  Sign up now
                 </Button>
               </Link>
             </div>
           </div>
-          <div className="md:col-span-2 mt-8 flex md:justify-end">
-            <Image
-              src="/freedomAugust.png"
-              alt=""
-              width={1000}
-              height={1000}
-              className="md:w-96 rounded-full"
-            />
-          </div>
+
+          <Image
+            src="/freedomAugust.png"
+            alt=""
+            width={1000}
+            height={1000}
+            className="w-full max-w-sm rounded-full"
+          />
         </div>
       </div>
 
       <SponsorBanner type="static" />
-      <section className="px-6 md:px-0  max-w-5xl mx-auto my-20 md:py-28">
+      <section className="px-8  max-w-5xl mx-auto my-20 md:py-28">
         <h2 className="font-display text-3xl md:text-5xl uppercase font-bold mb-6 ">
           Testimonials
         </h2>
         <h3 className="text-2xl mb-6 md:mb-10 ">What my partners say</h3>
         {testimonials.map((testimonial, index) => (
           <div
-            className="prose md:prose-lg prose-h3:italic prose-p:italic prose-p:text-ogLabel-muted w-auto prose-h3:font-light prose-p:font-light prose-p:text-sm prose-p:md:text-lg  prose-h3:text-sm prose-h3:md:text-xl my-4"
+            className="prose md:prose-lg prose-h3:italic prose-p:italic prose-p:text-ogLabel-muted w-auto  prose-p:text-sm prose-p:md:text-lg  prose-h3:text-sm prose-h3:md:text-xl my-4"
             key={index}
           >
             <PortableText value={testimonial.content} />
@@ -141,13 +140,13 @@ export default function AboutMe() {
         ))}
       </section>
 
-      <article className="flex justify-end -mt-28 md:-mt-40">
+      <article className="px-8 flex justify-end -mt-28 md:-mt-40">
         <Image
           src="/computerAbout.png"
           alt="Laptop"
           width={2000}
           height={2000}
-          className="hidden md:block object-contain w-96 md:w-[900px] -mb-32 mr-36 md:-mb-[500px] z-10 drop-shadow-lg"
+          className="hidden md:block object-contain w-96 md:w-[40vw] -mb-32 2xl:mr-28 md:-mb-[500px] z-10 drop-shadow-lg"
         />
         <Image
           src="/threePhones.png"

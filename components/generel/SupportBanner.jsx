@@ -105,8 +105,8 @@ function SupportBanner({ type = "banner" }) {
             <Image
               src="/fire.png"
               alt="August sitting by a campfire"
-              width={500}
-              height={500}
+              width={400}
+              height={400}
               className="w-full h-full object-cover rounded-full drop-shadow-lg"
             />
           </div>
