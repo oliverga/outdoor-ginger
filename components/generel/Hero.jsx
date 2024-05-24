@@ -21,12 +21,14 @@ function Hero({
         className={`overflow-hidden grid grid-cols-2 max-w-7xl mx-auto pb-20 md:pb-32 ${height}`}
       >
         <div className="place-self-end z-30 w-full flex flex-col justify-end h-fit">
-          <h1 className="text-4xl md:text-7xl font-bold text-ogBG-base uppercase m-0 tracking-tight leading-none">
+          <h1 className="text-5xl md:text-7xl font-bold text-ogBG-base uppercase m-0 tracking-tight leading-none">
             {title}
           </h1>
           {leftSideChildren}
         </div>
-        <div className="z-40 place-self-end w-full">{rightSideChildren}</div>
+        <div className="z-40 place-self-end h-fit w-full">
+          {rightSideChildren}
+        </div>
       </div>
       <div className="rounded-t-[3rem] bg-ogBG-base col-span-2 h-12 z-30 absolute bottom-0 left-0 w-full"></div>
       <div className=" bg-gradient-to-tr from-ogLabel-base to-transparent  w-full h-full absolute top-0 left-0 z-20 opacity-75"></div>
