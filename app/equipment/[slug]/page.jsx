@@ -65,12 +65,6 @@ export default async function Page({ params }) {
               </AccordionTrigger>
               <AccordionContent className="text-ogLabel-muted text-sm"></AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger className="text-base py-0">
-                Dimensions
-              </AccordionTrigger>
-              <AccordionContent className="text-ogLabel-muted text-sm"></AccordionContent>
-            </AccordionItem>
           </Accordion>
         </div>
       </section>
