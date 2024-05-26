@@ -6,7 +6,7 @@ import Image from "next/image";
 import Item from "@/components/Cart/Item";
 import useCartStore from "@/lib/store/cartStore";
 import useAuthStore from "@/lib/store/authStore";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { IconShoppingCart } from "@tabler/icons-react";
 import { toast } from "sonner";
 
@@ -20,6 +20,7 @@ export default function Page() {
 		removeAllItems,
 	} = useCartStore();
 	const { user } = useAuthStore();
+	const [flow, setFlow] = useState(1);
 
 	useEffect(() => {
 		loadCart();
@@ -44,6 +45,17 @@ export default function Page() {
 		removeAllItems();
 		setCartOpen(false);
 	};
+
+	const handleNextFlow = (event) => {
+		event.preventDefault();
+		setFlow(flow + 1);
+	};
+
+	const handlePreviousFlow = (event) => {
+		event.preventDefault();
+		setFlow(flow - 1);
+	};
+
 	return (
 		<main className="pt-40 md:pt-48 mb-16">
 			<section className="md:hidden fixed w-full px-2 top-16 z-10">
@@ -89,121 +101,131 @@ export default function Page() {
 				className="px-2 max-w-5xl md:mx-auto md:shadow-xl md:pl-12 md:pr-0 md:rounded-2xl overflow-hidden"
 			>
 				<div className="md:grid grid-cols-checkoutLayout gap-16">
-					<form className="md:py-12">
-						<div className="flex flex-col">
-							<label
-								htmlFor="mail"
-								className="font-display text-xl text-ogLabel-base mb-2"
-							>
-								Contact
-							</label>
-							<input type="email" id="mail" placeholder="Email" />
-						</div>
-						<div className="flex items-center gap-2 font-normal text-ogLabel-muted text-xs">
-							<Checkbox />
-							<p>Subscribe to our newsletter</p>
-						</div>
-						<div className="flex flex-col mt-4">
-							<label
-								htmlFor="shipping"
-								className="font-display text-xl text-ogLabel-base mb-2"
-							>
-								Shipping Address
-							</label>
-							<select id="shipping">
-								<option value="">Select a country</option>
-								<option value="ar">Argentina</option>
-								<option value="au">Australia</option>
-								<option value="at">Austria</option>
-								<option value="bd">Bangladesh</option>
-								<option value="be">Belgium</option>
-								<option value="br">Brazil</option>
-								<option value="bg">Bulgaria</option>
-								<option value="ca">Canada</option>
-								<option value="cl">Chile</option>
-								<option value="cn">China</option>
-								<option value="co">Colombia</option>
-								<option value="cz">Czech Republic</option>
-								<option value="dk">Denmark</option>
-								<option value="eg">Egypt</option>
-								<option value="fi">Finland</option>
-								<option value="fr">France</option>
-								<option value="de">Germany</option>
-								<option value="gr">Greece</option>
-								<option value="hu">Hungary</option>
-								<option value="in">India</option>
-								<option value="id">Indonesia</option>
-								<option value="ir">Iran</option>
-								<option value="il">Israel</option>
-								<option value="it">Italy</option>
-								<option value="jp">Japan</option>
-								<option value="kr">South Korea</option>
-								<option value="my">Malaysia</option>
-								<option value="mx">Mexico</option>
-								<option value="nl">Netherlands</option>
-								<option value="nz">New Zealand</option>
-								<option value="no">Norway</option>
-								<option value="pk">Pakistan</option>
-								<option value="pe">Peru</option>
-								<option value="ph">Philippines</option>
-								<option value="pl">Poland</option>
-								<option value="pt">Portugal</option>
-								<option value="ro">Romania</option>
-								<option value="ru">Russia</option>
-								<option value="sa">Saudi Arabia</option>
-								<option value="sg">Singapore</option>
-								<option value="za">South Africa</option>
-								<option value="es">Spain</option>
-								<option value="se">Sweden</option>
-								<option value="ch">Switzerland</option>
-								<option value="th">Thailand</option>
-								<option value="tr">Turkey</option>
-								<option value="ua">Ukraine</option>
-								<option value="ae">United Arab Emirates</option>
-								<option value="uk">United Kingdom</option>
-								<option value="us">United States</option>
-								<option value="vn">Vietnam</option>
-							</select>
-							<input
-								type="text"
-								name="firstName"
-								id="firstName"
-								placeholder="First name"
-							/>
-							<input
-								type="text"
-								name="lastName"
-								id="lastName"
-								placeholder="Last name"
-							/>
-							<input
-								type="text"
-								name="address"
-								id="address"
-								placeholder="Street and house number"
-							/>
-							<div className="md:flex justify-between gap-6">
-								<input
-									type="text"
-									name="zip"
-									id="zip"
-									placeholder="ZIP code"
-									className="w-full"
-								/>
-								<input
-									type="text"
-									name="city"
-									id="city"
-									placeholder="City"
-									className="w-full"
-								/>
+					<form className="md:py-12 md:h-144 md:flex md:flex-col justify-end md:-mt-4">
+						{flow === 1 && (
+							<div>
+								<div className="flex flex-col">
+									<label
+										htmlFor="mail"
+										className="font-display text-xl text-ogLabel-base mb-2"
+									>
+										Contact
+									</label>
+									<input type="email" id="mail" placeholder="Email" />
+								</div>
+								<div className="flex items-center gap-2 font-normal text-ogLabel-muted text-xs">
+									<Checkbox />
+									<p>Subscribe to our newsletter</p>
+								</div>
+								<div className="flex flex-col mt-4">
+									<label
+										htmlFor="shipping"
+										className="font-display text-xl text-ogLabel-base mb-2"
+									>
+										Shipping Address
+									</label>
+									<select id="shipping">
+										<option value="">Select a country</option>
+										<option value="ar">Argentina</option>
+										<option value="au">Australia</option>
+										<option value="at">Austria</option>
+										<option value="bd">Bangladesh</option>
+										<option value="be">Belgium</option>
+										<option value="br">Brazil</option>
+										<option value="bg">Bulgaria</option>
+										<option value="ca">Canada</option>
+										<option value="cl">Chile</option>
+										<option value="cn">China</option>
+										<option value="co">Colombia</option>
+										<option value="cz">Czech Republic</option>
+										<option value="dk">Denmark</option>
+										<option value="eg">Egypt</option>
+										<option value="fi">Finland</option>
+										<option value="fr">France</option>
+										<option value="de">Germany</option>
+										<option value="gr">Greece</option>
+										<option value="hu">Hungary</option>
+										<option value="in">India</option>
+										<option value="id">Indonesia</option>
+										<option value="ir">Iran</option>
+										<option value="il">Israel</option>
+										<option value="it">Italy</option>
+										<option value="jp">Japan</option>
+										<option value="kr">South Korea</option>
+										<option value="my">Malaysia</option>
+										<option value="mx">Mexico</option>
+										<option value="nl">Netherlands</option>
+										<option value="nz">New Zealand</option>
+										<option value="no">Norway</option>
+										<option value="pk">Pakistan</option>
+										<option value="pe">Peru</option>
+										<option value="ph">Philippines</option>
+										<option value="pl">Poland</option>
+										<option value="pt">Portugal</option>
+										<option value="ro">Romania</option>
+										<option value="ru">Russia</option>
+										<option value="sa">Saudi Arabia</option>
+										<option value="sg">Singapore</option>
+										<option value="za">South Africa</option>
+										<option value="es">Spain</option>
+										<option value="se">Sweden</option>
+										<option value="ch">Switzerland</option>
+										<option value="th">Thailand</option>
+										<option value="tr">Turkey</option>
+										<option value="ua">Ukraine</option>
+										<option value="ae">United Arab Emirates</option>
+										<option value="uk">United Kingdom</option>
+										<option value="us">United States</option>
+										<option value="vn">Vietnam</option>
+									</select>
+									<input
+										type="text"
+										name="firstName"
+										id="firstName"
+										placeholder="First name"
+									/>
+									<input
+										type="text"
+										name="lastName"
+										id="lastName"
+										placeholder="Last name"
+									/>
+									<input
+										type="text"
+										name="address"
+										id="address"
+										placeholder="Street and house number"
+									/>
+									<div className="md:flex justify-between gap-6">
+										<input
+											type="text"
+											name="zip"
+											id="zip"
+											placeholder="ZIP code"
+											className="w-full"
+										/>
+										<input
+											type="text"
+											name="city"
+											id="city"
+											placeholder="City"
+											className="w-full"
+										/>
+									</div>
+								</div>
 							</div>
-						</div>
+						)}
 						<div className="mt-4 flex justify-end gap-4">
-							<Button variant="secondary" size="lg">
-								Back
-							</Button>
-							<Button variant="primary" size="lg">
+							{flow > 1 && (
+								<Button
+									variant="secondary"
+									size="lg"
+									onClick={handlePreviousFlow}
+								>
+									Back
+								</Button>
+							)}
+							<Button variant="primary" size="lg" onClick={handleNextFlow}>
 								Continue to Payment
 							</Button>
 						</div>
