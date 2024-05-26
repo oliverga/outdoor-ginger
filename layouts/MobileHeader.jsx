@@ -241,7 +241,9 @@ function MobileHeader() {
 				)}
 			</AnimatePresence>
 			<AnimatePresence>
-				{cartOpen && <ShoppingCart cartRef={cartRef} />}
+				{cartOpen && (
+					<ShoppingCart setCartOpen={setCartOpen} cartRef={cartRef} />
+				)}
 			</AnimatePresence>
 		</header>
 	);

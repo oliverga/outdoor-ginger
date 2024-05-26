@@ -120,3 +120,13 @@ button.mapboxgl-popup-close-button {
   top: 5px;
   right: 8px;
 }
+
+#checkout input, #checkout select {
+  padding: 10px;
+  margin-bottom: 0.5rem;
+
+  border: 1px solid #A3A3A3;
+  border-radius: 5px;
+
+  background-color: transparent;
+}
