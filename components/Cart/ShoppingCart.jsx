@@ -101,27 +101,6 @@ export default function ShoppingCart({ setCartOpen, cartRef }) {
 									</p>
 								</div>
 								<hr className="bg-neutral-300 h-[3px]" />
-								<div className="flex items-center gap-2 font-normal text-ogLabel-muted text-xs mb-2">
-									<Checkbox />
-									<p>
-										Accept{" "}
-										<Link
-											target="_blank"
-											href="https://www.google.com/search?client=firefox-b-d&q=terms+and+conditions"
-											className="underline decoration-neutral-400"
-										>
-											Terms
-										</Link>
-										{" & "}
-										<Link
-											target="_blank"
-											href="https://www.google.com/search?client=firefox-b-d&q=terms+and+conditions"
-											className="underline decoration-neutral-400"
-										>
-											Conditions
-										</Link>
-									</p>
-								</div>
 								<Link href="/checkout" className="w-full">
 									<Button
 										variant="primary"

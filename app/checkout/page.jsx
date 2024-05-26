@@ -3,10 +3,11 @@
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import Item from "@/components/Cart/Item";
 import useCartStore from "@/lib/store/cartStore";
 import useAuthStore from "@/lib/store/authStore";
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import {
 	IconShoppingCart,
 	IconCreditCard,
@@ -37,6 +38,23 @@ export default function Page() {
 		focus: "",
 	});
 
+	const [order, setOrder] = useState({
+		email: "",
+		country: "",
+		firstName: "",
+		lastName: "",
+		address: "",
+		zip: "",
+		city: "",
+		card,
+		cart,
+		orderId: "",
+	});
+
+	useEffect(() => {
+		console.log(order);
+	});
+
 	useEffect(() => {
 		loadCart();
 	}, [loadCart]);
@@ -57,13 +75,31 @@ export default function Page() {
 	};
 
 	const handleRemoveAllItems = () => {
+		setOrder((prevState) => ({
+			...prevState,
+			email: "",
+			country: "",
+			firstName: "",
+			lastName: "",
+			address: "",
+			zip: "",
+			city: "",
+			card,
+			cart,
+		}));
 		removeAllItems();
-		setCartOpen(false);
 	};
 
 	const handleNextFlow = (event) => {
 		event.preventDefault();
-		setFlow(flow + 1);
+		if (flow === 2) {
+			const orderId = Math.floor(Math.random() * 1000000);
+			setOrder((prevState) => ({ ...prevState, orderId }));
+			setFlow(flow + 1);
+			handleRemoveAllItems();
+		} else {
+			setFlow(flow + 1);
+		}
 	};
 
 	const handlePreviousFlow = (event) => {
@@ -152,7 +188,18 @@ export default function Page() {
 												Contact
 											</label>
 										</div>
-										<input type="email" id="mail" placeholder="Email" />
+										<input
+											type="email"
+											id="mail"
+											placeholder="Email"
+											value={order.email}
+											onChange={(e) =>
+												setOrder((prevState) => ({
+													...prevState,
+													email: e.target.value,
+												}))
+											}
+										/>
 									</div>
 									<div className="flex items-center gap-2 font-normal text-ogLabel-muted text-xs">
 										<Checkbox />
@@ -168,7 +215,16 @@ export default function Page() {
 												Shipping Address
 											</label>
 										</div>
-										<select id="shipping">
+										<select
+											id="shipping"
+											value={order.country}
+											onChange={(e) =>
+												setOrder((prevState) => ({
+													...prevState,
+													country: e.target.value,
+												}))
+											}
+										>
 											<option value="">Select a country</option>
 											<option value="ar">Argentina</option>
 											<option value="au">Australia</option>
@@ -227,18 +283,39 @@ export default function Page() {
 											name="firstName"
 											id="firstName"
 											placeholder="First name"
+											value={order.firstName}
+											onChange={(e) =>
+												setOrder((prevState) => ({
+													...prevState,
+													firstName: e.target.value,
+												}))
+											}
 										/>
 										<input
 											type="text"
 											name="lastName"
 											id="lastName"
 											placeholder="Last name"
+											value={order.lastName}
+											onChange={(e) =>
+												setOrder((prevState) => ({
+													...prevState,
+													lastName: e.target.value,
+												}))
+											}
 										/>
 										<input
 											type="text"
 											name="address"
 											id="address"
 											placeholder="Street and house number"
+											value={order.address}
+											onChange={(e) =>
+												setOrder((prevState) => ({
+													...prevState,
+													address: e.target.value,
+												}))
+											}
 										/>
 										<div className="md:flex justify-between gap-6">
 											<input
@@ -247,6 +324,13 @@ export default function Page() {
 												id="zip"
 												placeholder="ZIP code"
 												className="w-full"
+												value={order.zip}
+												onChange={(e) =>
+													setOrder((prevState) => ({
+														...prevState,
+														zip: e.target.value,
+													}))
+												}
 											/>
 											<input
 												type="text"
@@ -254,6 +338,13 @@ export default function Page() {
 												id="city"
 												placeholder="City"
 												className="w-full"
+												value={order.city}
+												onChange={(e) =>
+													setOrder((prevState) => ({
+														...prevState,
+														city: e.target.value,
+													}))
+												}
 											/>
 										</div>
 									</div>
@@ -326,6 +417,27 @@ export default function Page() {
 											required
 										/>
 									</div>
+									<div className="flex items-center gap-2 font-normal text-ogLabel-muted text-xs mb-2">
+										<Checkbox />
+										<p>
+											Accept{" "}
+											<Link
+												target="_blank"
+												href="https://www.google.com/search?client=firefox-b-d&q=terms+and+conditions"
+												className="underline decoration-neutral-400"
+											>
+												Terms
+											</Link>
+											{" & "}
+											<Link
+												target="_blank"
+												href="https://www.google.com/search?client=firefox-b-d&q=terms+and+conditions"
+												className="underline decoration-neutral-400"
+											>
+												Conditions
+											</Link>
+										</p>
+									</div>
 								</div>
 							)}
 							<div className="mt-4 flex justify-end gap-4">
@@ -351,7 +463,7 @@ export default function Page() {
 										Order Summary
 									</h2>
 								</div>
-								<div className="flex flex-col gap-4">
+								<div className="flex flex-col gap-4 h-[390px] overflow-y-scroll">
 									{cart.length === 0 ? (
 										<p className="text-center text-ogLabel-muted">
 											Your cart is empty
@@ -414,10 +526,34 @@ export default function Page() {
 				)}
 				{flow === 3 && (
 					<div className="md:flex flex-col md:h-144 items-center justify-center md:p-12">
-						<h1 className="font-display uppercase font-bold text-4xl">
-							Order Complete
-						</h1>
-						<h2 className="-mt-6 text-ogLabel-muted">Order Id: 43023r2089</h2>
+						<dotlottie-player
+							src="/lottie/iconText.lottie"
+							background="transparent"
+							speed="1.5"
+							style={{ width: "250px" }}
+							direction="1"
+							playMode="bounce"
+							loop
+							autoplay
+						/>
+						<div className="flex gap-2 md:-mt-24">
+							<h1 className="font-display uppercase font-bold text-4xl">
+								Order Complete
+							</h1>
+							<dotlottie-player
+								src="/lottie/completed.lottie"
+								background="transparent"
+								speed="2"
+								style={{ width: "80px" }}
+								direction="1"
+								playMode="bounce"
+								loop
+								autoplay
+							/>
+						</div>
+						<h2 className="-mt-6 text-ogLabel-muted">
+							Order Id: {order.orderId}
+						</h2>
 						<p className="md:text-center my-8 text-ogLabel-muted italic">
 							Thank you for choosing OutDoor Ginger for your recent purchase! We
 							appreciate your trust in our products and are delighted to have
@@ -428,6 +564,11 @@ export default function Page() {
 						<p className="text-lg">
 							Thank you for shopping with OutDoor Ginger!
 						</p>
+						<div className="flex justify-end">
+							<Link href="/equipment" className="mt-6">
+								<Button variant="primary">Continue Shopping</Button>
+							</Link>
+						</div>
 					</div>
 				)}
 			</section>
