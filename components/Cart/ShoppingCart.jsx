@@ -96,8 +96,8 @@ export default function ShoppingCart({ setCartOpen, cartRef }) {
 														product.quantity
 												);
 											}, 0)
-											.toFixed(2)}{" "}
-										EUR
+											.toFixed(2)}
+										€
 									</p>
 								</div>
 								<hr className="bg-neutral-300 h-[3px]" />

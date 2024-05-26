@@ -59,9 +59,9 @@ export default function Page() {
 											product.quantity
 									);
 								}, 0)
-								.toFixed(2)}{" "}
+								.toFixed(2)}
 						</span>
-						EUR
+						€
 					</p>
 				</div>
 			</section>
@@ -253,9 +253,9 @@ export default function Page() {
 															product.quantity
 													);
 												}, 0) * 0.25
-											).toFixed(2)}{" "}
+											).toFixed(2)}
 										</span>
-										EUR in taxes
+										€ in taxes
 									</p>
 								</div>
 								<p>
@@ -268,9 +268,9 @@ export default function Page() {
 														product.quantity
 												);
 											}, 0)
-											.toFixed(2)}{" "}
+											.toFixed(2)}
 									</span>
-									EUR
+									€
 								</p>
 							</div>
 						</div>

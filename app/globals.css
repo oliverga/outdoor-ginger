@@ -130,3 +130,9 @@ button.mapboxgl-popup-close-button {
 
   background-color: transparent;
 }
+
+#checkout input:focus, #checkout select:focus {
+  border-color: #FE4F0B;
+  outline: none;
+}
+
