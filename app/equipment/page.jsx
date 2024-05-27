@@ -63,7 +63,6 @@ export default function Page() {
       <MemberBanner
         title="25% Discount for members"
         description="Get access to exclusive content, discounts and more!"
-        buttonText="Become a member"
       />
       <SponsorBanner />
     </main>
