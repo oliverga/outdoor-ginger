@@ -39,7 +39,7 @@ export default async function Page({ params }) {
     <main className="min-h-screen">
       <Hero imageSrc={image} height="h-48 md:h-[30vh]" bg="bg-equipment" />
       <section className="container mx-auto max-w-5xl md:grid grid-cols-2 prose pb-24">
-        <div className="md:px-8 pb-8 -mt-10 md:mt-0">
+        <div className="md:px-8 pb-8 -mt-6 md:mt-0">
           <Image
             src={image}
             alt={product.title}
