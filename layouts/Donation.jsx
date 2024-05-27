@@ -15,7 +15,6 @@ export default function Donation() {
       const data = await client.fetch(`*[_type == "donation"]{procent}`);
       let dataString = data[0].procent.toString() + "%";
       setDonationProgress(dataString);
-      console.log(dataString);
     };
     fetchDonationProgress();
   }, []);

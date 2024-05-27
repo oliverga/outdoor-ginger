@@ -41,8 +41,6 @@ export default async function Page({ params }) {
 
   const image = urlFor(product.images[0]).url();
 
-  console.log(product.materials);
-
   return (
     <main className="min-h-screen">
       <Hero imageSrc={image} height="h-48 md:h-[30vh]" bg="bg-equipment" />
