@@ -17,6 +17,7 @@ import {
 import { toast } from "sonner";
 import Cards from "react-credit-cards-2";
 import "react-credit-cards-2/dist/es/styles-compiled.css";
+import { sendEmail as sendMail } from "../../lib/sendMail.js";
 
 export default function Page() {
 	const {
@@ -53,7 +54,7 @@ export default function Page() {
 
 	useEffect(() => {
 		console.log(order);
-	});
+	}, [order]);
 
 	useEffect(() => {
 		loadCart();
@@ -90,11 +91,31 @@ export default function Page() {
 		removeAllItems();
 	};
 
-	const handleNextFlow = (event) => {
+	const handleNextFlow = async (event) => {
 		event.preventDefault();
 		if (flow === 2) {
 			const orderId = Math.floor(Math.random() * 1000000);
 			setOrder((prevState) => ({ ...prevState, orderId }));
+
+			const emailContent = {
+				sender: {
+					name: "OutDoor Ginger Team",
+					email: "order@outdoorginger.com",
+				},
+				to: [{ email: order.email }],
+				subject: "Order Confirmation",
+				htmlContent: `<html><head></head><body><h1>Order Details</h1><p>Order ID: ${orderId}</p><p>${order.email}</p><p>${order.firstName} ${order.lastName}</p><p>${order.address}</p><p>${order.zip} ${order.city}</p><h2>Items</h2>${order.cart.map((item) => `<p>${item.title}</p><p>${item.price}€</p>`).join("")}</body></html>`,
+			};
+			console.log(emailContent);
+			try {
+				const data = await sendMail(emailContent);
+				if (data) {
+					toast.success("Order Confirmation sent to your email!");
+				}
+			} catch (error) {
+				console.error("Error:", error);
+			}
+
 			setFlow(flow + 1);
 			handleRemoveAllItems();
 		} else {
