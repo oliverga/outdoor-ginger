@@ -1,6 +1,5 @@
-import { client, urlFor } from "@/lib/sanity/client";
+import { client } from "@/lib/sanity/client";
 import UpcomingEvents from "@/components/generel/UpcomingEvents";
-import SupportBanner from "@/components/generel/SupportBanner";
 import { Button } from "@/components/ui/button";
 import Hero from "@/components/generel/Hero";
 import Image from "next/image";
@@ -15,7 +14,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import NewsletterBanner from "@/components/generel/NewsletterBanner";
-
 import ExclusivePerks from "@/components/generel/ExclusivePerks";
 
 const whatPeopleSayQuery = '*[_type == "whatPeopleSay"]{Sponsor_Name, content}';
@@ -68,13 +66,13 @@ export default function Page() {
       </Hero>
 
       <section className="mb-10 md:py-10 pt-64 md:pt-0 rounded-t-[3rem] px-8">
-        <div className="max-w-7xl mx-auto  flex flex-col md:flex-row items-center justify-between">
-          <div className="max-w-2xl">
-            <h2 className="text-3xl leading-7 md:text-5xl  font-semibold uppercase text-left font-display">
-              Join the Adventure with Outdoor Ginger!
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
+          <div className="max-w-4xl">
+            <h2 className="text-4xl md:text-5xl leading-7  font-semibold uppercase text-left font-display">
+              An exclusive wilderness membership
             </h2>
 
-            <p className="mt-4 leading-relaxed">
+            <p className="mt-4 leading-relaxed text-xl max-w-3xl">
               Dive into the wild like never before with Outdoor Ginger! As an
               exclusive member, you&apos;ll gain access to a world of adventure,
               exploration, and untamed beauty that only the true wilderness can

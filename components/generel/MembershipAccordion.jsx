@@ -10,7 +10,7 @@ export default function MemberAccordion() {
     <div className="my-10 py-10 md:my-32">
       <section className="px-6 md:px-0 max-w-7xl mx-auto">
         <div className="">
-          <h2 className="font-display text-3xl md:text-6xl text-center font-bold uppercase pb-2 md:pb-10">
+          <h2 className="font-display text-4xl md:text-5xl  text-center font-bold uppercase pb-2 md:pb-10">
             Frequently Asked Questions
           </h2>
           <div className="flex flex-col items-center justify-center px-6 md:px-0">

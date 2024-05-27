@@ -1,6 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "../ui/button";
 import {
   IconArticle,
   IconCampfire,
@@ -10,13 +7,13 @@ import {
   IconUserScreen,
 } from "@tabler/icons-react";
 
-export default function JoinTheClub() {
+export default function ExclusivePerks() {
   return (
-    <section className="px-6 md:px-0 py-16 md:py-20 md:my-32 z-50 bg-ogPrimary-lightest rounded-t-[3rem] rounded-b-[3rem]">
-      <div className="max-w-7xl mx-auto">
+    <section className="px-8 py-24 md:py-32 md:my-32 z-50 bg-ogPrimary-lightest rounded-t-[3rem] rounded-b-[3rem] shadow-lg">
+      <div className="max-w-7xl mx-auto ">
         <div className="mb-12 flex flex-col md:flex-row items-center gap-8 ">
           <div className="text-left flex flex-col gap-4 items-left">
-            <h2 className="text-3xl leading-7 md:text-5xl  font-semibold uppercase text-left font-display">
+            <h2 className="text-4xl md:text-5xl  leading-7 font-semibold uppercase text-left font-display">
               Why become a member?
             </h2>
           </div>
