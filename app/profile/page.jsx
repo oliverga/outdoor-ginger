@@ -11,6 +11,7 @@ import {
   IconShoppingBagDiscount,
 } from "@tabler/icons-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const { createClient } = require("@/lib/supabase/server");
 const { redirect } = require("next/navigation");
@@ -20,7 +21,6 @@ export default async function PrivatePage() {
 
   const { data, error } = await supabase.auth.getUser();
   if (error || !data?.user) {
-    console.error("No user found" + error);
     redirect("/login");
   }
 
@@ -35,12 +35,17 @@ export default async function PrivatePage() {
                 Your Membership
               </div>
               <h1 className="text-3xl font-bold text-ogBG-base sm:text-5xl xl:text-6xl">
-                Explore the Great Outdoors with August
+                Ready to explore the great outdoors?
               </h1>
               <p className="max-w-[600px] text-ogBG-base md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 As an Outdoor Ginger member, you&#39;ll enjoy access to
                 exclusive field trips, discounts, and more.
               </p>
+              <Link href="/membership">
+                <Button variant="link" className="pl-0 text-ogBG-base">
+                  Learn more about our membership
+                </Button>
+              </Link>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-lg">
               <div className="space-y-4">
