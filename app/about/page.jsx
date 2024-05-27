@@ -94,7 +94,7 @@ export default function AboutMe() {
               Membership
             </h2>
             <div>
-              <p className="mb-6 md:text-xl max-w-xl">
+              <p className="mb-6 md:text-lg max-w-xl">
                 Thousands of followers was build by a strong mental mindset and
                 dedicated discipline, that im now teaching you so you can do the
                 potentially same
