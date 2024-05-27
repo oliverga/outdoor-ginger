@@ -1,12 +1,14 @@
-.image-gallery-slide{
+.image-gallery-slides{
     border-radius: 20px;
     aspect-ratio: 1/1;
+    margin-top: -20px;
 }
 
 .image-gallery-image {
     border-radius: 20px;
     aspect-ratio: 1/1;
     object-fit: cover;
+    padding-top: 0px;
   }
 
   .image-gallery-slide .image-gallery-image{

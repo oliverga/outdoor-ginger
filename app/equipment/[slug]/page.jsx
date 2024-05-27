@@ -42,8 +42,6 @@ export default async function Page({ params }) {
 
 	const image = urlFor(product.images[0]).url();
 
-	// console.log(product.images);
-
 	return (
 		<main className="min-h-screen">
 			<Hero imageSrc={image} height="h-48 md:h-[30vh]" bg="bg-equipment" />
@@ -68,13 +66,6 @@ export default async function Page({ params }) {
 			</nav>
 			<section className="container mx-auto max-w-5xl md:grid grid-cols-2 prose pb-24">
 				<div className="md:px-8 pb-8">
-					{/* <Image
-						src={image}
-						alt={product.title}
-						width={500}
-						height={500}
-						className="object-cover outline w-full rounded-xl m-0"
-					/> */}
 					<ProductImageGallery imgs={product.images} />
 				</div>
 				<div className="flex flex-col gap-4">
