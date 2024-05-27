@@ -1,19 +1,20 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { IconHeartHandshake, IconShoppingCart } from "@tabler/icons-react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { IconHeartHandshake, IconShoppingCart } from "@tabler/icons-react";
+import { Button } from "@/components/ui/button";
+import ShoppingCart from "@/components/Cart/ShoppingCart";
 import {
   motion,
   useMotionValueEvent,
   useScroll,
   AnimatePresence,
 } from "framer-motion";
-import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
 import useAuthStore from "@/lib/store/authStore";
 import useCartStore from "@/lib/store/cartStore";
-import ShoppingCart from "@/components/Cart/ShoppingCart";
+import { client } from "@/lib/sanity/client";
 
 function Header() {
   const { user } = useAuthStore();
@@ -21,10 +22,22 @@ function Header() {
 
   const [hidden, setHidden] = useState(false);
   const [prevScroll, setPrevScroll] = useState(0);
-  const [progress, setProgress] = useState("75%");
+
   const [cartOpen, setCartOpen] = useState(false);
 
   const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+
+  const [donationProgress, setDonationProgress] = useState(null);
+
+  useEffect(() => {
+    const fetchDonationProgress = async () => {
+      const data = await client.fetch(`*[_type == "donation"]{procent}`);
+      let dataString = data[0].procent.toString() + "%";
+      setDonationProgress(dataString);
+      console.log(dataString);
+    };
+    fetchDonationProgress();
+  }, []);
 
   const pathname = usePathname();
 
@@ -177,9 +190,9 @@ function Header() {
               <motion.div
                 className="w-0 h-3 absolute top-0 left-0"
                 animate={{
-                  width: progress,
+                  width: donationProgress,
                   backgroundColor:
-                    progress === "100%"
+                    donationProgress === "100%"
                       ? "oklch(var(--og-warning))"
                       : "oklch(var(--og-primary))",
                 }}
@@ -189,10 +202,10 @@ function Header() {
             <div className=" w-full mx-auto flex h-full">
               <motion.div
                 className="w-0 h-0 opacity-0"
-                animate={{ width: progress }}
+                animate={{ width: donationProgress }}
                 transition={{ duration: 1.8, type: "spring" }}
               ></motion.div>
-              {progress !== "100%" && (
+              {donationProgress !== "100%" && (
                 <motion.div
                   className="origin-right -translate-x-full -translate-y-[1px] z-50 text-ogBG-base h-fit p-2 rounded-b-xl text-sm font-medium opacity-0"
                   animate={{
@@ -201,19 +214,21 @@ function Header() {
                   }}
                   transition={{ duration: 1.8, type: "spring" }}
                 >
-                  <p className="cursor-default text-ogBG-base">{progress}</p>
+                  <p className="cursor-default text-ogBG-base">
+                    {donationProgress}
+                  </p>
                 </motion.div>
               )}
             </div>
           </div>
           <div className="w-fit h-fit  mx-auto flex justify-end">
             <div
-              className={`w-fit h-full max-w-xs justify-self-end rounded-b-xl flex justify-between gap-4 items-center px-2 py-2 z-30 ${progress === "100%" ? "bg-ogWarning" : "bg-ogBG-sub"}`}
+              className={`w-fit h-full max-w-xs justify-self-end rounded-b-xl flex justify-between gap-4 items-center px-2 py-2 z-30 ${donationProgress === "100%" ? "bg-ogWarning" : "bg-ogBG-sub"}`}
             >
               <p
-                className={`whitespace-nowrap text-sm font-normal cursor-default pl-2 ${progress === "100%" ? "text-ogWarning-darker" : "text-ogLabel-muted"}`}
+                className={`whitespace-nowrap text-sm font-normal cursor-default pl-2 ${donationProgress === "100%" ? "text-ogWarning-darker" : "text-ogLabel-muted"}`}
               >
-                {progress === "100%" ? "Fully funded!" : "Goal: 1500€"}
+                {donationProgress === "100%" ? "Fully funded!" : "Goal: 1500€"}
               </p>
               <Link
                 href="https://www.gofundme.com/f/outdoorginger"
@@ -222,7 +237,7 @@ function Header() {
                 <Button
                   variant="primary"
                   size="sm"
-                  className={`gap-1 ${progress === "100%" ? "bg-ogWarning-dark hover:bg-ogWarning-darker text-ogWarning-lightest" : "bg-ogPrimary hover:bg-ogPrimary-dark"}`}
+                  className={`gap-1 ${donationProgress === "100%" ? "bg-ogWarning-dark hover:bg-ogWarning-darker text-ogWarning-lightest" : "bg-ogPrimary hover:bg-ogPrimary-dark"}`}
                 >
                   Donate
                   <IconHeartHandshake size={20} className="stroke-[1.5px]" />
