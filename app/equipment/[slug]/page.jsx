@@ -26,14 +26,14 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }) {
   const productQuery =
-    '*[_type == "product" && slug.current == $slug]{title, slug, description, body, price, memberPrice, images, tags, category, _id}';
+    '*[_type == "product" && slug.current == $slug]{title, slug, description, body, price, memberPrice, images, tags, category, _id, materials, weight}';
 
   const productFetch = await client.fetch(productQuery, { slug: params.slug });
   const product = productFetch[0];
 
   const image = urlFor(product.images[0]).url();
 
-  console.log(product);
+  console.log(product.materials);
 
   return (
     <main className="min-h-screen">
@@ -52,19 +52,29 @@ export default async function Page({ params }) {
           <h1 className="mb-0 font-bold">{product.title}</h1>
           <ProductInteraction product={product} />
           <PortableText value={product.body} />
-          <Accordion type="single" collapsible className="w-full my-4">
-            <AccordionItem value="item-1" defaultOpen={true} className="">
-              <AccordionTrigger className="text-base py-0">
-                Materials
-              </AccordionTrigger>
-              <AccordionContent className="text-ogLabel-muted text-sm"></AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger className="text-base py-0">
-                Weight
-              </AccordionTrigger>
-              <AccordionContent className="text-ogLabel-muted text-sm"></AccordionContent>
-            </AccordionItem>
+          <Accordion type="multiple" collapsible className="w-full my-4">
+            {product.materials && (
+              <AccordionItem value="item-1" defaultOpen={true} className="">
+                <AccordionTrigger className="text-base py-0">
+                  Materials
+                </AccordionTrigger>
+                <AccordionContent className="text-ogLabel-muted text-sm">
+                  <div className="prose prose-neutral prose-sm prose-strong:font-medium prose-p:text-sm">
+                    <PortableText value={product.materials} />
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            )}
+            {product.weight && (
+              <AccordionItem value="item-2">
+                <AccordionTrigger className="text-base py-0">
+                  Weight
+                </AccordionTrigger>
+                <AccordionContent className="text-ogLabel-muted text-sm">
+                  {product.weight}
+                </AccordionContent>
+              </AccordionItem>
+            )}
           </Accordion>
         </div>
       </section>
