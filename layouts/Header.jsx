@@ -27,7 +27,7 @@ function Header() {
 
   const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
 
-  const [donationProgress, setDonationProgress] = useState(null);
+  const [donationProgress, setDonationProgress] = useState(0);
 
   useEffect(() => {
     const fetchDonationProgress = async () => {
