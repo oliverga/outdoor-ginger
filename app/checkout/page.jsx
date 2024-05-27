@@ -53,10 +53,6 @@ export default function Page() {
 	});
 
 	useEffect(() => {
-		console.log(order);
-	}, [order]);
-
-	useEffect(() => {
 		loadCart();
 	}, [loadCart]);
 
@@ -106,7 +102,6 @@ export default function Page() {
 				subject: "Order Confirmation",
 				htmlContent: `<html><head></head><body><h1>Order Details</h1><p>Order ID: ${orderId}</p><p>${order.email}</p><p>${order.firstName} ${order.lastName}</p><p>${order.address}</p><p>${order.zip} ${order.city}</p><h2>Items</h2>${order.cart.map((item) => `<p>${item.title}</p><p>${item.price}€</p>`).join("")}</body></html>`,
 			};
-			console.log(emailContent);
 			try {
 				const data = await sendMail(emailContent);
 				if (data) {
