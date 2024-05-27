@@ -97,7 +97,7 @@ export default function Page() {
       <MembershipAccordion />
       <NewsletterBanner
         title="Campfire Chronicles"
-        subtitle="The Outdoor Ginger Newsletter"
+        subtitle="The Outdoor Ginger Blog"
       />
     </main>
   );
