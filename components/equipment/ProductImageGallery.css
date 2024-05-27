@@ -1,0 +1,41 @@
+.image-gallery-slide{
+    border-radius: 20px;
+    aspect-ratio: 1/1;
+}
+
+.image-gallery-image {
+    border-radius: 20px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  .image-gallery-slide .image-gallery-image{
+    object-fit: cover;
+  }
+
+  .image-gallery-thumbnail .image-gallery-thumbnail-inner img {
+    border-radius: 10px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  .image-gallery-thumbnail {
+    aspect-ratio: 1/1;
+    border: none;
+    transition: .1s ease-in-out;
+  }
+
+  .image-gallery-thumbnail:hover {
+    border: none;
+    transform: scale(1.05);
+    
+  }
+
+  .image-gallery-thumbnail-inner {
+    margin-left: 4px;
+  }
+
+  .image-gallery-thumbnail.active, .image-gallery-thumbnail:focus image-gallery-thumbnail-image {
+    border: none;
+    transform: scale(1.1);
+  }
