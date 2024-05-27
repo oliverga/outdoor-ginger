@@ -31,7 +31,7 @@ export default function SocialFollowers() {
             <AnimatedCount
               finalCount={12000}
               duration={1}
-              className="text-xl md:text-3xl"
+              className="text-xl md:text-3xl w-[55px] md:w-[80px]"
             />
           </Link>
           <Link
@@ -51,7 +51,7 @@ export default function SocialFollowers() {
             <AnimatedCount
               finalCount={333000}
               duration={3}
-              className="text-xl md:text-3xl"
+              className="text-xl md:text-3xl w-[55px] md:w-[80px]"
             />
           </Link>
           <Link
@@ -71,7 +71,7 @@ export default function SocialFollowers() {
             <AnimatedCount
               finalCount={24000}
               duration={1}
-              className="text-xl md:text-3xl"
+              className="text-xl md:text-3xl w-[55px] md:w-[80px]"
             />
           </Link>
         </div>
