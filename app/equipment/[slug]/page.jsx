@@ -9,6 +9,14 @@ import {
 import { client, urlFor } from "@/lib/sanity/client";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 export async function generateStaticParams() {
   const slugQuery = '*["_type" == "product"]{slug}';
@@ -38,8 +46,27 @@ export default async function Page({ params }) {
   return (
     <main className="min-h-screen">
       <Hero imageSrc={image} height="h-48 md:h-[30vh]" bg="bg-equipment" />
+      <nav className="container max-w-5xl mx-auto mb-12">
+        <div className="md:px-8">
+          <Breadcrumb>
+            <BreadcrumbList className="text-ogLabel-faint">
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/equipment">Equipment</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage className="text-ogLabel-faint">
+                  {product.title.length > 30
+                    ? product.title.substring(0, 30) + "..."
+                    : product.title}
+                </BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </nav>
       <section className="container mx-auto max-w-5xl md:grid grid-cols-2 prose pb-24">
-        <div className="md:px-8 pb-8 -mt-6 md:mt-0">
+        <div className="md:px-8 pb-8">
           <Image
             src={image}
             alt={product.title}
