@@ -4,11 +4,12 @@ import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { sendEmail as sendMail } from "../../lib/sendMail.js";
 import { useState, useEffect } from "react";
+import { toast } from "sonner";
 
 function NewsletterBanner({ title, subtitle }) {
 	const [email, setEmail] = useState("");
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 		const emailContent = {
 			sender: {
@@ -20,7 +21,16 @@ function NewsletterBanner({ title, subtitle }) {
 			htmlContent:
 				"<html><head></head><body><p>Welcome</p>Thank you for subcribing to Campfire Chronicles, the OutDoor Ginger Newsletter!</p></body></html>",
 		};
-		sendMail(emailContent);
+
+		try {
+			const data = await sendMail(emailContent);
+			if (data) {
+				toast.success("Thank you for subscribing to Campfire Chronicles!");
+			}
+		} catch (error) {
+			console.error("Error:", error);
+		}
+		setEmail("");
 	};
 
 	return (
@@ -46,6 +56,7 @@ function NewsletterBanner({ title, subtitle }) {
 					placeholder="Your email address"
 					className="bg-ogPrimary placeholder:text-ogPrimary-lightest text-ogPrimary-lightest border-ogPrimary-lighter focus-visible:ring-0 focus-visible:ring-offset-0"
 					required
+					value={email}
 					onChange={(e) => setEmail(e.target.value)}
 				/>
 				<Button
