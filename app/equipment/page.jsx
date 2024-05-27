@@ -62,8 +62,7 @@ export default function Page() {
       </section>
       <MemberBanner
         title="25% Discount for members"
-        description="Join 'FREEDOM ACHIEVERS' to get access to exclusive content,
-        discounts and more!"
+        description="Get access to exclusive content, discounts and more!"
         buttonText="Become a member"
       />
       <SponsorBanner />
