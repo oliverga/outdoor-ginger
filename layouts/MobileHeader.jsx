@@ -147,7 +147,7 @@ function MobileHeader() {
                 style={{
                   width: "48px",
                   userSelect: "none",
-                  webkitUserSelect: "none",
+                  WebkitUserSelect: "none",
                   MsUserSelect: "none",
                 }}
                 playMode="normal"
