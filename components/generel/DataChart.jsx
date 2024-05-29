@@ -3,8 +3,6 @@ import { Card, CardContent, CardTitle, CardHeader, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from "recharts";
-
 export default function Datachart() {
   return (
     <section className=" px-8 md:px-0 md:my-32 md:max-w-7xl md:mx-auto">
