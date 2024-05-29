@@ -18,15 +18,15 @@ function Hero({
   return (
     <section className={`relative mb-6 ${bg} ${bgPos} bg-cover px-8 md:px-8 `}>
       <div
-        className={`overflow-hidden grid grid-cols-2 max-w-7xl mx-auto pb-20 md:pb-32 ${height}`}
+        className={`overflow-hidden flex flex-col justify-end gap-0  md:grid grid-cols-2 max-w-7xl mx-auto pb-20 md:pb-32 ${height}`}
       >
-        <div className="place-self-end z-30 w-full flex flex-col justify-end h-fit">
+        <div className="place-self-end z-30 w-full flex flex-col justify-end h-fit order-2 md:order-0">
           <h1 className="text-5xl md:text-7xl font-bold text-ogBG-base uppercase m-0 tracking-tight leading-none">
             {title}
           </h1>
           {leftSideChildren}
         </div>
-        <div className="z-40 place-self-end h-fit w-full">
+        <div className="z-40 place-self-end h-fit w-full md:order-2">
           {rightSideChildren}
         </div>
       </div>

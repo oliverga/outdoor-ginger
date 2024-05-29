@@ -33,7 +33,7 @@ export default function Home() {
 
         <div
           id="right"
-          className="w-full mb-8 md:mb-0 flex flex-col gap-6 md:gap-16 px-8 md:px-12 items-end md:items-start"
+          className="w-full mb-8 md:mb-0 flex flex-col gap-6 md:gap-16 px-8  md:px-12 items-end md:items-start"
         >
           <div className="flex gap-2 items-center  bg-neutral-100/75 px-2 py-2 rounded-full w-max">
             <Image
