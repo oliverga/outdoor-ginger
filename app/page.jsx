@@ -22,7 +22,7 @@ export default function Home() {
       >
         <div id="left" className="flex flex-col w-full gap-4 mt-4 text-lg">
           <p className="text-ogBG-base max-w-[90%] opacity-80 leading-normal text-base md:text-lg ">
-            The home of adventurers, explorers, and outdoor enthusiasts
+            The home of adventurers, explorers, and wilderness enthusiasts
           </p>
           <Link href="/membership">
             <Button size="md" variant="primary" className="">
