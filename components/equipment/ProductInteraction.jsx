@@ -20,7 +20,7 @@ export default function ProductInteraction({ product }) {
 	}, [cart]);
 
 	return (
-		<div className="flex flex-col gap-4">
+		<div className="flex flex-col gap-4 -mt-8">
 			{user ? (
 				<div className="flex gap-4 items-center">
 					<h2 className="text-xl font-medium line-through">
@@ -36,7 +36,11 @@ export default function ProductInteraction({ product }) {
 			) : (
 				<h2 className="text-xl font-medium">{product.price} €</h2>
 			)}
-			<Button variant="primary" className="w-fit" onClick={handleAddToCart}>
+			<Button
+				variant="primary"
+				className="w-fit -mt-6"
+				onClick={handleAddToCart}
+			>
 				Add to cart
 			</Button>
 		</div>
