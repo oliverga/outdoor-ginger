@@ -44,6 +44,7 @@ export default function Page() {
         height="h-96 md:h-[40vh]"
         bg="bg-equipment"
         bgPos="bg-top"
+        padding="pb-20 md:pb-24"
       >
         <div id="left" className="w-[200%] md:w-full">
           <p className="text-xl md:text-2xl font-medium opacity-70 font-display text-ogBG-base">

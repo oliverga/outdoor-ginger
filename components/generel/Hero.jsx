@@ -8,6 +8,7 @@ function Hero({
   bgPos = "bg-center",
   bg,
   children,
+  padding = "pb-20 md:pb-32",
 }) {
   const leftSideChildren = React.Children.toArray(children).filter(
     (child) => child.props.id === "left",
@@ -18,7 +19,7 @@ function Hero({
   return (
     <section className={`relative mb-6 ${bg} ${bgPos} bg-cover px-8 md:px-8 `}>
       <div
-        className={`overflow-hidden flex flex-col justify-end gap-0  md:grid grid-cols-2 max-w-7xl mx-auto pb-20 md:pb-32 ${height}`}
+        className={`overflow-hidden flex flex-col justify-end gap-0  md:grid grid-cols-2 max-w-7xl mx-auto ${padding} ${height}`}
       >
         <div className="place-self-end z-30 w-full flex flex-col justify-end h-fit order-2 md:order-0">
           <h1 className="text-5xl md:text-7xl font-bold text-ogBG-base uppercase m-0 tracking-tight leading-none">
