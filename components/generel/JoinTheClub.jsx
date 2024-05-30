@@ -16,7 +16,7 @@ export default function JoinTheClub() {
             with our exclusive membership. Enjoy a range of perks, including
             discounts and unique offers crafted for the adventurous spirit.
           </p>
-          <Link href="/membership">
+          <Link href="/signup">
             <Button variant="primary" size="lg" className="">
               Sign up now
             </Button>

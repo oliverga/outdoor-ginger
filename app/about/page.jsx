@@ -34,8 +34,8 @@ export default function AboutMe() {
         </div>
       </Hero>
 
-      <section className="px-8 pb-10 md:py-32 md:max-w-7xl md:mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+      <section className="px-8 pb-10 md:py-32">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-10 max-w-7xl mx-auto">
           <div className=" flex flex-col mb-10 md:mb-0">
             <h2 className="font-display text-3xl md:text-5xl font-bold mb-6 uppercase">
               Who is August?
@@ -88,8 +88,8 @@ export default function AboutMe() {
           />
         </div>
       </div>
-      <div className="px-8 md:pb-40 max-w-7xl md:mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+      <div className="px-8 md:pb-40">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-10 max-w-7xl mx-auto">
           <div className="flex flex-col pb-4">
             <h2 className="font-display text-3xl md:text-5xl mb-8 leading-7 uppercase font-bold">
               Membership
@@ -123,8 +123,8 @@ export default function AboutMe() {
       </div>
 
       <SponsorBanner type="static" />
-      <section className="px-8  max-w-7xl mx-auto my-20 md:py-28">
-        <h2 className="font-display text-3xl md:text-5xl uppercase font-bold mb-6 ">
+      <section className="px-8 my-20 md:py-28 max-w-7xl mx-auto">
+        <h2 className="font-display text-3xl md:text-5xl uppercase font-bold mb-6 mx-auto">
           Testimonials
         </h2>
         <h3 className="text-2xl mb-6 md:mb-10 ">What my partners say</h3>
