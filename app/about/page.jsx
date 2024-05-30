@@ -6,7 +6,7 @@ import SponsorBanner from "@/components/generel/SponsorBanner";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import ConnectBanner from "@/components/ConnectBanner";
-import Datachart from "@/components/generel/DataChart";
+
 import { PortableText } from "next-sanity";
 
 const testimonialsQuery = '*[_type == "testimonials"]{Sponsor_Name, content}';
@@ -69,7 +69,7 @@ export default function AboutMe() {
           <Image src="/freedomAugust.png" alt="" width={1000} height={1000} className="w-full max-w-sm rounded-full" />
         </div>
       </div>
-      <Datachart />
+
       <SponsorBanner type="static" />
       <section className="px-8 md:px-0 max-w-7xl mx-auto my-20 md:py-28">
         <h2 className="font-display text-3xl md:text-5xl uppercase font-bold mb-6 ">Testimonials</h2>
